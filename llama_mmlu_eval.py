@@ -31,9 +31,9 @@ import platform
 # CONFIGURATION - Modify these settings
 # ============================================================================
 
-#MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
+MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 #MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
-MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
+#MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
 
 model_name_short = MODEL_NAME.split("/")[1]
 
@@ -41,7 +41,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = True  # Set to False to force CPU-only execution
+USE_GPU = False # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -262,12 +262,14 @@ def load_model_and_tokenizer(device):
 
         if quant_config is not None:
             # Quantized model loading (only works with CUDA)
+
             model = AutoModelForCausalLM.from_pretrained(
                 MODEL_NAME,
                 quantization_config=quant_config,
                 device_map="auto",
-                low_cpu_mem_usage=True
+                low_cpu_mem_usage=True,
             )
+
 
         else:
             # Non-quantized model loading
@@ -276,21 +278,21 @@ def load_model_and_tokenizer(device):
                     MODEL_NAME,
                     dtype=torch.float16,
                     device_map="auto",
-                    low_cpu_mem_usage=True
+                    low_cpu_mem_usage=True,
                 )
       
             elif device == "mps":
                 model = AutoModelForCausalLM.from_pretrained(
                     MODEL_NAME,
                     dtype=torch.float16,
-                    low_cpu_mem_usage=True
+                    low_cpu_mem_usage=True,
                 )
                 model = model.to(device)
             else:  # CPU
                 model = AutoModelForCausalLM.from_pretrained(
                     MODEL_NAME,
                     dtype=torch.float32,
-                    low_cpu_mem_usage=True
+                    low_cpu_mem_usage=True,
                 )
                 model = model.to(device)
 
@@ -316,13 +318,13 @@ def load_model_and_tokenizer(device):
         return model, tokenizer
         
     except Exception as e:
+        print("Exception:", e)
         print(f"\nâŒ Error loading model: {e}")
         print("\nPossible causes:")
         print("1. No Hugging Face token - Run: huggingface-cli login")
         print("2. Llama license not accepted - Visit: https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct")
         print("3. bitsandbytes not installed - Run: pip install bitsandbytes")
         print("4. Out of memory - Try 4-bit quantization or smaller model")
-        raise
 
 
 def format_mmlu_prompt(question, choices):
@@ -474,8 +476,7 @@ def main(verbose:bool=False):
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
-    device_name = "GPU" if device == "cuda" else device
-    output_file = f"output_files/{model_name_short}_results{quant_suffix}_{device_name}_{timestamp}.json"
+    output_file = f"output_files/{model_name_short}_results{quant_suffix}_{device}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
