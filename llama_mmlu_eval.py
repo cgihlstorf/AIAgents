@@ -31,9 +31,9 @@ import platform
 # CONFIGURATION - Modify these settings
 # ============================================================================
 
-MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
+#MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 #MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
-#MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
+MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
 
 model_name_short = MODEL_NAME.split("/")[1]
 
@@ -41,7 +41,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = False  # Set to False to force CPU-only execution
+USE_GPU = True  # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -58,7 +58,7 @@ MAX_NEW_TOKENS = 1
 # - Quantization only works with CUDA (NVIDIA GPUs), not with Apple Metal (MPS)
 # - If using Apple Silicon, quantization will be automatically disabled
 
-QUANTIZATION_BITS = 4  # Change to 4 or 8 to enable quantization
+QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
