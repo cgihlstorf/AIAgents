@@ -41,7 +41,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = True  # Set to False to force CPU-only execution
+USE_GPU = False  # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -58,7 +58,7 @@ MAX_NEW_TOKENS = 1
 # - Quantization only works with CUDA (NVIDIA GPUs), not with Apple Metal (MPS)
 # - If using Apple Silicon, quantization will be automatically disabled
 
-QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
+QUANTIZATION_BITS = 4  # Change to 4 or 8 to enable quantization
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
