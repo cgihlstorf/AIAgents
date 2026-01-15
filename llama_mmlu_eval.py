@@ -41,7 +41,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = False  # Set to False to force CPU-only execution
+USE_GPU = True  # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -58,7 +58,7 @@ MAX_NEW_TOKENS = 1
 # - Quantization only works with CUDA (NVIDIA GPUs), not with Apple Metal (MPS)
 # - If using Apple Silicon, quantization will be automatically disabled
 
-QUANTIZATION_BITS = 4  # Change to 4 or 8 to enable quantization
+QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
@@ -380,6 +380,9 @@ def evaluate_subject(model, tokenizer, subject, verbose:bool=False):
     
     correct = 0
     total = 0
+
+    ground_truth_answers = []
+    model_answers = []
     
     for example in tqdm(dataset, desc=f"Testing {subject}", leave=True):
         question = example["question"]
@@ -393,6 +396,9 @@ def evaluate_subject(model, tokenizer, subject, verbose:bool=False):
         if predicted_answer == correct_answer:
             correct += 1
         total += 1
+
+        ground_truth_answers.append(correct_answer)
+        model_answers.append(predicted_answer)
 
         if verbose:
             print("Question:", question)
@@ -409,7 +415,9 @@ def evaluate_subject(model, tokenizer, subject, verbose:bool=False):
         "subject": subject,
         "correct": correct,
         "total": total,
-        "accuracy": accuracy
+        "accuracy": accuracy,
+        "ground_truth_answers": ground_truth_answers,
+        "model_answers": model_answers,
     }
 
 
@@ -467,7 +475,7 @@ def main(verbose:bool=False):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
     device_name = "GPU" if device == "cuda" else device
-    output_file = f"{model_name_short}_results{quant_suffix}_{device_name}_{timestamp}.json"
+    output_file = f"output_files/{model_name_short}_results{quant_suffix}_{device_name}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
