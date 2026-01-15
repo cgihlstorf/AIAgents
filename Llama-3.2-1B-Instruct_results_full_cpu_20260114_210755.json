@@ -1,9 +1,9 @@
 {
   "model": "meta-llama/Llama-3.2-1B-Instruct",
   "quantization_bits": null,
-  "timestamp": "20260114_202140",
-  "device": "cuda",
-  "duration_seconds": 9.393519,
+  "timestamp": "20260114_210755",
+  "device": "cpu",
+  "duration_seconds": 202.265364,
   "overall_accuracy": 47.61904761904761,
   "total_correct": 120,
   "total_questions": 252,

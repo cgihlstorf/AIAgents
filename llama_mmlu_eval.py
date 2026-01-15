@@ -32,11 +32,16 @@ import platform
 # ============================================================================
 
 MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
+#MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
+#MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
+
+model_name_short = MODEL_NAME.split("/")[1]
+
 
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = True  # Set to False to force CPU-only execution
+USE_GPU = False  # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -53,7 +58,7 @@ MAX_NEW_TOKENS = 1
 # - Quantization only works with CUDA (NVIDIA GPUs), not with Apple Metal (MPS)
 # - If using Apple Silicon, quantization will be automatically disabled
 
-QUANTIZATION_BITS = 8  # Change to 4 or 8 to enable quantization
+QUANTIZATION_BITS = 4  # Change to 4 or 8 to enable quantization
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
@@ -361,7 +366,7 @@ def get_model_prediction(model, tokenizer, prompt):
     return answer
 
 
-def evaluate_subject(model, tokenizer, subject):
+def evaluate_subject(model, tokenizer, subject, verbose:bool=False):
     """Evaluate model on a specific MMLU subject"""
     print(f"\n{'='*70}")
     print(f"Evaluating subject: {subject}")
@@ -388,6 +393,14 @@ def evaluate_subject(model, tokenizer, subject):
         if predicted_answer == correct_answer:
             correct += 1
         total += 1
+
+        if verbose:
+            print("Question:", question)
+            print("Model Answer:", predicted_answer)
+            correctness_bool = (predicted_answer == correct_answer)
+            correctness_str = "Correct" if correctness_bool else f'Incorrect (correct answer is {correct_answer})'
+            print("Correctness:", correctness_str)
+            print("=" * 70)
     
     accuracy = (correct / total * 100) if total > 0 else 0
     print(f"âœ“ Result: {correct}/{total} correct = {accuracy:.2f}%")
@@ -400,7 +413,7 @@ def evaluate_subject(model, tokenizer, subject):
     }
 
 
-def main():
+def main(verbose:bool=False):
     """Main evaluation function"""
     print("\n" + "="*70)
     print("Llama 3.2-1B MMLU Evaluation (Quantized)")
@@ -425,7 +438,7 @@ def main():
     
     for i, subject in enumerate(MMLU_SUBJECTS, 1):
         print(f"\nProgress: {i}/{len(MMLU_SUBJECTS)} subjects")
-        result = evaluate_subject(model, tokenizer, subject)
+        result = evaluate_subject(model, tokenizer, subject, verbose=verbose)
         if result:
             results.append(result)
             total_correct += result["correct"]
@@ -454,7 +467,7 @@ def main():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
     device_name = "GPU" if device == "cuda" else device
-    output_file = f"llama_3.2_1b_mmlu_results{quant_suffix}_{device_name}_{timestamp}.json"
+    output_file = f"{model_name_short}_results{quant_suffix}_{device_name}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
