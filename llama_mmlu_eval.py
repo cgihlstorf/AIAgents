@@ -53,7 +53,7 @@ MAX_NEW_TOKENS = 1
 # - Quantization only works with CUDA (NVIDIA GPUs), not with Apple Metal (MPS)
 # - If using Apple Silicon, quantization will be automatically disabled
 
-QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
+QUANTIZATION_BITS = 8  # Change to 4 or 8 to enable quantization
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
@@ -263,6 +263,7 @@ def load_model_and_tokenizer(device):
                 device_map="auto",
                 low_cpu_mem_usage=True
             )
+
         else:
             # Non-quantized model loading
             if device == "cuda":
@@ -272,6 +273,7 @@ def load_model_and_tokenizer(device):
                     device_map="auto",
                     low_cpu_mem_usage=True
                 )
+      
             elif device == "mps":
                 model = AutoModelForCausalLM.from_pretrained(
                     MODEL_NAME,
@@ -451,7 +453,8 @@ def main():
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
-    output_file = f"llama_3.2_1b_mmlu_results{quant_suffix}_{timestamp}.json"
+    device_name = "GPU" if device == "cuda" else device
+    output_file = f"llama_3.2_1b_mmlu_results{quant_suffix}_{device_name}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
