@@ -9,6 +9,7 @@ import json
 def make_plots(file_paths:list, output_file_name:str):
 
     answer_matrix = [[0 for _ in file_paths] for _ in file_paths] #make an nxn matrix for a heatmap
+    heatmap_dict = {}
 
     models = []
     subjects = []
@@ -39,6 +40,38 @@ def make_plots(file_paths:list, output_file_name:str):
             subjects.append(subject)
             accs.append(accuracy)
 
+            if subject not in heatmap_dict.keys():
+                heatmap_dict[subject] = {}
+
+            heatmap_dict[subject][model_name] = model_answers #TODO check
+
+
+
+    for subject in heatmap_dict.keys():
+
+        subject_dict = heatmap_dict[subject]
+        heatmap_models = []
+
+        for i in range(len(list(subject_dict.keys()))):
+
+            model_1 = list(subject_dict.keys())[i]
+            m1_answers = subject_dict[model_1]
+            heatmap_models.append(model_1)
+
+            for j in range(len(list(subject_dict.keys()))):
+                
+                model_2 = list(subject_dict.keys())[j]
+                m2_answers = subject_dict[model_2]
+
+                overlap = compute_overlap(m1_answers, m2_answers)
+                answer_matrix[i][j] = overlap
+
+        plt.figure()
+        heatmap = sns.heatmap(np.array(answer_matrix), xticklabels=heatmap_models, yticklabels=heatmap_models, annot=True)
+        plt.title(subject)
+        plt.savefig(f'figures/{output_file_name}_{subject}_heatmap.png')
+
+    
     
     accuracy_df = pd.DataFrame({
         "Model" : models,
@@ -46,13 +79,12 @@ def make_plots(file_paths:list, output_file_name:str):
         "Accuracy" : accs,
     })
 
-    print(accuracy_df)
-
 
     plt.figure()
     acc_barplot = sns.barplot(accuracy_df, x="Model", y="Accuracy", hue="Subject")
     plt.title(f'MMLU Results {output_file_name}')
-    plt.savefig(f'figures/{output_file_name}.png')
+    plt.savefig(f'figures/{output_file_name}_accuracies.png')
+
 
     #TODO correlations for each model
 
@@ -81,7 +113,22 @@ def choose_files(by_model:bool=False, model:str=None, by_quant:bool=False, quant
                     found_files.append(f'{output_dir}/' + file_name)
 
         return found_files, model_substr[1:-1]
+
         
+def compute_overlap(lst1, lst2):
+
+    assert len(lst1) == len(lst2)
+    
+    total_items = len(lst1)
+    matching_items = 0
+    
+    for i1, i2 in zip(lst1, lst2):
+        if i1 == i2:
+            matching_items += 1
+
+    return matching_items / total_items
+
+
 
 
 
@@ -95,5 +142,4 @@ if __name__ == "__main__":
 
     make_plots(file_paths, output_file_name)
 
-    #open this file, get ground truth and model answers
     #make a heatmap
