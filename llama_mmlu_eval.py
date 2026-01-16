@@ -26,6 +26,8 @@ import os
 from datetime import datetime
 import sys
 import platform
+import time
+from torch.profiler import profile, ProfilerActivity
 
 # ============================================================================
 # CONFIGURATION - Modify these settings
@@ -41,7 +43,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = False # Set to False to force CPU-only execution
+USE_GPU = True # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -63,7 +65,7 @@ QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
     # "abstract_algebra", "anatomy", 
-    "astronomy", "business_ethics",
+    "astronomy", #"business_ethics",
     # "clinical_knowledge", "college_biology", "college_chemistry",
     # "college_computer_science", "college_mathematics", "college_medicine",
     # "college_physics", "computer_security", "conceptual_physics",
@@ -78,9 +80,9 @@ MMLU_SUBJECTS = [
     # "human_sexuality", "international_law", "jurisprudence",
     # "logical_fallacies", "machine_learning", "management", "marketing",
     # "medical_genetics", "miscellaneous", "moral_disputes", "moral_scenarios",
-    "nutrition", "philosophy", "prehistory", "professional_accounting",
+    # "nutrition", "philosophy", "prehistory", "professional_accounting",
     # "professional_law", "professional_medicine", "professional_psychology",
-    "public_relations", "security_studies", "sociology", "us_foreign_policy",
+    # "public_relations", "security_studies", "sociology", "us_foreign_policy",
     # "virology", "world_religions"
 ]
 
@@ -443,8 +445,17 @@ def main(verbose:bool=False):
     print(f"\n{'='*70}")
     print(f"Starting evaluation on {len(MMLU_SUBJECTS)} subjects")
     print(f"{'='*70}\n")
+
+    duration_cpu = None
+    duration_gpu = None
     
     start_time = datetime.now()
+
+    if USE_GPU == False:
+        start_time_cpu = time.process_time()
+    
+    else:
+        start_time_gpu = time.perf_counter()
     
     for i, subject in enumerate(MMLU_SUBJECTS, 1):
         print(f"\nProgress: {i}/{len(MMLU_SUBJECTS)} subjects")
@@ -453,6 +464,15 @@ def main(verbose:bool=False):
             results.append(result)
             total_correct += result["correct"]
             total_questions += result["total"]
+
+    if USE_GPU == False:
+        end_time_cpu = time.process_time()
+        duration_cpu = end_time_cpu - start_time_cpu
+
+    else:
+        end_time_gpu = time.perf_counter()
+        duration_gpu = end_time_gpu - start_time_gpu
+        print("duration gpu:", duration_gpu)
     
     end_time = datetime.now()
     duration = (end_time - start_time).total_seconds()
@@ -484,6 +504,8 @@ def main(verbose:bool=False):
         "timestamp": timestamp,
         "device": str(device),
         "duration_seconds": duration,
+        "duration_cpu": duration_cpu,
+        "duration_gpu": duration_gpu,
         "overall_accuracy": overall_accuracy,
         "total_correct": total_correct,
         "total_questions": total_questions,
