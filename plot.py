@@ -21,7 +21,6 @@ def make_plots(file_paths:list, output_file_name:str):
         model_name = file_path_items[0]
         quant_config = file_path_items[2]
         architecture = file_path_items[3]
-        file_name_short = f'{model_name}_{quant_config}_{architecture}'
 
         file = open(file_path, 'r')
         file_string = file.read()
@@ -36,7 +35,7 @@ def make_plots(file_paths:list, output_file_name:str):
             ground_truth_answers = subject_dict["ground_truth_answers"]
             model_answers = subject_dict["model_answers"]
 
-            models.append(file_name_short.replace(f'_{output_file_name}', ""))
+            models.append(model_name)
             subjects.append(subject)
             accs.append(accuracy)
 
@@ -66,9 +65,9 @@ def make_plots(file_paths:list, output_file_name:str):
                 overlap = compute_overlap(m1_answers, m2_answers)
                 answer_matrix[i][j] = overlap
 
-        plt.figure()
+        plt.figure(figsize=(14, 7))
         heatmap = sns.heatmap(np.array(answer_matrix), xticklabels=heatmap_models, yticklabels=heatmap_models, annot=True)
-        plt.title(subject)
+        plt.title(f'{subject} {output_file_name}')
         plt.savefig(f'figures/{output_file_name}_{subject}_heatmap.png')
 
     
@@ -138,7 +137,7 @@ if __name__ == "__main__":
 
     output_dir = "output_files"
 
-    file_paths, output_file_name = choose_files(by_quant=True, quant="full", by_architecture=True, architecture="GPU")
+    file_paths, output_file_name = choose_files(by_quant=True, quant="full", by_architecture=True, architecture="mps")
 
     make_plots(file_paths, output_file_name)
 
