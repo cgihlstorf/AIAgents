@@ -85,10 +85,7 @@ def make_plots(file_paths:list, output_file_name:str):
     plt.savefig(f'figures/{output_file_name}_accuracies.png')
 
 
-    #TODO correlations for each model
-
-
-def choose_files(by_model:bool=False, model:str=None, by_quant:bool=False, quant:str=None, by_architecture:bool=False, architecture:str=None):
+def choose_files(output_dir:str, by_model:bool=False, model:str=None, by_quant:bool=False, quant:str=None, by_architecture:bool=False, architecture:str=None):
 
         model_specs = []
 
@@ -137,8 +134,6 @@ if __name__ == "__main__":
 
     output_dir = "output_files"
 
-    file_paths, output_file_name = choose_files(by_quant=True, quant="full", by_architecture=True, architecture="mps")
+    file_paths, output_file_name = choose_files(output_dir, by_quant=True, quant="full", by_architecture=True, architecture="mps")
 
     make_plots(file_paths, output_file_name)
-
-    #make a heatmap
