@@ -34,8 +34,8 @@ from torch.profiler import profile, ProfilerActivity
 # ============================================================================
 
 #MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
-#MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
-MODEL_NAME = "Qwen/Qwen2.5-0.5B"
+MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
+#MODEL_NAME = "Qwen/Qwen2.5-0.5B"
 
 model_name_short = MODEL_NAME.split("/")[1]
 
@@ -65,7 +65,7 @@ QUANTIZATION_BITS = None  # Change to 4 or 8 to enable quantization
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
     # "abstract_algebra", "anatomy", 
-    "astronomy", #"business_ethics",
+    "astronomy", "business_ethics",
     # "clinical_knowledge", "college_biology", "college_chemistry",
     # "college_computer_science", "college_mathematics", "college_medicine",
     # "college_physics", "computer_security", "conceptual_physics",
@@ -80,9 +80,9 @@ MMLU_SUBJECTS = [
     # "human_sexuality", "international_law", "jurisprudence",
     # "logical_fallacies", "machine_learning", "management", "marketing",
     # "medical_genetics", "miscellaneous", "moral_disputes", "moral_scenarios",
-    # "nutrition", "philosophy", "prehistory", "professional_accounting",
+    "nutrition", "philosophy", "prehistory", "professional_accounting",
     # "professional_law", "professional_medicine", "professional_psychology",
-    # "public_relations", "security_studies", "sociology", "us_foreign_policy",
+    "public_relations", "security_studies", "sociology", "us_foreign_policy",
     # "virology", "world_religions"
 ]
 
@@ -425,7 +425,7 @@ def evaluate_subject(model, tokenizer, subject, verbose:bool=False):
     }
 
 
-def main(verbose:bool=False):
+def main(output_dir:str, verbose:bool=False):
     """Main evaluation function"""
     print("\n" + "="*70)
     print("Llama 3.2-1B MMLU Evaluation (Quantized)")
@@ -472,7 +472,6 @@ def main(verbose:bool=False):
     else:
         end_time_gpu = time.perf_counter()
         duration_gpu = end_time_gpu - start_time_gpu
-        print("duration gpu:", duration_gpu)
     
     end_time = datetime.now()
     duration = (end_time - start_time).total_seconds()
@@ -496,7 +495,7 @@ def main(verbose:bool=False):
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
-    output_file = f"output_files/{model_name_short}_results{quant_suffix}_{device}_{timestamp}.json"
+    output_file = f"{output_dir}/{model_name_short}_results{quant_suffix}_{device}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
@@ -543,7 +542,8 @@ def main(verbose:bool=False):
 
 if __name__ == "__main__":
     try:
-        output_file = main()
+        output_dir = "output_files"
+        output_file = main(output_dir)
     except KeyboardInterrupt:
         print("\n\nâš ï¸  Evaluation interrupted by user")
     except Exception as e:
