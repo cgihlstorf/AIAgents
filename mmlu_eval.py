@@ -34,8 +34,8 @@ from torch.profiler import profile, ProfilerActivity
 # ============================================================================
 
 #MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
-MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
-#MODEL_NAME = "Qwen/Qwen2.5-0.5B"
+#MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
+MODEL_NAME = "Qwen/Qwen2.5-0.5B"
 
 model_name_short = MODEL_NAME.split("/")[1]
 
@@ -43,7 +43,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = True # Set to False to force CPU-only execution
+USE_GPU = False # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
