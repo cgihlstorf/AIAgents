@@ -79,7 +79,7 @@ def make_plots(file_paths:list, output_file_name:str):
     })
 
 
-    plt.figure()
+    plt.figure(figsize=(10, 8))
     acc_barplot = sns.barplot(accuracy_df, x="Model", y="Accuracy", hue="Subject")
     plt.title(f'MMLU Results {output_file_name}')
     plt.savefig(f'figures/{output_file_name}_accuracies.png')
