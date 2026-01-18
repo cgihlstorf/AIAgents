@@ -68,6 +68,10 @@ chat_history.append({
 })
 
 max_chat_turns = 10 #fixed window for chat history
+keep_chat_history = False
+
+outfile_path = f'chat_history_max_{max_chat_turns}_turns_keep_history_{keep_chat_history}.txt'
+outfile = open(outfile_path, 'w')
 
 # ============================================================================
 # CHAT LOOP
@@ -97,6 +101,8 @@ while True:
     # ========================================================================
     # The chat history grows with each exchange
     # We append the new user message to the existing history
+    outfile.write("You: " + user_input + "\n")
+
     chat_history.append({
         "role": "user",
         "content": user_input
@@ -168,6 +174,8 @@ while True:
     )
     
     print(assistant_response)  # Display the response
+
+    outfile.write("Assistant: " + assistant_response + "\n")
     
     # ========================================================================
     # STEP 6: Add assistant response to chat history (PLAIN TEXT)
@@ -180,12 +188,21 @@ while True:
         "content": assistant_response
     })
 
-    if len(chat_history) > max_chat_turns:
-        assert chat_history[0]["role"] == "system" #ensure we are keeping the system prompt in the first position
-        chat_history = [chat_history[0]] + chat_history[-(max_chat_turns - 1):] #keep the latest n chat turns
-        assert len(chat_history) == max_chat_turns #we are going to keep the max number of chat turns
-        
+    if keep_chat_history == False: #we want to erase all chat history
+        #erase all curren chat history
+        chat_history = [] 
+        #add system prompt back for the next loop
+        chat_history.append({
+            "role": "system",
+            "content": SYSTEM_PROMPT
+        })
     
+    else: #keep some chat history
+        if len(chat_history) > max_chat_turns:
+            assert chat_history[0]["role"] == "system" #ensure we are keeping the system prompt in the first position
+            chat_history = [chat_history[0]] + chat_history[-(max_chat_turns - 1):] #keep the latest n chat turns
+            assert len(chat_history) == max_chat_turns #we are going to keep the max number of chat turns
+
     # Now chat_history has grown again:
     # [
     #   {"role": "system", "content": "You are helpful..."},
@@ -207,6 +224,8 @@ while True:
     # Each turn, we feed it the ENTIRE conversation history
     
     print()  # Blank line for readability
+
+outfile.close()
 
 # ============================================================================
 # SUMMARY OF HOW CHAT HISTORY WORKS
