@@ -33,9 +33,9 @@ from torch.profiler import profile, ProfilerActivity
 # CONFIGURATION - Modify these settings
 # ============================================================================
 
-#MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
+MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 #MODEL_NAME = "allenai/OLMo-2-0425-1B-SFT" 
-MODEL_NAME = "Qwen/Qwen2.5-0.5B"
+#MODEL_NAME = "Qwen/Qwen2.5-0.5B"
 
 model_name_short = MODEL_NAME.split("/")[1]
 
@@ -43,7 +43,7 @@ model_name_short = MODEL_NAME.split("/")[1]
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = False # Set to False to force CPU-only execution
+USE_GPU = True # Set to False to force CPU-only execution
 
 MAX_NEW_TOKENS = 1
 
@@ -80,9 +80,9 @@ MMLU_SUBJECTS = [
     # "human_sexuality", "international_law", "jurisprudence",
     # "logical_fallacies", "machine_learning", "management", "marketing",
     # "medical_genetics", "miscellaneous", "moral_disputes", "moral_scenarios",
-    "nutrition", "philosophy", "prehistory", "professional_accounting",
+    #"nutrition", "philosophy", "prehistory", "professional_accounting",
     # "professional_law", "professional_medicine", "professional_psychology",
-    "public_relations", "security_studies", "sociology", "us_foreign_policy",
+    #"public_relations", "security_studies", "sociology", "us_foreign_policy",
     # "virology", "world_religions"
 ]
 
@@ -450,11 +450,9 @@ def main(output_dir:str, verbose:bool=False):
     duration_gpu = None
     
     start_time = datetime.now()
-
-    if USE_GPU == False:
-        start_time_cpu = time.process_time()
+    start_time_cpu = time.process_time()
     
-    else:
+    if USE_GPU == True:
         start_time_gpu = time.perf_counter()
     
     for i, subject in enumerate(MMLU_SUBJECTS, 1):
@@ -465,13 +463,12 @@ def main(output_dir:str, verbose:bool=False):
             total_correct += result["correct"]
             total_questions += result["total"]
 
-    if USE_GPU == False:
-        end_time_cpu = time.process_time()
-        duration_cpu = end_time_cpu - start_time_cpu
-
-    else:
+    if USE_GPU == True:
         end_time_gpu = time.perf_counter()
         duration_gpu = end_time_gpu - start_time_gpu
+
+    end_time_cpu = time.process_time()
+    duration_cpu = end_time_cpu - start_time_cpu
     
     end_time = datetime.now()
     duration = (end_time - start_time).total_seconds()
@@ -542,7 +539,7 @@ def main(output_dir:str, verbose:bool=False):
 
 if __name__ == "__main__":
     try:
-        output_dir = "output_files"
+        output_dir = "output_files_2_subjects"
         output_file = main(output_dir)
     except KeyboardInterrupt:
         print("\n\nâš ï¸  Evaluation interrupted by user")
