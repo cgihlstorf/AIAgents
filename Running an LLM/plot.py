@@ -68,7 +68,7 @@ def make_plots(file_paths:list, output_file_name:str):
         plt.figure(figsize=(14, 7))
         heatmap = sns.heatmap(np.array(answer_matrix), xticklabels=heatmap_models, yticklabels=heatmap_models, annot=True)
         plt.title(f'{subject} {output_file_name}')
-        plt.savefig(f'figures/{output_file_name}_{subject}_heatmap.png')
+        plt.savefig(f'figures/{output_file_name}_{subject}_heatmap.pdf')
 
     
     
@@ -82,7 +82,7 @@ def make_plots(file_paths:list, output_file_name:str):
     plt.figure(figsize=(10, 8))
     acc_barplot = sns.barplot(accuracy_df, x="Model", y="Accuracy", hue="Subject")
     plt.title(f'MMLU Results {output_file_name}')
-    plt.savefig(f'figures/{output_file_name}_accuracies.png')
+    plt.savefig(f'figures/{output_file_name}_accuracies.pdf')
 
 
 def choose_files(output_dir:str, by_model:bool=False, model:str=None, by_quant:bool=False, quant:str=None, by_architecture:bool=False, architecture:str=None):
