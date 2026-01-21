@@ -16,7 +16,7 @@ I then tested `Llama-3.2 1B Instruct` as a chat agent on my local laptop. Using 
 
 `output_files_2_subjects` contains output files for models I ran on 2 subjects, testing on both CPU and GPU.
 
-The `colab_link.txt` file contains the link to the Colab file I used to replicate some of these experiments. Figures and output files for the Colab experiment are in a separate folder entitled `hw1_outputs_colab`.
+The `colab_link.txt` file contains the link to the Colab file I used to replicate some of these experiments. Figures and output files for the Colab experiments are in a separate folder entitled `hw1_outputs_colab`.
 
 
 ## Results - Local Laptop
