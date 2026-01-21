@@ -2,9 +2,9 @@
 
 ## General Overview
 
-For this assignment, I ran several language models on subsets of the `MMLU` benchmark on both my local laptop and Google Colab. I analyzed their performance and compared the overlap between their multiple-choice answers. For running locally, used `Llama-3.2 1B Instruct`, `OLMo-2 1B SFT`, and `Qwen-2.5 0.5B`. On Colab, I ran these three models in addition to three medium-sized models: `Llama-3.1 8B`, `OLMo-2 7B`, and `Qwen-2.5 7B`. Analyses of these results on both my local machine and Colab can be found below. 
+For this assignment, I ran several language models on subsets of the `MMLU` benchmark on both my local laptop and Google Colab. I analyzed their performance and compared the overlap between their multiple-choice answers. For running locally, used `Llama-3.2 1B Instruct`, `OLMo-2 1B SFT`, and `Qwen-2.5 0.5B`. On Colab, I ran these three models in addition to three medium-sized models: `Llama-3.1 8B`, `OLMo-2 7B`, and `Qwen-2.5 7B`. Analyses of these results on both my local machine and Colab can be found in the sections below. 
 
-I then tested `Llama-3.2 1B Instruct` as a chat agent on my local laptop. Using the code provided for the assignment as a starter, I modified it to limit the model's chat context to only the previous 10 rounds of conversation. I thenn instroduced a variable that determined whether the model has access to any context at all and had two conversations with it in each setting - with context and without context. I provide a qualitative analysis of these two conversations in question 2 of `Results - Local Laptop`. 
+I then tested `Llama-3.2 1B Instruct` as a chat agent on my local laptop. Using the code provided for the assignment as a starter, I modified it to limit the model's chat context to only the previous 10 rounds of conversation. I then instroduced a variable that determined whether the model has access to any context at all and had two conversations with it in each setting - with context and without context. I provide a qualitative analysis of these two conversations in question 2 of `Results - Local Laptop`. 
 
 ## Folder Guide
 
