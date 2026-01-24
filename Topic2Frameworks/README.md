@@ -1,0 +1,4 @@
+## Task 2 
+
+### Empty Inputs
+I gave `Llama-3.2 1B Instruct` an empty input twice and recorded its responses. In both cases, the model hallucinated a conversation between a user and an assistant, though the topic was different each time. The first empty input resulted in a simulated conversation about mental health in the workplace, while the second empty input resulted in a simulated conversation about organizing documents in folders. This suggests that smaller language models, like the one used here, are unable to interpret an empty input as a sign to perhaps wait for another input from the user or ask user a question to get a non-empty input that they can work with. Instead, they default to generating random conversations and ignore the fact that they should be waiting on the user to begin a conversation with a nonempty string. 
