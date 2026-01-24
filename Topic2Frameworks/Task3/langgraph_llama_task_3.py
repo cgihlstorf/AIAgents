@@ -64,8 +64,8 @@ class AgentState(TypedDict):
     """
     user_input: str
     should_exit: bool
-    llama_response: str
-    qwen_response: str
+    llama_response: str #TASK 3: add a variable in the state for Llama's response
+    qwen_response: str #TASK 3: add a variable in the state for Qwen's response
     print_trace: bool #TASK 1: add in a print_trace variable to determine whether we print a trace of the program ("verbose") or not ("quiet")
 
 def create_llm():
@@ -79,7 +79,8 @@ def create_llm():
 
     models = {}
 
-    for model_id in ["meta-llama/Llama-3.2-1B-Instruct", "Qwen/Qwen2.5-0.5B"]:
+    #TASK 3: return a dictionary mapping to both Llama and Qwen so we can access them both in the same graph
+    for model_id in ["meta-llama/Llama-3.2-1B-Instruct", "Qwen/Qwen2.5-0.5B"]: 
 
         print(f"Loading model: {model_id}")
         print("This may take a moment on first run as the model is downloaded...")
@@ -227,14 +228,16 @@ def create_graph(llms):
         return {"llm_response": response}
     
 
-    def llama_and_qwen(state: AgentState) -> dict:
+    def llama_and_qwen(state: AgentState) -> dict: #TASK 3: create a node that passes input to both Llama and Qwen
+
+        '''Node that passes the input from get_user_input to both Llama and Qwen'''
 
         print("\nProcessing your input...")
 
-        return {"llama_response" : "", "qwen_response" : ""}
+        return {}
     
 
-    def run_llama(state: AgentState) -> dict:
+    def run_llama(state: AgentState) -> dict: #TASK 3: get response from Llama and add it to the state
         """
         Node that invokes the LLM with the user's input.
 
@@ -261,7 +264,7 @@ def create_graph(llms):
         return {"llama_response": response}
     
 
-    def run_qwen(state: AgentState) -> dict:
+    def run_qwen(state: AgentState) -> dict: #TASK 3: get response from Qwen and add it to the state
         """
         Node that invokes the LLM with the user's input.
 
@@ -310,6 +313,8 @@ def create_graph(llms):
 
         if state.get("print_trace", False): #TASK 1: if tracing is enabled, print tracing information here
             print(f'[TRACE] Printing LLM response..')
+        
+        #TASK 3: print responses for both Llama and Qwen
         
         print("\n" + "-" * 50)
         print("Llama Response:")
@@ -364,7 +369,7 @@ def create_graph(llms):
         if state.get("print_trace", False): #TASK 1: if tracing is enabled, print tracing information here
             print(f'[TRACE] Routing: calling LLM...')
 
-        return "llama_and_qwen"
+        return "llama_and_qwen" #TASK 3: go to the node running both Llama and Qwen
 
     # =========================================================================
     # GRAPH CONSTRUCTION
@@ -374,9 +379,9 @@ def create_graph(llms):
 
     # Add all three nodes to the graph
     graph_builder.add_node("get_user_input", get_user_input)
-    graph_builder.add_node("llama_and_qwen", llama_and_qwen)
-    graph_builder.add_node("run_llama", run_llama)
-    graph_builder.add_node("run_qwen", run_qwen)
+    graph_builder.add_node("llama_and_qwen", llama_and_qwen) #TASK 3: add node for Llama and Qwen
+    graph_builder.add_node("run_llama", run_llama) #TASK 3: add node to run llama
+    graph_builder.add_node("run_qwen", run_qwen) #TASK3: add node to run Qwen
     #graph_builder.add_node("call_llm", call_llm)
     graph_builder.add_node("print_response", print_response)
 
@@ -391,12 +396,13 @@ def create_graph(llms):
         route_after_input,      # Routing function that examines state
         {
             "get_user_input" : "get_user_input", #TASK 1: introduce the possibility of cycling back to the user input node (happens when user input is initially used to set the tracing variable)
-            "llama_and_qwen" : "llama_and_qwen",  # Any input -> proceed to LLM
+            "llama_and_qwen" : "llama_and_qwen",  # TASK 3: replace call_llm with the node that runs Llama and Qwen
             END: END                  # Quit command -> terminate graph
         }
     )
 
     # 3. run_llama or run_qwen -> print_response (always print after LLM responds)
+    #TASK 3: add edges between the node passing the input to Llama and Qwen to each model's node and from each model's node to print_response
     graph_builder.add_edge("llama_and_qwen", "run_llama")
     graph_builder.add_edge("llama_and_qwen", "run_qwen")
     graph_builder.add_edge("run_llama", "print_response")
