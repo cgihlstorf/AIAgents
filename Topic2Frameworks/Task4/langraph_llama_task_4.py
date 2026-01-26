@@ -67,7 +67,7 @@ class AgentState(TypedDict):
     llama_response: str #TASK 3: add a variable in the state for Llama's response
     qwen_response: str #TASK 3: add a variable in the state for Qwen's response
     print_trace: bool #TASK 1: add in a print_trace variable to determine whether we print a trace of the program ("verbose") or not ("quiet")
-    use_qwen: bool
+    use_qwen: bool #TASK 4: bool keeping track of whether to run Qwen instead of Llama (when prompted with "Hey Qwen")
 
 def create_llm():
     """
@@ -262,7 +262,7 @@ def create_graph(llms):
         response = llm.invoke(prompt)
 
         # Return only the field we're updating
-        return {"llama_response": response, "use_qwen": False}
+        return {"llama_response": response, "use_qwen": False} #TASK 4: if using Llama, set use_qwen to False to we don't call Qwen
     
 
     def run_qwen(state: AgentState) -> dict: #TASK 3: get response from Qwen and add it to the state
@@ -289,7 +289,7 @@ def create_graph(llms):
         response = llm.invoke(prompt)
 
         # Return only the field we're updating
-        return {"qwen_response": response, "use_qwen" : True}
+        return {"qwen_response": response, "use_qwen" : True} #TASK 4: if using Qwen, set use_qwen to True so we don't use Llama
 
     
 
@@ -315,14 +315,14 @@ def create_graph(llms):
         if state.get("print_trace", False): #TASK 1: if tracing is enabled, print tracing information here
             print(f'[TRACE] Printing LLM response..')
         
-        if state["use_qwen"] == True:
+        if state["use_qwen"] == True: #TASK 4: print Qwen's output if Qwen is called
         
             print("\n" + "-" * 50)
             print("Qwen Response:")
             print("-" * 50)
             print(state["qwen_response"])
 
-        else:
+        else: #TASK 4: otherwise print Llama's output since Llama was called instead of Qwen
             print("\n" + "-" * 50)
             print("Llama Response:")
             print("-" * 50)
@@ -371,10 +371,10 @@ def create_graph(llms):
             print(f'Got input {user_input}, updating trace variable...')
             return "get_user_input"
         
-        if user_input.lower().startswith("hey qwen"):
+        if user_input.lower().startswith("hey qwen"): #TASK 4: if "hey qwen" is the start of the user input, run Qwen instead of Llama
             return "run_qwen"
 
-        return "run_llama"
+        return "run_llama" #TASK 4: if Qwen isn't specified in the user input, run Llama
 
     # =========================================================================
     # GRAPH CONSTRUCTION
@@ -401,8 +401,8 @@ def create_graph(llms):
         route_after_input,      # Routing function that examines state
         {
             "get_user_input" : "get_user_input", #TASK 1: introduce the possibility of cycling back to the user input node (happens when user input is initially used to set the tracing variable)
-            "run_llama" : "run_llama",  
-            "run_qwen" : "run_qwen",
+            "run_llama" : "run_llama",  #TASK 4: separate calling Llama from calling Qwen (no parallelization)
+            "run_qwen" : "run_qwen", #TASK 4: separate calling Llama from calling Qwen (no parallelization)
             END: END                  # Quit command -> terminate graph
         }
     )
