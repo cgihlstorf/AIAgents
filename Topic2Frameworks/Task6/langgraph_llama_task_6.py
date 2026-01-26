@@ -106,7 +106,7 @@ def create_llm():
             "text-generation",
             model=model,
             tokenizer=tokenizer,
-            max_new_tokens=50,  # Maximum tokens to generate in response
+            max_new_tokens=128,  # Maximum tokens to generate in response
             do_sample=True,      # Enable sampling for varied responses
             temperature=0.7,     # Controls randomness (lower = more deterministic)
             top_p=0.95,          # Nucleus sampling parameter
@@ -188,7 +188,6 @@ def create_graph(llms):
                 "print_trace": False,
             }
         
-        
 
         system_prompt = [{"role": "system", "content": "You are a helpful assistant."}] #TASK 5: initialize a system prompt to begin the chat history
         chat_history = state.get("chat_history", system_prompt) #TASK 5: get the current state or initialize it with a system prompt
@@ -243,7 +242,8 @@ def create_graph(llms):
         print("\nProcessing your input...")
 
         return {}
-    
+
+
 
     def run_llama(state: AgentState) -> dict: #TASK 3: get response from Llama and add it to the state
         """
@@ -268,23 +268,22 @@ def create_graph(llms):
         # Invoke the LLM and get the response
         chat_history = state["chat_history"] + [{"role": "user", "content": "Human: " + user_input}] #TASK 5: add the user input to the chat history
 
-        for c in chat_history:
-            if c["role"] == "system":
-                print("GOT TO SYSTEM LLAMA")
+        for c in chat_history: 
+            if c["role"] == "system": #TASK 6: make system prompts specific to the model (i.e, tell the model who else it is in conversation with)
                 c["content"] = "You are a helpful assistant in conversation with two other participants: a human (Human) and a language model (Qwen)."
-            if c["content"].startswith("Qwen: ") and c["role"] == "assistant":
+            if c["content"].startswith("Qwen: ") and c["role"] == "assistant": #TASK 6: make the other model in the conversation listed as a user in all prior context
                 c["role"] = "user" #TASK 5: make Qwen listed as a user for Llama
-            if c["content"].startswith("Llama: ") and c["role"] == "user":
+            if c["content"].startswith("Llama: ") and c["role"] == "user": #TASK 6: make the current model the assistant in all prior context
                 c["role"] = "assistant"
         
         response = llm.invoke(chat_history) #TASK 5: run the model with the chat history as context
+        response_new = response.split(user_input)[1].strip() #TASK 6: models output a repeat of the context before their new output; just ger the new output
 
-        chat_history.append({"role": "assistant", "content": "Llama: " + response}) #TASK 5: add the model's response to the chat history
+        chat_history.append({"role": "assistant", "content": "Llama: " + response_new}) #TASK 5: add the model's response to the chat history
 
-       
 
         # Return only the field we're updating
-        return {"llama_response": response, 
+        return {"llama_response": response_new, #TASK 6: only get the model's new output
                 "use_qwen": False, #TASK 4: if using Llama, set use_qwen to False to we don't call Qwen
                 "chat_history": chat_history,
                 } 
@@ -315,20 +314,21 @@ def create_graph(llms):
         chat_history = state["chat_history"] + [{"role": "user", "content": "Human: " + user_input}] #TASK 5: add the user input to the chat history
 
         for c in chat_history:
-            if c["role"] == "system":
-                print("GOT TO SYSTEM QWEN")
+            if c["role"] == "system": #TASK 6: make system prompts specific to the model (i.e, tell the model who else it is in conversation with)
                 c["content"] = "You are a helpful assistant in conversation with two other participants: a human (Human) and a language model (Llama)."
-            if c["content"].startswith("Llama: ") and c["role"] == "assistant":
+            if c["content"].startswith("Llama: ") and c["role"] == "assistant": #TASK 6: make the other model in the conversation listed as a user in all prior context
                 c["role"] = "user" #TASK 5: make Llama listed as a user for Qwen
-            if c["content"].startswith("Qwen: ") and c["role"] == "user":
+            if c["content"].startswith("Qwen: ") and c["role"] == "user": #TASK 6: make the current model the assistant in all prior context
                 c["role"] = "assistant"
         
         response = llm.invoke(chat_history) #TASK 5: run the model with the chat history as context
+        response_new = response.split(user_input)[1].strip() #TASK 6: models output a repeat of the context before their new output; just ger the new output
 
-        chat_history.append({"role": "assistant", "content": "Qwen: " + response}) #TASK 5: add the model's response to the chat history
+
+        chat_history.append({"role": "assistant", "content": "Qwen: " + response_new}) #TASK 5: add the model's response to the chat history
 
         # Return only the field we're updating
-        return {"qwen_response": response, 
+        return {"qwen_response": response_new, #TASK 6: only get the model's new output
                 "use_qwen" : True, #TASK 4: if using Qwen, set use_qwen to True so we don't use Llama
                 "chat_history": chat_history,
                 } 
