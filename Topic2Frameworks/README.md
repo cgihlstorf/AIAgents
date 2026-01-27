@@ -1,6 +1,6 @@
 # Table of Contents
 
-Below are the names of the folders in this directory as well as explanations of what I did for each task and where results can be found.
+Below are the names of the folders in this directory as well as explanations of what each file in each folder contains.
 
 ## Folder: Task1
 This folder contains the starter code modified so that when the input to the model is `verbose`, the system prints tracing information as the program runs. When the input is `quiet`, the model stops printing this tracing information 
