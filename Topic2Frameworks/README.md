@@ -7,7 +7,7 @@ This folder contains the starter code modified so that when the input to the mod
 
 - `langgraph_llama_task_1.py` contains the modified code. 
 - `lg_graph.png` contains a visualization of the graph. 
-- `task_1_stdout.txt` contains the terminal output of my interaction with the model demonstrating the use of `verbose` and `quiet` to enable and disable tracing information.
+- `task_1_stdout.txt` contains the command line output of my interaction with the model demonstrating the use of `verbose` and `quiet` to enable and disable tracing information.
 
 ## Task2 
 
