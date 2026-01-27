@@ -5,7 +5,7 @@ Below are the names of the folders in this directory as well as explanations of 
 ## Task1
 This folder contains the starter code modified so that when the input to the model is `verbose`, the system prints tracing information as the program runs. When the input is `quiet`, the model stops printing this tracing information.
 
-- `langgraph_llama_task_1.py` contains the modifies code. 
+- `langgraph_llama_task_1.py` contains the modified code. 
 - `lg_graph.png` contains a visualization of the graph. 
 - `task_1_stdout.txt` contains the terminal output of my interaction with the model demonstrating the use of `verbose` and `quiet` to enable and disable tracing information.
 
