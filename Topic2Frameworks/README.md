@@ -35,8 +35,8 @@ I gave `Llama-3.2 1B Instruct` an empty input twice and recorded its responses. 
 
 ## Task5
 
-- `langgraph_llama_task_5.py` contains code modified to include a chat history using the Message API. Comments with changes made for this task contain the label `Task 5`
-- `lg_graph.png` contains the image of the graph for this task
+- `langgraph_llama_task_5.py` contains code modified to include a chat history using the Message API. Comments with changes made for this task contain the label `Task 5`.
+- `lg_graph.png` contains the image of the graph for this task.
 - `task_5_stdout.txt` contains a conversation I had with the model, and includes traces of the chat history build up after each conversation turn.
 
 ## Task6
