@@ -13,7 +13,7 @@ This folder contains the starter code modified so that when the input to the mod
 
 ### Contents
 
-- task_2_stdout_empty_input_1.txt` and `task_2_stdout_empty_input_2.txt` show the model responses for each time I prompted it with an empty input.
+- `task_2_stdout_empty_input_1.txt` and `task_2_stdout_empty_input_2.txt` show the model responses for each time I prompted it with an empty input.
 - `langgraph_llama_task_2.py` shows the code modified for this task. Changes made from the previous code file are marked with comments containing the phrase `TASK 2:`. 
 - `lg_graph.png` shows the updated graph after I made the changes.
 
