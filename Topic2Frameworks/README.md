@@ -49,4 +49,5 @@ I gave `Llama-3.2 1B Instruct` an empty input twice and recorded its responses. 
 
 - `checkpoints.db` contains checkpint information in case the conversation crashes and the system needs to restart while maintaining conversation history.
 - `langgraph_llama_task_7.py` contains the code modified to include checkpointing so that the system will resume where it left off if it crashes. Comments denoting changes to the code in this file begin with `TASK 7:`.
+- `lg_graph.png` shows the graph for this task.
 - `task_7_stdout.txt` contains text from a conversation I had with the model after crashing the program a few times. The file shows one point where I cancel the program and restart, but even before this I canceled the program a couple of times, and the conversation history from those previous runs is displayed on lines 38 and 107.
