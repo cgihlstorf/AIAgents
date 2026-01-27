@@ -466,7 +466,7 @@ def create_graph(llms):
     
     # Compile the graph into an executable form
 
-    return graph_builder
+    return graph_builder #TASK 7: return the graph builder here so the graph can be build in main() when the checkpointer is open
 
 def save_graph_image(graph, filename="lg_graph.png"):
     """
@@ -515,6 +515,7 @@ def main():
     graph_builder = create_graph(llms)
     print("Graph created successfully!")
 
+    #TASK 7: initialize checkpointer
     with SqliteSaver.from_conn_string("checkpoints.db") as checkpointer:
 
         graph = graph_builder.compile(checkpointer=checkpointer)
@@ -552,10 +553,10 @@ def main():
             print("🔄 Found incomplete workflow. Resuming...")
             print(f"   Completed so far: {current_state.values.get('messages', [])}")
             print(f"   Resuming at: {current_state.next}")
-            result = graph.invoke(None, config=config)
+            graph.invoke(None, config=config)
         else:
             print("▶️  Starting new workflow...")
-            result = graph.invoke(initial_state, config=config)
+            graph.invoke(initial_state, config=config)
 
 # Entry point - only run main() if this script is executed directly
 if __name__ == "__main__":
