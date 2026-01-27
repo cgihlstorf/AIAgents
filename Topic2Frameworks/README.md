@@ -3,7 +3,7 @@
 Below are the names of the folders in this directory as well as explanations of what each file in each folder contains.
 
 ## Task1
-This folder contains the starter code modified so that when the input to the model is `verbose`, the system prints tracing information as the program runs. When the input is `quiet`, the model stops printing this tracing information 
+This folder contains the starter code modified so that when the input to the model is `verbose`, the system prints tracing information as the program runs. When the input is `quiet`, the model stops printing this tracing information.
 
 - `langgraph_llama_task_1.py` contains the modifies code. 
 - `lg_graph.png` contains a visualization of the graph. 
