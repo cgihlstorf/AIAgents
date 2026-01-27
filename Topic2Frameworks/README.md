@@ -43,7 +43,7 @@ I gave `Llama-3.2 1B Instruct` an empty input twice and recorded its responses. 
 
 - `langgraph_llama_task_6.py` contains code modified to call both `Llama` and `Qwen` in a conversation, specifiying different roles and system prompts in the chat history for each model depending on which model is currently the assistant. Changes made to the code are marked with comments starting with `TASK 6:`.
 - `lg_graph.png` shows the graph for this task.
-- `task_6_books_stdout.txt`, `task_6_ice_cream_stdout.txt`, and `task_6_study_breaks_stdout.txt` each contain conversations I had the models along with chat histories demonstrating the changes to roles and system prompts I modified for this task.
+- `task_6_books_stdout.txt`, `task_6_ice_cream_stdout.txt`, and `task_6_study_breaks_stdout.txt` each contain conversations I had the models along with chat histories demonstrating the changes to roles and system prompts imlemented for this task.
 
 ## Task7
 
