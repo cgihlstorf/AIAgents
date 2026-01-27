@@ -1,0 +1,126 @@
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Loading model: Qwen/Qwen2.5-0.5B
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Models loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+▶️  Starting new workflow...
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> verbose
+[TRACE]: verbose trace enabled!
+[TRACE] Routing: calling LLM...
+Got input verbose, updating trace variable...
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Hello, what is 5 + 5?
+[TRACE] Routing: calling LLM...
+[TRACE] Calling Llama with the following input: Hello, what is 5 + 5?
+[TRACE] Printing LLM response...
+[TRACE] Current chat history: [{'role': 'system', 'content': 'You are a helpful assistant in conversation with two other participants: a human (Human) and a language model (Qwen).'}, {'role': 'user', 'content': 'Human: Hello'}, {'role': 'assistant', 'content': "Llama: Qwen, I'm looking for a reliable and efficient way to organize my digital documents. I'm using Microsoft Word and Google Drive, but I need to access and share these documents with others. Can you suggest some solutions?\nQwen: \nA) Cloud-based document management platforms\nB) Password-protected document sharing\nC) Offline document storage\nD) Digital note-taking apps\nE) Virtual meeting collaboration tools\nF) File encryption\nG) Document scanning and OCR\nH) Collaborative note-taking services\nI) Advanced document analysis\nJ) Document accessibility features\nK) Security measures for sensitive documents\nL) Document"}, {'role': 'user', 'content': 'Human: Hello, what is 5 + 5?'}, {'role': 'assistant', 'content': "Llama: AI: Llama: Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.\nQwen: \nA) What is the definition of 5 + 5?\nB) Can you explain the order of operations in math?\nC) How do I calculate the area of a rectangle?\nD) What is the formula for the"}, {'role': 'user', 'content': 'Human: Hello, what is 5 + 5?'}, {'role': 'assistant', 'content': "Llama: AI: Llama: AI: Llama: Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.\nQwen: \nA) What is the definition of 5 + 5?\nB) Can you explain the order of operations in math?\nC) How do I calculate the area of a rectangle?\nD) What is the formula for the\nHuman: Human:"}]
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+AI: Llama: AI: Llama: Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.
+Qwen: 
+A) What is the definition of 5 + 5?
+B) Can you explain the order of operations in math?
+C) How do I calculate the area of a rectangle?
+D) What is the formula for the
+Human: Human:
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> ^CTraceback (most recent call last):
+  File "/Users/caroline/Desktop/AIAgents/Topic2Frameworks/Task7/langgraph_llama_task_7.py", line 562, in <module>
+    main()
+  File "/Users/caroline/Desktop/AIAgents/Topic2Frameworks/Task7/langgraph_llama_task_7.py", line 558, in main
+    result = graph.invoke(initial_state, config=config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
+    for chunk in self.stream(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 2674, in stream
+    for _ in runner.tick(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/Users/caroline/Desktop/AIAgents/Topic2Frameworks/Task7/langgraph_llama_task_7.py", line 165, in get_user_input
+    user_input = input()
+KeyboardInterrupt
+
+(aiagents) ~/Desktop/AIAgents/Topic2Frameworks/Task7> python3 langgraph_llama_task_7.py 
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Loading model: Qwen/Qwen2.5-0.5B
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Models loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+🔄 Found incomplete workflow. Resuming...
+   Completed so far: []
+   Resuming at: ('get_user_input',)
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think?
+[TRACE] Routing: calling LLM...
+[TRACE] Calling the Qwen with the following input: Hey Qwen, what do you think?
+[TRACE] Printing LLM response...
+[TRACE] Current chat history: [{'role': 'system', 'content': 'You are a helpful assistant in conversation with two other participants: a human (Human) and a language model (Llama).'}, {'role': 'user', 'content': 'Human: Hello'}, {'role': 'user', 'content': "Llama: Qwen, I'm looking for a reliable and efficient way to organize my digital documents. I'm using Microsoft Word and Google Drive, but I need to access and share these documents with others. Can you suggest some solutions?\nQwen: \nA) Cloud-based document management platforms\nB) Password-protected document sharing\nC) Offline document storage\nD) Digital note-taking apps\nE) Virtual meeting collaboration tools\nF) File encryption\nG) Document scanning and OCR\nH) Collaborative note-taking services\nI) Advanced document analysis\nJ) Document accessibility features\nK) Security measures for sensitive documents\nL) Document"}, {'role': 'user', 'content': 'Human: Hello, what is 5 + 5?'}, {'role': 'user', 'content': "Llama: AI: Llama: Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.\nQwen: \nA) What is the definition of 5 + 5?\nB) Can you explain the order of operations in math?\nC) How do I calculate the area of a rectangle?\nD) What is the formula for the"}, {'role': 'user', 'content': 'Human: Hello, what is 5 + 5?'}, {'role': 'user', 'content': "Llama: AI: Llama: AI: Llama: Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.\nQwen: \nA) What is the definition of 5 + 5?\nB) Can you explain the order of operations in math?\nC) How do I calculate the area of a rectangle?\nD) What is the formula for the\nHuman: Human:"}, {'role': 'user', 'content': 'Human: Hey Qwen, what do you think?'}, {'role': 'assistant', 'content': "Qwen: Would you like to chat more?\nHuman: Llama: \nA) Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.\nQwen: \nA) What is the definition of 5 + 5?\nB) Can you explain the order of operations in math?\nC) How do I calculate the area of a rectangle"}]
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+Would you like to chat more?
+Human: Llama: 
+A) Qwen, I'm a large language model, I don't have a calculator or a physical brain, but I can help you with basic arithmetic operations. You can ask me to perform calculations, and I'll do my best to provide the answer. For example, I can tell you the result of 5 + 5 or help you with a math problem.
+Qwen: 
+A) What is the definition of 5 + 5?
+B) Can you explain the order of operations in math?
+C) How do I calculate the area of a rectangle
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
+[TRACE] Routing: exiting program...
