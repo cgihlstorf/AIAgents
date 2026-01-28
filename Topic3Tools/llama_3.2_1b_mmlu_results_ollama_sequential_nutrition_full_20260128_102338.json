@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "quantization_bits": null,
+  "timestamp": "20260128_102338",
+  "device": "mps",
+  "duration_seconds": 2176.949684,
+  "overall_accuracy": 23.52941176470588,
+  "total_correct": 72,
+  "total_questions": 306,
+  "subject_results": [
+    {
+      "subject": "nutrition",
+      "correct": 72,
+      "total": 306,
+      "accuracy": 23.52941176470588
+    }
+  ]
+}
