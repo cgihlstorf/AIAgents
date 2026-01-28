@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "quantization_bits": null,
+  "timestamp": "20260128_115004",
+  "device": "mps",
+  "duration_seconds": 3055.480045,
+  "overall_accuracy": 29.581993569131832,
+  "total_correct": 92,
+  "total_questions": 311,
+  "subject_results": [
+    {
+      "subject": "philosophy",
+      "correct": 92,
+      "total": 311,
+      "accuracy": 29.581993569131832
+    }
+  ]
+}
