@@ -1,18 +1,18 @@
 {
   "model": "meta-llama/Llama-3.2-1B-Instruct",
   "quantization_bits": null,
-  "timestamp": "20260128_115004",
+  "timestamp": "20260128_212252",
   "device": "mps",
-  "duration_seconds": 3055.480045,
-  "overall_accuracy": 29.581993569131832,
-  "total_correct": 92,
+  "duration_seconds": 2884.003486,
+  "overall_accuracy": 29.903536977491964,
+  "total_correct": 93,
   "total_questions": 311,
   "subject_results": [
     {
       "subject": "philosophy",
-      "correct": 92,
+      "correct": 93,
       "total": 311,
-      "accuracy": 29.581993569131832
+      "accuracy": 29.903536977491964
     }
   ]
 }
