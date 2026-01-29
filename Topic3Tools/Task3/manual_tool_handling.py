@@ -168,20 +168,20 @@ def run_agent(user_query: str):
 
 if __name__ == "__main__":
     # Test query that requires tool use
-    # print("="*60)
-    # print("TEST 1: Query requiring tool")
-    # print("="*60)
-    # run_agent("What's the weather like in San Francisco?")
+    print("="*60)
+    print("TEST 1: Query requiring tool")
+    print("="*60)
+    run_agent("What's the weather like in San Francisco?")
     
-    # print("\n" + "="*60)
-    # print("TEST 2: Query not requiring tool")
-    # print("="*60)
-    # run_agent("Say hello!")
+    print("\n" + "="*60)
+    print("TEST 2: Query not requiring tool")
+    print("="*60)
+    run_agent("Say hello!")
     
-    # print("\n" + "="*60)
-    # print("TEST 3: Multiple tool calls")
-    # print("="*60)
-    # run_agent("What's the weather in New York and London?")
+    print("\n" + "="*60)
+    print("TEST 3: Multiple tool calls")
+    print("="*60)
+    run_agent("What's the weather in New York and London?")
 
     print("\n" + "="*60)
     print("TEST 4: Calculator")
@@ -192,3 +192,8 @@ if __name__ == "__main__":
     print("TEST 5: Calculator")
     print("="*60)
     run_agent("What is (5 ** 2) * 10 / 4?")
+
+    print("\n" + "="*60)
+    print("TEST 5: Weather and Calculator")
+    print("="*60)
+    run_agent("What is the temperature in New York divided by 11?")

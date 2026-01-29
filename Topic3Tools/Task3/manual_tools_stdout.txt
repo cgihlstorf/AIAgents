@@ -1,0 +1,104 @@
+============================================================
+TEST 1: Query requiring tool
+============================================================
+User: What's the weather like in San Francisco?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'San Francisco'}
+  Result: Sunny, 72Â°F
+
+--- Iteration 2 ---
+Assistant: 
+
+The current weather in San Francisco is sunny with a temperature of 72°F.
+
+
+============================================================
+TEST 2: Query not requiring tool
+============================================================
+User: Say hello!
+
+--- Iteration 1 ---
+Assistant: 
+
+Hello! How can I assist you today? 😊
+
+
+============================================================
+TEST 3: Multiple tool calls
+============================================================
+User: What's the weather in New York and London?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: get_weather
+  Args: {'location': 'New York'}
+  Result: Cloudy, 55Â°F
+  Tool: get_weather
+  Args: {'location': 'London'}
+  Result: Rainy, 48Â°F
+
+--- Iteration 2 ---
+Assistant: 
+
+The current weather in New York is **Cloudy, 55°F**.  
+In London, it's **Rainy, 48°F**.
+
+
+============================================================
+TEST 4: Calculator
+============================================================
+User: What is 8 + 2?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '8 + 2'}
+  Result: 10
+
+--- Iteration 2 ---
+Assistant: 
+
+The result of 8 + 2 is **10**.
+
+
+============================================================
+TEST 5: Calculator
+============================================================
+User: What is (5 ** 2) * 10 / 4?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '(5 ** 2) * 10 / 4'}
+  Result: 62.5
+
+--- Iteration 2 ---
+Assistant: 
+
+The result of $(5^2) \times 10 / 4$ is **62.5**.
+
+
+============================================================
+TEST 5: Weather and Calculator
+============================================================
+User: What is the temperature in New York divided by 11?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'New York'}
+  Result: Cloudy, 55Â°F
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '55 / 11'}
+  Result: 5.0
+
+--- Iteration 3 ---
+Assistant: 
+
+The temperature in New York divided by 11 is **5.0**.
