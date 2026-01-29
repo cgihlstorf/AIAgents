@@ -8,6 +8,7 @@ import json
 import ollama
 from ollama import Client
 from simpleeval import simple_eval
+import math
 
 client = Client()
 
@@ -29,8 +30,9 @@ def get_weather(location: str) -> str:
 
 def calculator(expr: str):
     """Evaluate the input mathematical expression."""
+    allowed_functions = {"sin": math.sin, "cos": math.cos}
     calc_data = {
-        expr : str(simple_eval(expr))
+        expr : str(simple_eval(expr, functions=allowed_functions))
     }
     return calc_data.get(expr, f"Expression could not be parsed: {expr}")
 
@@ -194,6 +196,11 @@ if __name__ == "__main__":
     run_agent("What is (5 ** 2) * 10 / 4?")
 
     print("\n" + "="*60)
-    print("TEST 5: Weather and Calculator")
+    print("TEST 6: Weather and Calculator")
     print("="*60)
     run_agent("What is the temperature in New York divided by 11?")
+
+    print("\n" + "="*60)
+    print("TEST 7: Calculator")
+    print("="*60)
+    run_agent("What is sin(5) + cos(0)?")

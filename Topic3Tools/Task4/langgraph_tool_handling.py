@@ -9,6 +9,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 import ast
 from simpleeval import simple_eval
+import math
 
 # ============================================
 # PART 1: Define Your Tools
@@ -29,8 +30,9 @@ def get_weather(location: str) -> str:
 @tool
 def calculator(expr: str):
     """Evaluate the input mathematical expression."""
+    allowed_functions = {"sin": math.sin, "cos": math.cos}
     calc_data = {
-        expr : str(simple_eval(expr))
+        expr : str(simple_eval(expr, functions=allowed_functions))
     }
     return calc_data.get(expr, f"Expression could not be parsed: {expr}")
 
@@ -50,6 +52,26 @@ def num_letters(phrase: str, letter:str):
     return num_occurrances
 
 
+@tool
+def consonant_vowel_ratio(phrase:str):
+
+    '''Return the ratio of consonants to vowels in a given phrase.'''
+
+    vowels = ["a", "e", "i", "o", "u"]
+    v = 0
+    c = 0
+
+    for letter in phrase.lower():
+        if letter in vowels:
+            v +=1
+        else:
+            if letter == " ": #ignore spaces
+                continue
+            c += 1
+
+    c_v_ratio = round((c / v), 2)
+
+    return c_v_ratio
 
 
 
@@ -62,7 +84,7 @@ llm = ChatOllama(model="qwen3-next:80b-cloud")
 
 # Bind tools to LLM
 # At the top with tool definitions
-tools = [get_weather, calculator, num_letters]
+tools = [get_weather, calculator, num_letters, consonant_vowel_ratio]
 tool_map = {tool.name: tool for tool in tools}
 llm_with_tools = llm.bind_tools(tools)
 
@@ -136,32 +158,42 @@ def run_agent(user_query: str):
 
 if __name__ == "__main__":
     #Test query that requires tool use
-    print("="*60)
-    print("TEST 1: Query requiring tool")
-    print("="*60)
-    run_agent("What's the weather like in San Francisco?")
+    # print("="*60)
+    # print("TEST 1: Query requiring tool")
+    # print("="*60)
+    # run_agent("What's the weather like in San Francisco?")
     
-    print("\n" + "="*60)
-    print("TEST 2: Query not requiring tool")
-    print("="*60)
-    run_agent("Say hello!")
+    # print("\n" + "="*60)
+    # print("TEST 2: Query not requiring tool")
+    # print("="*60)
+    # run_agent("Say hello!")
     
-    print("\n" + "="*60)
-    print("TEST 3: Multiple tool calls")
-    print("="*60)
-    run_agent("What's the weather in New York and London?")
+    # print("\n" + "="*60)
+    # print("TEST 3: Multiple tool calls")
+    # print("="*60)
+    # run_agent("What's the weather in New York and London?")
+
+    # print("\n" + "="*60)
+    # print("TEST 4: Calculator")
+    # print("="*60)
+    # run_agent("What is 8 + 2?")
+
+    # print("\n" + "="*60)
+    # print("TEST 5: Calculator")
+    # print("="*60)
+    # run_agent("What is (5 ** 2) * 10 / 4?")
+
+    # print("\n" + "="*60)
+    # print("TEST 6: Counting letters")
+    # print("="*60)
+    # run_agent("How many s are in Mississippi riverboats?")
 
     print("\n" + "="*60)
-    print("TEST 4: Calculator")
+    print("TEST 7: Calculator")
     print("="*60)
-    run_agent("What is 8 + 2?")
+    run_agent("What is sin(5) + cos(0)?")
 
     print("\n" + "="*60)
-    print("TEST 5: Calculator")
+    print("TEST 8: Consonant-vowel ratio")
     print("="*60)
-    run_agent("What is (5 ** 2) * 10 / 4?")
-
-    print("\n" + "="*60)
-    print("TEST 6: Counting letters")
-    print("="*60)
-    run_agent("How many s are in Mississippi riverboats?")
+    run_agent("What is the ratio of consonants to vowels in the phrase the quick brown fox jumped over the lazy dog?")

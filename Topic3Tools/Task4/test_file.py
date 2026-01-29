@@ -1,6 +1,5 @@
-import ast
+from langgraph_tool_handling import consonant_vowel_ratio
 
+phrase = "the quick brown fox jumped over the lazy dog"
 
-expr = "cos(0) + 8 + 2"
-result = eval(expr)
-print("Result:", result)
+print(consonant_vowel_ratio(phrase))

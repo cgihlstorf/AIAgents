@@ -43,8 +43,7 @@ LLM wants to call 2 tool(s)
 --- Iteration 2 ---
 Assistant: 
 
-The current weather in New York is **Cloudy, 55°F**.  
-In London, it's **Rainy, 48°F**.
+The current weather in New York is Cloudy with a temperature of 55°F. In London, it's Rainy with a temperature of 48°F.
 
 
 ============================================================
@@ -61,7 +60,7 @@ LLM wants to call 1 tool(s)
 --- Iteration 2 ---
 Assistant: 
 
-The result of 8 + 2 is **10**.
+The result of $8 + 2$ is **10**.
 
 
 ============================================================
@@ -82,7 +81,7 @@ The result of $(5^2) \times 10 / 4$ is **62.5**.
 
 
 ============================================================
-TEST 5: Weather and Calculator
+TEST 6: Weather and Calculator
 ============================================================
 User: What is the temperature in New York divided by 11?
 
@@ -101,4 +100,25 @@ LLM wants to call 1 tool(s)
 --- Iteration 3 ---
 Assistant: 
 
-The temperature in New York divided by 11 is **5.0**.
+The temperature in New York is 55°F. Divided by 11, the result is **5.0**.
+
+
+============================================================
+TEST 7: Calculator
+============================================================
+User: What is sin(5) + cos(0)?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': 'sin(5) + cos(0)'}
+  Result: 0.041075725336861546
+
+--- Iteration 2 ---
+Assistant: 
+
+The result of $\sin(5) + \cos(0)$ is approximately **0.0411**. 
+
+- $\cos(0) = 1$ (since cosine of 0 radians is always 1).
+- $\sin(5)$ (where 5 is in radians) evaluates to approximately $-0.9589$.
+- Adding them together: $-0.9589 + 1 = 0.0411$.
