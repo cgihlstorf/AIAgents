@@ -1,0 +1,36 @@
+============================================================
+TEST 4: Calculator
+============================================================
+User: What is 8 + 2?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '8 + 2'}
+  Result: Error: Unknown function calculator
+
+--- Iteration 2 ---
+Assistant: 
+
+<tools>
+{"name": "calculator", "arguments": {"expr": "8 + 2"}}
+</tools>
+
+
+============================================================
+TEST 5: Calculator
+============================================================
+User: What is cos(0) + sin(0)?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': 'cos(0) + sin(0)'}
+  Result: Error: Unknown function calculator
+
+--- Iteration 2 ---
+Assistant: 
+
+The value of $\cos(0) + \sin(0)$ is $1 + 0 = 1$. 
+
+**Answer:** 1
