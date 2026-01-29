@@ -1,1 +1,1 @@
-       95.97 real        29.75 user         9.64 sys
+       63.22 real        20.89 user         6.60 sys

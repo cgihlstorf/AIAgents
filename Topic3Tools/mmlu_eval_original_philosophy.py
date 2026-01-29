@@ -430,7 +430,7 @@ def main():
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
-    output_file = f"llama_3.2_1b_mmlu_results_original_parallel_philosophy{quant_suffix}_{timestamp}.json"
+    output_file = f"llama_3.2_1b_mmlu_results_original_sequential_philosophy{quant_suffix}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,
