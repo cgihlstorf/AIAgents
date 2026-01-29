@@ -1,0 +1,96 @@
+============================================================
+TEST 1: Query requiring tool
+============================================================
+User: What's the weather like in San Francisco?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'San Francisco'}
+
+--- Iteration 2 ---
+Assistant: 
+
+The current weather in San Francisco is sunny with a temperature of 72°F.
+
+
+============================================================
+TEST 2: Query not requiring tool
+============================================================
+User: Say hello!
+
+--- Iteration 1 ---
+Assistant: 
+
+Hello! How can I assist you today? 😊
+
+
+============================================================
+TEST 3: Multiple tool calls
+============================================================
+User: What's the weather in New York and London?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: get_weather
+  Args: {'location': 'New York'}
+  Tool: get_weather
+  Args: {'location': 'London'}
+
+--- Iteration 2 ---
+Assistant: 
+
+The current weather in New York is **Cloudy, 55°F** and in London it is **Rainy, 48°F**.
+
+
+============================================================
+TEST 4: Calculator
+============================================================
+User: What is 8 + 2?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '8 + 2'}
+
+--- Iteration 2 ---
+Assistant: 
+
+The result of 8 + 2 is **10**.
+
+
+============================================================
+TEST 5: Calculator
+============================================================
+User: What is (5 ** 2) * 10 / 4?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expr': '(5 ** 2) * 10 / 4'}
+
+--- Iteration 2 ---
+Assistant: 
+
+The result of the expression $(5^2) \times 10 / 4$ is **62.5**.
+
+
+============================================================
+TEST 6: Counting letters
+============================================================
+User: How many s are in Mississippi riverboats?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: num_letters
+  Args: {'letter': 's', 'phrase': 'Mississippi riverboats'}
+
+--- Iteration 2 ---
+Assistant: 
+
+The phrase "Mississippi riverboats" contains **5** instances of the letter "s". 
+
+- In "Mississippi": 4 's's (positions 3, 4, 6, 7)
+- In "riverboats": 1 's' (the last letter)
+
+Total: **5**.

@@ -7,30 +7,26 @@ User: What is 8 + 2?
 LLM wants to call 1 tool(s)
   Tool: calculator
   Args: {'expr': '8 + 2'}
-  Result: Error: Unknown function calculator
+  Result: 10
 
 --- Iteration 2 ---
 Assistant: 
 
-<tools>
-{"name": "calculator", "arguments": {"expr": "8 + 2"}}
-</tools>
+The result of $8 + 2$ is **10**.
 
 
 ============================================================
 TEST 5: Calculator
 ============================================================
-User: What is cos(0) + sin(0)?
+User: What is (5 ** 2) * 10 / 4?
 
 --- Iteration 1 ---
 LLM wants to call 1 tool(s)
   Tool: calculator
-  Args: {'expr': 'cos(0) + sin(0)'}
-  Result: Error: Unknown function calculator
+  Args: {'expr': '(5 ** 2) * 10 / 4'}
+  Result: 62.5
 
 --- Iteration 2 ---
 Assistant: 
 
-The value of $\cos(0) + \sin(0)$ is $1 + 0 = 1$. 
-
-**Answer:** 1
+The result of $(5^2) \times 10 / 4$ is **62.5**.

@@ -7,7 +7,7 @@ import json
 #from openai import OpenAI
 import ollama
 from ollama import Client
-import ast
+from simpleeval import simple_eval
 
 client = Client()
 
@@ -30,7 +30,7 @@ def get_weather(location: str) -> str:
 def calculator(expr: str):
     """Evaluate the input mathematical expression."""
     calc_data = {
-        expr : ast.literal_eval(expr)
+        expr : str(simple_eval(expr))
     }
     return calc_data.get(expr, f"Expression could not be parsed: {expr}")
 
@@ -134,6 +134,10 @@ def run_agent(user_query: str):
                 # In a real system, you'd use a dictionary lookup
                 if function_name == "get_weather":
                     result = get_weather(**function_args)
+
+                elif function_name == "calculator":
+                    result = calculator(**function_args)
+
                 else:
                     result = f"Error: Unknown function {function_name}"
                 
@@ -187,4 +191,4 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("TEST 5: Calculator")
     print("="*60)
-    run_agent("What is cos(0) + sin(0)?")
+    run_agent("What is (5 ** 2) * 10 / 4?")
