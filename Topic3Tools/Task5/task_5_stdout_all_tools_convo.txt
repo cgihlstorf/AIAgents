@@ -1,0 +1,84 @@
+==================================================
+Starting conversation...
+==================================================
+
+Loading model...
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+🔄 Found incomplete workflow. Resuming...
+   Completed so far: []
+   Resuming at: ('get_user_input',)
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
+Assistant: 
+
+The calculation is as follows:
+
+1. **Weather in San Francisco**: The temperature is 72°F. Assuming "sine of the weather" refers to the sine of 72 degrees (a common angle interpretation),  
+   $ \sin(72^\circ) \approx 0.9511 $.
+
+2. **Number of 'l's in "lullaby"**: From the tool response, there are **3** instances of the letter 'l'.
+
+3. **Consonant-vowel ratio in "computer science"**: The tool returned **1.5**.
+
+Now compute:  
+$$
+(\sin(72^\circ) \times 3) + 1.5 = (0.9511 \times 3) + 1.5 \approx 2.853 + 1.5 = 4.353
+$$
+
+**Final Answer**: $ \boxed{4.35} $
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
+Traceback (most recent call last):
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 397, in <module>
+    main()
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 389, in main
+    graph.invoke(None, config=config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
+    for chunk in self.stream(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 2687, in stream
+    loop._put_checkpoint_fut.result()
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_loop.py", line 1102, in __exit__
+    return self.stack.__exit__(exc_type, exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 532, in __exit__
+    raise exc_details[1]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 517, in __exit__
+    if cb(*exc_details):
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_executor.py", line 118, in __exit__
+    task.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_executor.py", line 81, in done
+    task.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/sqlite/__init__.py", line 465, in put_writes
+    [
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/sqlite/__init__.py", line 473, in <listcomp>
+    *self.serde.dumps_typed(value),
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 222, in dumps_typed
+    raise exc
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 216, in dumps_typed
+    return "msgpack", _msgpack_enc(obj)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 676, in _msgpack_enc
+    return ormsgpack.packb(data, default=_msgpack_default, option=_option)
+TypeError: Type is not msgpack serializable: StructuredTool

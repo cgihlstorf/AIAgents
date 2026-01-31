@@ -1,0 +1,164 @@
+==================================================
+Starting conversation...
+==================================================
+
+Loading model...
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+🔄 Found incomplete workflow. Resuming...
+   Completed so far: []
+   Resuming at: ('get_user_input',)
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Hello
+Assistant: 
+
+Hello! How can I assist you today? 😊
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is the weather in New York and London?
+Assistant: 
+
+The current weather in New York is cloudy with a temperature of 55°F. In London, it's rainy with a temperature of 48°F. 🌤️☔
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is 8 + 2 + sin(0)?
+Assistant: 
+
+The result of $8 + 2 + \sin(0)$ is **10.0**, since $\sin(0) = 0$. 😊
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> ^CTraceback (most recent call last):
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 397, in <module>
+    main()
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 389, in main
+    graph.invoke(None, config=config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
+    for chunk in self.stream(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 2674, in stream
+    for _ in runner.tick(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 95, in get_user_input
+    user_input = input()
+KeyboardInterrupt
+
+(aiagents) ~/Desktop/AIAgents/Topic3Tools/Task5> python3 langgraph_tools_with_nodes.py 
+==================================================
+Starting conversation...
+==================================================
+
+Loading model...
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+🔄 Found incomplete workflow. Resuming...
+   Completed so far: []
+   Resuming at: ('get_user_input',)
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is the weather in New York divided by 11?
+Assistant: 
+
+The temperature in New York is 55°F. Dividing that by 11 gives **5.0**.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> How many s are in Mississippi riverboats?
+Assistant: 
+
+The phrase "Mississippi riverboats" contains **5** instances of the letter "s".
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Are there more i's than s's in Mississippi riverboats?
+Assistant: 
+
+The phrase "Mississippi riverboats" contains **5 i's** and **5 s's**, so there are **not more i's than s's** — they are equal.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is the ratio of consonants to vowels in the phrase the quick brown fox jumped over the lazy dog?
+Assistant: 
+
+The phrase "the quick brown fox jumped over the lazy dog" contains **24 consonants** and **12 vowels**, resulting in a consonant-to-vowel ratio of **2.0** (or 2:1).
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
+Traceback (most recent call last):
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 397, in <module>
+    main()
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 389, in main
+    graph.invoke(None, config=config)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
+    for chunk in self.stream(
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 2687, in stream
+    loop._put_checkpoint_fut.result()
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_loop.py", line 1102, in __exit__
+    return self.stack.__exit__(exc_type, exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 532, in __exit__
+    raise exc_details[1]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 517, in __exit__
+    if cb(*exc_details):
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_executor.py", line 118, in __exit__
+    task.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/_executor.py", line 81, in done
+    task.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/sqlite/__init__.py", line 465, in put_writes
+    [
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/sqlite/__init__.py", line 473, in <listcomp>
+    *self.serde.dumps_typed(value),
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 222, in dumps_typed
+    raise exc
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 216, in dumps_typed
+    return "msgpack", _msgpack_enc(obj)
+  File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/checkpoint/serde/jsonplus.py", line 676, in _msgpack_enc
+    return ormsgpack.packb(data, default=_msgpack_default, option=_option)
+TypeError: Type is not msgpack serializable: StructuredTool

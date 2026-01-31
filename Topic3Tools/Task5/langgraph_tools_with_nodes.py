@@ -4,7 +4,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from langchain_huggingface import HuggingFacePipeline
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.sqlite import SqliteSaver #TASK 7: use for checkpointing
-from typing_extensions import TypedDict
+from typing import TypedDict
 from langchain.tools import tool
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
@@ -236,6 +236,11 @@ def create_graph(llm):
     
     
     def route_after_llm(state: AgentState):
+
+        if state.get("should_exit", False):
+            if state.get("print_trace", False): #if tracing is enabled, print tracing information here
+                print(f'[TRACE] Routing: exiting program...')
+            return END
 
         last_message = state["llm_response"]
 
