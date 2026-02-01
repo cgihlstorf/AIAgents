@@ -12,6 +12,13 @@ The real times taken by each process are as follows:
 Running Ollama took far more time than running the original models from HuggingFace. For both the HuggingFace and Ollama models, running the two programs sequentially took less time than running the two programs in parallel.
 
 
+## Task 2
+
+- `manual_tool_handling.py` contains code to run the LLM with manually defined tools.
+- `manual_tools_stdout.txt` contains model outputs from test prompts that require the model to use the defined tools.
+
+
+
 ## Task 4
 
 I created the following query that used all my tools: `What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?`
@@ -27,4 +34,4 @@ This query should call the weather tool to get the weather in San Francisco and 
 ## Task 6
 ### Question: where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?  
 
-Right now, the code I have to call tools requires tools to be called sequentially, each after the LLM is called (this is displayed in the Mermaid diagram between the `call_llm` and `call_tools` nodes). There is, however, an opportunity to parallelize tool calls. Once the model knows which tools it has to call for a certain input, it could call multiple tools in parallel instead of calling them sequentially. This would speed up the computation by allowing different tools to run at the same time.
+Right now, the code I have to call tools requires tools to be called sequentially, each time after the LLM is called (this is displayed in the Mermaid diagram between the `call_llm` and `call_tools` nodes (`Task5/lg_graph.png`)). There is, however, an opportunity to parallelize tool calls. Once the model knows which tools it has to call for a certain input, it could call multiple tools in parallel instead of calling them sequentially. This would speed up the computation by allowing different tools to run at the same time.
