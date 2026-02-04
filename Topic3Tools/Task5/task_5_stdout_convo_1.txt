@@ -27,27 +27,33 @@ Enter your text (or 'quit' to exit):
 ==================================================
 
 > What is the weather in New York and London?
+[TRACE] calling tool: get_weather() with input: New York, got result: Cloudy, 55Â°F
+[TRACE] calling tool: get_weather() with input: London, got result: Rainy, 48Â°F
 Assistant: 
 
-The current weather in New York is cloudy with a temperature of 55°F. In London, it's rainy with a temperature of 48°F. 🌤️☔
+The current weather in New York is **Cloudy** with a temperature of **55°F**, and in London it's **Rainy** with a temperature of **48°F**.
 
 ==================================================
 Enter your text (or 'quit' to exit):
 ==================================================
 
 > What is 8 + 2 + sin(0)?
+[TRACE] calling tool: calculator() with input: 8 + 2 + sin(0), got result: 10.0
 Assistant: 
 
-The result of $8 + 2 + \sin(0)$ is **10.0**, since $\sin(0) = 0$. 😊
+The expression $8 + 2 + \sin(0)$ evaluates to **10.0** because:
+- $8 + 2 = 10$
+- $\sin(0) = 0$
+- $10 + 0 = 10.0$
 
 ==================================================
 Enter your text (or 'quit' to exit):
 ==================================================
 
 > ^CTraceback (most recent call last):
-  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 397, in <module>
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 413, in <module>
     main()
-  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 389, in main
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 405, in main
     graph.invoke(None, config=config)
   File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
     for chunk in self.stream(
@@ -65,7 +71,7 @@ Enter your text (or 'quit' to exit):
     user_input = input()
 KeyboardInterrupt
 
-(aiagents) ~/Desktop/AIAgents/Topic3Tools/Task5> python3 langgraph_tools_with_nodes.py 
+~/Desktop/AIAgents/Topic3Tools/Task5> python3 langgraph_tools_with_nodes.py 
 ==================================================
 Starting conversation...
 ==================================================
@@ -86,15 +92,18 @@ Enter your text (or 'quit' to exit):
 ==================================================
 
 > What is the weather in New York divided by 11?
+[TRACE] calling tool: get_weather() with input: New York, got result: Cloudy, 55Â°F
+[TRACE] calling tool: calculator() with input: 55 / 11, got result: 5.0
 Assistant: 
 
-The temperature in New York is 55°F. Dividing that by 11 gives **5.0**.
+The temperature in New York is 55°F. Dividing 55 by 11 gives **5.0**.
 
 ==================================================
 Enter your text (or 'quit' to exit):
 ==================================================
 
 > How many s are in Mississippi riverboats?
+[TRACE] calling tool: num_letters() with inputs: Mississippi riverboats, s, got result: 5
 Assistant: 
 
 The phrase "Mississippi riverboats" contains **5** instances of the letter "s".
@@ -104,28 +113,34 @@ Enter your text (or 'quit' to exit):
 ==================================================
 
 > Are there more i's than s's in Mississippi riverboats?
+[TRACE] calling tool: num_letters() with inputs: Mississippi riverboats, i, got result: 5
 Assistant: 
 
-The phrase "Mississippi riverboats" contains **5 i's** and **5 s's**, so there are **not more i's than s's** — they are equal.
+No, there are not more i's than s's in "Mississippi riverboats". Both letters appear exactly **5 times** each.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> How many r are in that same phrase?
+[TRACE] calling tool: num_letters() with inputs: Mississippi riverboats, r, got result: 2
+Assistant: 
+
+The phrase "Mississippi riverboats" contains **2** instances of the letter "r".
 
 ==================================================
 Enter your text (or 'quit' to exit):
 ==================================================
 
 > What is the ratio of consonants to vowels in the phrase the quick brown fox jumped over the lazy dog?
+[TRACE] calling tool: consonant_vowel_ratio() with input: the quick brown fox jumped over the lazy dog, got result: 2.0
 Assistant: 
 
-The phrase "the quick brown fox jumped over the lazy dog" contains **24 consonants** and **12 vowels**, resulting in a consonant-to-vowel ratio of **2.0** (or 2:1).
-
-==================================================
-Enter your text (or 'quit' to exit):
-==================================================
-
-> What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
+The phrase "the quick brown fox jumped over the lazy dog" contains **24 consonants** and **12 vowels**, resulting in a consonant-to-vowel ratio of **2.0**.
 Traceback (most recent call last):
-  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 397, in <module>
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 413, in <module>
     main()
-  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 389, in main
+  File "/Users/caroline/Desktop/AIAgents/Topic3Tools/Task5/langgraph_tools_with_nodes.py", line 405, in main
     graph.invoke(None, config=config)
   File "/Users/caroline/Library/Python/3.9/lib/python/site-packages/langgraph/pregel/main.py", line 3085, in invoke
     for chunk in self.stream(
