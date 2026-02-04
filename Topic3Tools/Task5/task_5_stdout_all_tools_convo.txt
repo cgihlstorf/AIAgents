@@ -17,7 +17,7 @@ Graph image saved to lg_graph.png
 Enter your text (or 'quit' to exit):
 ==================================================
 
-> What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
+> What is the sin of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
 Assistant: 
 
 The calculation is as follows:

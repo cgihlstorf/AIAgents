@@ -146,16 +146,28 @@ def create_graph(llm):
             "London": "Rainy, 48Â°F",
             "Tokyo": "Clear, 65Â°F"
         }
-        return weather_data.get(location, f"Weather data not available for {location}")
+
+        result = weather_data.get(location, f"Weather data not available for {location}")
+
+        print(f'[TRACE] calling tool: get_weather() with input: {location}, got result: {result}')
+
+        return result
 
     @tool
     def calculator(expr: str):
+
         """Evaluate the input mathematical expression."""
+
         allowed_functions = {"sin": math.sin, "cos": math.cos}
         calc_data = {
             expr : str(simple_eval(expr, functions=allowed_functions))
         }
-        return calc_data.get(expr, f"Expression could not be parsed: {expr}")
+
+        result = calc_data.get(expr, f"Expression could not be parsed: {expr}")
+
+        print(f'[TRACE] calling tool: calculator() with input: {expr}, got result: {result}')
+
+        return result
 
 
     @tool
@@ -169,6 +181,8 @@ def create_graph(llm):
         for c in phrase.lower(): #count characters
             if c == letter:
                 num_occurrances += 1
+
+        print(f'[TRACE] calling tool: num_letters() with inputs: {phrase}, {letter}, got result: {num_occurrances}')
 
         return num_occurrances
 
@@ -191,6 +205,8 @@ def create_graph(llm):
                 c += 1
 
         c_v_ratio = round((c / v), 2)
+
+        print(f'[TRACE] calling tool: consonant_vowel_ratio() with input: {phrase}, got result: {c_v_ratio}')
 
         return c_v_ratio
     
