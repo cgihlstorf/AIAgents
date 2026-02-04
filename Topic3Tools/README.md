@@ -1,6 +1,6 @@
 # Topic3Tools
 
-NOTE: for tasks 2, 4, and 5, I used ChatOllama instead of OpenAI, as it was a free service that allowed for running larger models on the cloud. I used `qwen3-next:80b-cloud` for this assignment. The functions used to call tools for ChatOllama were almost entirely tha same as those used to call OpenAI.
+NOTE: for tasks 2, 4, and 5, I used ChatOllama instead of OpenAI, as it was a free service that allowed for running larger models on the cloud. I used `qwen3-next:80b-cloud` for this assignment. The functions used to call tools for ChatOllama were almost entirely the same as those used to call OpenAI.
 
 ## Task 1
 
