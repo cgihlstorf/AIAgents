@@ -101,7 +101,7 @@ def run_agent(user_query: str):
     
     # Start conversation with user query
     messages = [
-        SystemMessage(content="You are a helpful assistant. Use the provided tools when needed."),
+        SystemMessage(content="You are a helpful assistant that uses tools. If there is a tool available to perform a calculation, use that tool. Do not attempt to do the calculation on your own."),
         HumanMessage(content=user_query)
     ]
     
@@ -198,20 +198,20 @@ if __name__ == "__main__":
     # print("="*60)
     # run_agent("What is the ratio of consonants to vowels in the phrase the quick brown fox jumped over the lazy dog?")
 
-    # print("\n" + "="*60)
-    # print("TEST 9: Num letters advanced")
-    # print("="*60)
-    # run_agent("Are there more i's than s's in Mississippi riverboats?")
-
-    # print("\n" + "="*60)
-    # print("TEST 10: Num letters (more) advanced")
-    # print("="*60)
-    # run_agent("What is the sin of the difference between the number of i's and the number of s's in Mississippi riverboats?")
+    print("\n" + "="*60)
+    print("TEST 9: Num letters advanced")
+    print("="*60)
+    run_agent("Are there more i's than s's in Mississippi riverboats?")
 
     print("\n" + "="*60)
-    print("TEST 11: Tools combined")
+    print("TEST 10: Num letters (more) advanced")
     print("="*60)
-    run_agent("What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?")
+    run_agent("What is the sin of the difference between the number of i's and the number of s's in Mississippi riverboats?")
+
+    # print("\n" + "="*60)
+    # print("TEST 11: Tools combined")
+    # print("="*60)
+    # run_agent("What is the sine of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?")
     
     
     #Tools:
