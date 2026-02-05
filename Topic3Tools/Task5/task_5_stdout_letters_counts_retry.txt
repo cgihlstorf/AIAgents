@@ -17,22 +17,12 @@ Graph image saved to lg_graph.png
 Enter your text (or 'quit' to exit):
 ==================================================
 
-> What is the sin of the weather in San Francisco times the number of l in lullaby plus the ratio of consonants to vowels in computer science?
-[TRACE] calling tool: get_weather() with input: San Francisco, got result: Sunny, 72Â°F
-[TRACE] calling tool: num_letters() with inputs: lullaby, l, got result: 3
-[TRACE] calling tool: consonant_vowel_ratio() with input: computer science, got result: 1.5
-[TRACE] calling tool: calculator() with input: sin(72)*3 + 1.5, got result: 2.2614700882861087
+> Are there more i's than s's in Mississippi riverboats?
+[TRACE] calling tool: num_letters() with inputs: Mississippi riverboats, i, got result: 5
+[TRACE] calling tool: num_letters() with inputs: Mississippi riverboats, s, got result: 5
 Assistant: 
 
-The result of the calculation is approximately **2.26**. 
-
-This is derived from:
-- The temperature in San Francisco (72°F) treated as a numerical value for the sine function (sin(72 radians) ≈ 0.254),
-- Multiplied by the number of "l"s in "lullaby" (3),
-- Plus the consonant-vowel ratio in "computer science" (1.5).
-
-Mathematically:  
-$$ \sin(72) \times 3 + 1.5 \approx 0.254 \times 3 + 1.5 = 2.26 $$
+There are 5 i's and 5 s's in "Mississippi riverboats", so there are not more i's than s's. The counts are equal.
 
 ==================================================
 Enter your text (or 'quit' to exit):

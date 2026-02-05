@@ -124,7 +124,7 @@ def create_graph(llm):
             }
         
 
-        system_prompt = [{"role": "system", "content": "You are a helpful assistant."}] #TASK 5: initialize a system prompt to begin the chat history
+        system_prompt = [{"role": "system", "content": "You are a helpful assistant that uses tools. If there is a tool available to perform a calculation, use that tool. Do not attempt to do the calculation on your own."}] #TASK 5: initialize a system prompt to begin the chat history
         chat_history = state.get("chat_history", system_prompt) #TASK 5: get the current state or initialize it with a system prompt
         
         return { #Otherwise, accept the user input and move forward
