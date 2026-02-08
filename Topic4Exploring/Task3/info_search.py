@@ -47,6 +47,17 @@ class ConversationState(TypedDict):
 @tool
 def get_wikipedia_answer(input_text:str):
 
+    '''
+    Researches the input topic using Wikipedia.
+
+    Args:
+        input_text: the input query to look up
+
+    Returns: 
+        Wikipedia's entry for the input query
+    
+    '''
+
     wikipedia_retriever = WikipediaRetriever()
     wikipedia_result = wikipedia_retriever.invoke(input_text)
 
@@ -54,6 +65,17 @@ def get_wikipedia_answer(input_text:str):
 
 @tool
 def get_ddg_answer(input_text:str):
+
+    '''
+    Researches the input topic using DuckDuckGo.
+
+    Args:
+        input_text: the input query to look up
+
+    Returns: 
+        DuckDuckGo's search result for the input query
+    
+    '''
 
     ddg_search = DuckDuckGoSearchRun()
     ddg_result = ddg_search.invoke(input_text)
@@ -339,8 +361,9 @@ def create_conversation_graph():
     # System message to encourage tool usage
     system_message = (
         "You are a helpful assistant. "
-        "If a tool is able to solve a problem you are working on then "
-        "always use it, even if you are able to solve it without using a tool."
+        "You will be given a search query. Please research the topic of the query using both Wikipedia AND" \
+        "DuckDuckGo (DDG). Generate a combined summary of the information from each source followed by a brief report "
+        "that compares and contrasts the information from both sources."
     )
     
     # Create the ReAct agent using the built-in function
@@ -496,18 +519,6 @@ if __name__ == "__main__":
     # asyncio.run() executes main() exactly ONCE
     # The looping happens INSIDE the graph via edges
     asyncio.run(main())
-
-
-
-if __name__ == "__main__":
-
-    input_text = "rainbows"
-
-    wikipedia_result = get_wikipedia_answer(input_text)[0].metadata["summary"] #TODO change to full content if needed
-    ddg_result = get_ddg_answer(input_text)
-
-    #print("Wikipedia:", wikipedia_result)
-    #print("DDG:", ddg_result)
 
  
     

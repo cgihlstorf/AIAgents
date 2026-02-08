@@ -1,0 +1,102 @@
+================================================================================
+LangGraph ReAct Agent - Persistent Multi-Turn Conversation
+================================================================================
+
+This system uses create_react_agent with graph-based looping:
+  - Single persistent conversation across all turns
+  - History managed automatically (trimmed after 100 messages)
+  - Loops via graph edges (no Python loops or checkpointing)
+
+Commands:
+  - Type 'quit' or 'exit' to end the conversation
+  - Type 'verbose' to enable detailed tracing
+  - Type 'quiet' to disable detailed tracing
+
+Available tools:
+  - get_weather(location): Get weather information
+  - get_population(city): Get population data
+  - calculate(expression): Evaluate math expressions
+================================================================================
+[SYSTEM] ReAct agent created successfully
+[SYSTEM] ReAct agent graph saved to 'langchain_react_agent.png'
+[SYSTEM] Conversation graph saved to 'langchain_conversation_graph.png'
+
+[SYSTEM] Starting conversation...
+
+
+================================================================================
+NODE: input_node
+================================================================================
+
+You: What are rainbows?
+[DEBUG] User input: What are rainbows?
+[DEBUG] Routing to call_react_agent
+
+================================================================================
+NODE: call_react_agent
+================================================================================
+[DEBUG] Invoking ReAct agent with 1 messages in history
+/Users/caroline/Library/Python/3.9/lib/python/site-packages/wikipedia/wikipedia.py:389: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 389 of the file /Users/caroline/Library/Python/3.9/lib/python/site-packages/wikipedia/wikipedia.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  lis = BeautifulSoup(html).find_all('li')
+[DEBUG] Agent generated 4 new messages
+[DEBUG] Tool calls: ['get_wikipedia_answer', 'get_ddg_answer']
+[DEBUG] Response preview: 
+
+### Combined Summary of Rainbows from Wikipedia and DuckDuckGo
+
+**Definition and Formation**:  
+A ...
+
+================================================================================
+NODE: output_node
+================================================================================
+
+Assistant: 
+
+### Combined Summary of Rainbows from Wikipedia and DuckDuckGo
+
+**Definition and Formation**:  
+A rainbow is an optical phenomenon caused by the refraction, internal reflection, and dispersion of light in water droplets (e.g., rain, mist, or spray). It appears as a multicolored circular arc in the sky, always positioned directly opposite the sun. The primary rainbow shows red on the outer edge and violet on the inner edge due to light refracting once inside droplets, while a secondary rainbow (fainter and larger) forms when light reflects twice, reversing the color order (red on the inner side).
+
+**Key Details**:  
+- **Colors**: The sequence is traditionally described as red, orange, yellow, green, blue, indigo, and violet (ROYGBIV), though modern interpretations sometimes simplify to six colors.  
+- **Visibility**: Rainbows are most visible when half the sky is dark (e.g., after rain) with clear skies toward the sun. They appear in the western sky during morning and eastern sky during evening.  
+- **Higher-Order Rainbows**: Third-, fourth-, and fifth-order rainbows exist but are extremely rare. The third-order was first photographed in 2011, the fourth in 2011, and the fifth in 2014.  
+- **Moonbows**: Nighttime rainbows caused by moonlight, often appearing white due to low light affecting human color perception.  
+- **Polarization**: Primary rainbows are 96% polarized tangentially to the arc; secondary rainbows are 90% polarized.  
+- **No Physical Location**: Rainbows are not fixed in space—they depend entirely on the observer’s position relative to the sun and water droplets. Only one rainbow is visible per observer’s viewpoint.  
+- **Sky Brightness**: The sky inside a primary rainbow appears brighter than the area outside due to light scattering across a circular disc.  
+
+---
+
+### Comparison of Sources  
+**Agreements**:  
+- Both sources confirm the core physics of rainbows (refraction, reflection, dispersion in water droplets).  
+- Consistent descriptions of primary/secondary rainbows, color order (ROYGBIV), and the requirement for sunlight opposite the observer.  
+- Both note that rainbows have no physical location and depend on the observer’s perspective.  
+
+**Differences**:  
+- **Wikipedia** provides deeper technical details:  
+  - Explains polarization percentages (96% for primary, 90% for secondary).  
+  - Describes why the sky inside the rainbow is brighter (light scattering across a disc).  
+  - Mentions moonbows but does not detail higher-order rainbows beyond secondary.  
+- **DuckDuckGo** highlights newer observational data:  
+  - Specifies the years when third-, fourth-, and fifth-order rainbows were first photographed (2011, 2011, 2014).  
+  - Emphasizes the "no physical location" concept with simpler phrasing, likely sourced from popular science platforms like National Geographic.  
+  - Includes general "fun facts" (e.g., rainbows only appear opposite the sun), which Wikipedia covers more technically.  
+
+**Conclusion**:  
+Wikipedia offers a comprehensive scientific breakdown of rainbow mechanics, ideal for understanding the underlying physics. DuckDuckGo’s results supplement this with recent discoveries (e.g., higher-order rainbows) and accessible explanations for general audiences. Together, they provide a complete picture: from the precise optical principles to real-world observations of rare phenomena.
+
+================================================================================
+NODE: input_node
+================================================================================
+
+You: quit
+[DEBUG] Exit command received
+[DEBUG] Routing to END (exit requested)
+
+[SYSTEM] Conversation ended. Goodbye!
