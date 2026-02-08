@@ -31,7 +31,7 @@ This query should call the weather tool to get the weather in San Francisco and 
 - `checkpoints.db` contains the checkpoints for program recovery.
 - `lg_graph.png` contains a Mermaid diagram of the graph used for calling the model and tools.
 - `task_5_stdout_convo_1.txt` contains a conversation I had with the model using LangGraph nodes to facilitate model inference and tool calls. I asked several different questions to the model, each of which calls a different tool/combination of tools such that all tools are called at least once during the conversation. The file also demonstrates recovery from a keyboard interrupt.
-- `task_5_stdout_all_tools_convo.txt` contains a conversation I had with the model using a prompt that required the model to call all tools. 
+- `task_5_stdout_all_tools_convo.txt` contains a conversation I had with the model using a query that required the model to call all tools in order to successfully answer the question. 
 
 ## Task 6
 ### Question: where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?  
