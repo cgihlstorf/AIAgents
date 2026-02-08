@@ -11,7 +11,7 @@ The real times taken by each process are as follows:
 3. Ollama - sequential: 2183s
 4. Ollama - parallel: 2862s
 
-Running Ollama took far more time than running the original models from HuggingFace. For both the HuggingFace and Ollama models, running the two programs sequentially took less time than running the two programs in parallel.
+Running Ollama took far more time than running the original models from HuggingFace, perhaps because it was running on a server. For both the HuggingFace and Ollama models, running the two programs sequentially took less time than running the two programs in parallel.
 
 
 ## Task 2
