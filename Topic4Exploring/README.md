@@ -18,4 +18,17 @@ TODO
 
 ## Task 3
 
-In this task, I implement an agent that takes a search query and searches both Wikipedia and DuckDuckGo for a response. The model outputs a summary of the responses from both sources and compares and contrasts the information in the responses.
+In this task, I implement an agent that takes a search query and searches both Wikipedia and DuckDuckGo for a response. The model outputs a summary of the responses from both sources and compares and contrasts the information in the responses. I query the model with the following prompts:
+
+1. "What are rainbows?"
+2. "How to make scrambled eggs"
+3. "How is linguistics related to computer science?"
+4. "Chili recipe"
+
+The first query asks for factual information, which both Wikipedia and DuckDuckGo provide, though from different angles (`Task3/task3_rainbows_convo.txt`). Queries number 2 and 4 ask for instructions on how to cook food, and there is a divergence in the information given by Wikipedia and DuckDuckGo. Perhaps unsurprisingly, information from Wikipedia focuses more on the historical and cultural angles of the dishes while DuckDuckGo provides resources on how to prepare the dishes, demonstrating that DuckDuckGo might be a more reliable source when it comes to learning how to do something step by step. Conversations for prompts 2 and 4 can be found in `Task3/task3_scrambled_eggs.txt` and `Task3/task3_chili_recipe.txt`, respectively. Query number 3 asks a more specific question about how linguistics is related to computer science, as much interdisciplenary research has stemmed from the interactions between both fields. Both Wikipedia and DuckDuckGo return meaningful responses, though from different angles, suggesting that the best source to use depends on type of information you're searching for.
+
+
+
+
+
+
