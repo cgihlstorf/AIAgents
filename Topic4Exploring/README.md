@@ -9,7 +9,7 @@ The programs keep variables in the state to keep track of any keyword commands h
 
 3. Compare the graph diagrams of the two programs.  How do they differ if at all?
 
-TODO: should it be the other graph?
+I compared the following graphs: `langchain_manual_tool_graph.png` for the manual ToolNode agent, and `langchain_conversation_graph.png` for the ReAct agent. The graphs are very similar, but they differ in how they call the agent. The ReAct agent's graph combines running the agent and tool calls into one singular node, after which the only possible path is to the output node. By contrast, the manual ToolNode graph uses separate nodes for calling the model and calling tools such that if there are no tools to call, the computation shifts directly to the `output` node, and if there are tools to call, the graph goes back and forth between the `call_model` node and the `tools` node until all tools have been called and the computation is ready to proceed to the `output` node. 
 
 4. What is an example of a case where the structure imposed by the LangChain react agent is too restrictive and you'd want to pursue the toolnode approach? 
 
