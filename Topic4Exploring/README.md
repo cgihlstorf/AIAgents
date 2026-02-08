@@ -1,4 +1,4 @@
-## Task 3
+## Task 1
 1. What features of Python does ToolNode use to dispatch tools in parallel?  What kinds of tools would most benefit from parallel dispatch?
 
 TODO: can we look this up?
@@ -14,3 +14,8 @@ TODO: should it be the other graph?
 4. What is an example of a case where the structure imposed by the LangChain react agent is too restrictive and you'd want to pursue the toolnode approach? 
 
 TODO
+
+
+## Task 3
+
+In this task, I implement an agent that takes a search query and searches both Wikipedia and DuckDuckGo for a response. The model outputs a summary of the responses from both sources and compares and contrasts the information in the responses.

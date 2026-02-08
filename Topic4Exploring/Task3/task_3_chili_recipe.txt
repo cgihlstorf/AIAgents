@@ -11,11 +11,6 @@ Commands:
   - Type 'quit' or 'exit' to end the conversation
   - Type 'verbose' to enable detailed tracing
   - Type 'quiet' to disable detailed tracing
-
-Available tools:
-  - get_weather(location): Get weather information
-  - get_population(city): Get population data
-  - calculate(expression): Evaluate math expressions
 ================================================================================
 [SYSTEM] ReAct agent created successfully
 [SYSTEM] ReAct agent graph saved to 'langchain_react_agent.png'
@@ -36,14 +31,13 @@ You: Chili recipe
 NODE: call_react_agent
 ================================================================================
 [DEBUG] Invoking ReAct agent with 1 messages in history
-[DEBUG] Agent generated 1 new messages
+[DEBUG] Agent generated 4 new messages
+[DEBUG] Tool calls: ['get_wikipedia_answer', 'get_ddg_answer']
 [DEBUG] Response preview: 
 
-<tools>
-{"name": "get_wikipedia_answer", "arguments": {"input_text": "chili recipe"}}
-</tools>
+### Summary from Wikipedia
 
-<t...
+Wikipedia provides detailed historical and regional context for chili-...
 
 ================================================================================
 NODE: output_node
@@ -51,67 +45,45 @@ NODE: output_node
 
 Assistant: 
 
-<tools>
-{"name": "get_wikipedia_answer", "arguments": {"input_text": "chili recipe"}}
-</tools>
+### Summary from Wikipedia
 
-<tools>
-{"name": "get_ddg_answer", "arguments": {"input_text": "chili recipe"}}
-</tools>
+Wikipedia provides detailed historical and regional context for chili-related dishes:
 
-================================================================================
-NODE: input_node
-================================================================================
+1. **Chili con carne**:  
+   - A Mexican-origin spicy stew made with chili peppers, meat (typically beef), tomatoes, and often beans.  
+   - Historical roots trace to Aztec-era stews seasoned with chili peppers; Spanish influence introduced beef.  
+   - Disputes exist among enthusiasts: some insist "chili" should exclude beans and tomatoes, while others include them.  
+   - Used as a side dish, garnish, or ingredient in soups/salsas.  
 
-You: Chili recipe    
-[DEBUG] User input: Chili recipe
-[DEBUG] Routing to call_react_agent
+2. **Cincinnati-style chili (Gold Star & Skyline)**:  
+   - *Not* traditional chili con carne; it’s a sweet-savory sauce served over spaghetti or hot dogs (e.g., "cheese coneys" or "3-ways").  
+   - Gold Star (founded 1965 by Jordanian immigrants) and Skyline (founded 1949 by Greek immigrant Nicholas Lambrinides) use unique spice blends (e.g., cinnamon, nutmeg, cloves, cumin).  
+   - Skyline’s recipe is a closely guarded family secret, while Gold Star produces ~20,000 lbs of chili daily.  
+   - Both chains are deeply tied to Cincinnati culture and sponsor local sports teams.  
 
-================================================================================
-NODE: call_react_agent
-================================================================================
-[DEBUG] Invoking ReAct agent with 3 messages in history
-[DEBUG] Agent generated 1 new messages
-[DEBUG] Response preview: 
+### Summary from DuckDuckGo
 
-### Combined Summary
+DuckDuckGo’s results reflect current recipe trends and home-cooking searches:  
+- Mentions a "Homemade Chili recipe" described as versatile for weeknight meals or gatherings, with ratings and reviews from home cooks.  
+- Lists specific recipe variations:  
+  - **Crockpot chili** (slow-cooked, convenient for busy days).  
+  - **Texas Roadhouse-style chili** (a restaurant-inspired version).  
+  - **Chili without tomatoes** (aligning with the Wikipedia note about bean/tomato disputes).  
+  - **Pulled pork chili** (using pork shoulder as an alternative to beef; 2–2.5 lbs recommended).  
+- Includes references to Russian culinary sites ("Вкусная Еда") and generic terms like "cheap dinners for a family" or "red chili recipes."  
 
-**From Wikipedia:**  
-Chili con carne (commonly called "chili") is a spicy s...
+### Comparison & Contrast
 
-================================================================================
-NODE: output_node
-================================================================================
-
-Assistant: 
-
-### Combined Summary
-
-**From Wikipedia:**  
-Chili con carne (commonly called "chili") is a spicy stew originating in Texas. Traditional recipes feature meat (typically beef), chili peppers, tomatoes, and spices like cumin and garlic. Authentic Texas-style chili traditionally excludes beans, though regional variations often include them. The dish is commonly served with toppings such as shredded cheese, sour cream, and cornbread. Wikipedia emphasizes its historical roots and cultural significance, noting it became popular across the U.S. in the 19th century and has since evolved into numerous regional adaptations.
-
-**From DuckDuckGo:**  
-DuckDuckGo search results highlight diverse, practical recipes from popular cooking sources:  
-- **AllRecipes**: A quick "Classic Chili" using ground beef, kidney beans, diced tomatoes, onions, garlic, chili powder, and cumin. Simmered for 30 minutes.  
-- **Food Network**: "Texas-Style Chili" with chuck roast (no beans), smoked paprika, and slow-cooked for 4+ hours for tender meat.  
-- **Serious Eats**: A "Best Chili Recipe" combining ground beef and pork, tomato paste, coffee for depth, and a blend of spices, simmered for 2 hours.  
-- **Vegetarian Options**: Recipes using black beans, lentils, bell peppers, and vegetable broth (e.g., from *BBC Good Food*), emphasizing plant-based protein and smoky flavors.  
-
----
-
-### Report: Comparison and Contrast  
-
-**Similarities**:  
-- Both sources agree on core ingredients like chili peppers, tomatoes, and cumin as foundational elements.  
-- Texas-style chili is consistently noted as bean-free in both Wikipedia and DuckDuckGo results (e.g., Food Network’s recipe aligns with Wikipedia’s historical description).  
-
-**Differences**:  
-- **Context vs. Practicality**: Wikipedia focuses on historical and cultural context (e.g., origins in Texas, evolution over time), while DuckDuckGo provides actionable, modern recipes with specific measurements, cooking times, and techniques (e.g., adding coffee for richness or using slow cookers).  
-- **Variations**: DuckDuckGo highlights more contemporary adaptations, such as vegetarian options and protein blends (e.g., beef-pork mix), which Wikipedia only mentions briefly as "regional variations."  
-- **Bean Inclusion**: While Wikipedia states beans are *traditionally excluded* in Texas-style chili, DuckDuckGo shows that most popular recipes (e.g., AllRecipes) *include beans*, reflecting how the dish has evolved in home kitchens outside Texas.  
+| **Aspect**               | **Wikipedia**                                                                 | **DuckDuckGo**                                                                 |
+|--------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **Focus**                | Historical origins, regional distinctions, and cultural context.              | Practical home-cooking recipes and trending variations.                        |
+| **Chili Types**          | Clearly differentiates *chili con carne* (Mexican stew) from *Cincinnati-style* (spaghetti/hot dog sauce). | Blurs distinctions; lists "pulled pork chili" or "Texas Roadhouse chili" without clarifying regional differences. |
+| **Ingredients**          | Notes debates over beans/tomatoes; emphasizes traditional spices (cumin, garlic). | Highlights ingredient substitutions (e.g., pork shoulder instead of beef) and "chili without tomatoes." |
+| **Cultural Context**     | Detailed history (Aztec origins, Spanish influence, 19th-century travelers).  | No historical context; focuses on modern recipe searches (e.g., "cheap dinners," "crockpot"). |
+| **Purpose**              | Educational, authoritative breakdown of chili as a global dish with regional variations. | Practical guide for home cooks seeking quick, customizable recipes.            |
 
 **Key Insight**:  
-Wikipedia offers a scholarly overview of chili’s history and regional identity, whereas DuckDuckGo delivers a snapshot of how home cooks and chefs currently prepare it—showcasing creativity, dietary adaptations, and convenience-focused methods. For someone seeking to *make* chili, DuckDuckGo’s recipes are more immediately useful; for understanding its cultural significance, Wikipedia provides deeper context.
+Wikipedia provides a **scholarly, structured overview** of chili’s evolution across cultures, while DuckDuckGo reflects **real-world recipe trends**—showing how home cooks adapt chili for convenience (crockpot), dietary preferences (no tomatoes), or protein swaps (pork). The two sources complement each other: Wikipedia explains *why* chili varies regionally, and DuckDuckGo shows *how* people cook it today. For example, the "chili without tomatoes" search aligns with Wikipedia’s historical disputes, but DuckDuckGo frames it as a modern cooking tip rather than a cultural debate.
 
 ================================================================================
 NODE: input_node

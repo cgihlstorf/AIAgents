@@ -11,11 +11,6 @@ Commands:
   - Type 'quit' or 'exit' to end the conversation
   - Type 'verbose' to enable detailed tracing
   - Type 'quiet' to disable detailed tracing
-
-Available tools:
-  - get_weather(location): Get weather information
-  - get_population(city): Get population data
-  - calculate(expression): Evaluate math expressions
 ================================================================================
 [SYSTEM] ReAct agent created successfully
 [SYSTEM] ReAct agent graph saved to 'langchain_react_agent.png'
@@ -28,7 +23,7 @@ Available tools:
 NODE: input_node
 ================================================================================
 
-You: How to make scrambled eggs 
+You: How to make scrambled eggs
 [DEBUG] User input: How to make scrambled eggs
 [DEBUG] Routing to call_react_agent
 
@@ -40,10 +35,8 @@ NODE: call_react_agent
 [DEBUG] Tool calls: ['get_wikipedia_answer', 'get_ddg_answer']
 [DEBUG] Response preview: 
 
-### Combined Summary of Information
-
-**From Wikipedia:**  
-Scrambled eggs are a culinary dish made...
+### Wikipedia Summary
+The Wikipedia entry for "Scrambled eggs" provides a comprehensive overview o...
 
 ================================================================================
 NODE: output_node
@@ -51,41 +44,39 @@ NODE: output_node
 
 Assistant: 
 
-### Combined Summary of Information
+### Wikipedia Summary
+The Wikipedia entry for "Scrambled eggs" provides a comprehensive overview of the dish as a culinary technique, not a specific recipe. Key points include:
+- **Definition**: Scrambled eggs involve stirring or whisking egg whites and yolks (often with additives like salt, pepper, butter, milk, or cream), then heating to coagulate proteins into soft curds.
+- **History**: Earliest documented recipe dates to a 14th-century Italian cookbook.
+- **Preparation Methods**:
+  - *Skillet method*: Eggs cooked in a hot pan with butter/oil over gentle heat, stirred continuously for small, soft curds. French-style emphasizes creamy, custard-like texture.
+  - *Double boiler*: A traditional method requiring 40 minutes to prevent browning and achieve aerated, creamy results.
+  - *Microwave/sous-vide*: Modern alternatives for consistent texture.
+- **Variations**: 
+  - British style: Thorough stirring for fine texture; "buttered eggs" (extra butter stirred in).
+  - French style: Over 100 variants, often with additions like truffles or asparagus.
+- **Technical Notes**: Eggs should be slightly undercooked when removed (residual heat finishes cooking). Overcooking causes syneresis (liquid separation).
 
-**From Wikipedia:**  
-Scrambled eggs are a culinary dish made by stirring or whisking eggs (typically chicken), then heating them until the proteins coagulate into soft curds. The earliest documented recipe appears in a 14th-century Italian cookbook. Preparation methods vary:  
-- **Basic ingredients**: Eggs, salt, pepper, and optional additions like butter, milk, water, cream, cheese, or herbs.  
-- **Two main approaches**:  
-  1. *Whisking first*: Beat eggs thoroughly before cooking (Elizabeth David’s view for a smoother texture).  
-  2. *Direct pan method*: Crack eggs directly into a hot pan and stir as they cook (Dorothy Hartley’s preference for visible egg particles).  
-- **French style**: Cooked gently over low heat with constant stirring to achieve creamy, custard-like curds. A traditional double boiler method (taking up to 40 minutes) prevents browning but is less common today.  
-- **British style**: Stirred thoroughly for a fine, soft texture. Variations include "Scotch woodcock" (served on toast with Gentleman’s Relish).  
-- **Key tip**: Remove eggs slightly undercooked, as they continue to set after heat is removed. Overcooking causes syneresis (liquid separation) or rubberiness.  
+### DuckDuckGo (DDG) Summary
+DDG search results focus on practical, step-by-step recipes from cooking sources, emphasizing actionable tips for home cooks:
+- **Key Tips**:
+  - Use **low and slow heat** to avoid rubbery eggs and achieve fluffy, creamy texture.
+  - Add **butter or oil** to the pan before eggs to prevent sticking.
+  - Common ingredients: eggs, salt, pepper, butter (some recipes highlight "four ingredients" as sufficient).
+  - **Stirring technique**: Constant stirring for even cooking; some methods suggest folding in cheese or herbs at the end.
+  - **Avoiding mistakes**: Overcooking (leads to dryness), high heat (causes browning), or adding wet ingredients too early.
+- **Specific Techniques**:
+  - Restaurant-style methods for professional results.
+  - Martha Stewart’s approach emphasizes simplicity and avoiding common pitfalls.
+  - "Foolproof" methods for controlling doneness (e.g., stopping just before full set).
 
-**From DuckDuckGo (DDG) Results:**  
-Multiple recipe sources emphasize practical, modern techniques for fluffy, restaurant-style scrambled eggs:  
-- **Standard steps**: Whisk 3 large eggs with a pinch of salt, black pepper, and 3 tablespoons of whole milk until light and foamy. Cook in a buttered non-stick pan over **low heat**, stirring constantly with a spatula.  
-- **Critical tips**:  
-  - Avoid high heat to prevent rubbery eggs.  
-  - Add cheese, herbs, or ham *after* cooking to preserve texture.  
-  - Remove eggs just before fully set (they will finish cooking from residual heat).  
-- **Common secrets**: Using milk or water for fluffiness, preheating the pan properly, and gentle stirring for even coagulation. Some sources highlight a "three-key-secrets" approach for luxury texture in under 10 minutes.  
-
----
-
-### Comparison Report  
-
-| **Aspect**               | **Wikipedia**                                                                 | **DuckDuckGo (DDG)**                                                                 |  
-|--------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
-| **Core Methodology**     | Describes historical and regional variations (French vs. British styles), including traditional double boiler techniques. Mentions "two schools" of preparation (whisking first vs. direct pan cooking). | Focuses on modern skillet techniques with specific measurements (e.g., 3 eggs, 3 tbsp milk) and emphasizes low-heat, constant stirring. No mention of double boilers. |  
-| **Ingredients**          | Notes milk/cream as optional; highlights regional variations (e.g., crème fraîche in French style). | Explicitly recommends milk for fluffiness, with precise quantities (e.g., 3 tbsp whole milk). |  
-| **Cooking Technique**    | Discusses French-style creamy curds and British-style fine texture. Warns about overcooking but does not detail pan types. | Stresses non-stick pans, low heat, and constant stirring. Repeatedly advises removing eggs slightly undercooked to avoid rubberiness. |  
-| **Practical Guidance**   | General overview of techniques without step-by-step instructions or common pitfalls. | Provides actionable tips: "avoid high heat," "add cheese after cooking," and "whisk until foamy." Multiple sources cite "restaurant-style" tricks for fluffy results. |  
-| **Relevance to Users**   | Best for understanding cultural context and historical methods. Less useful for quick home cooking. | Ideal for immediate use: clear, concise steps tailored to home kitchens with measurable results. |  
-
-**Key Takeaway**:  
-Wikipedia offers a scholarly perspective on scrambled eggs’ history and global variations, while DDG delivers concise, actionable recipes optimized for home cooks. Both agree on critical principles (low heat, gentle stirring, avoiding overcooking), but DDG’s results prioritize practicality and modern preferences (e.g., milk for fluffiness), whereas Wikipedia contextualizes these techniques within broader culinary traditions. For beginners, DDG’s step-by-step guidance is more immediately helpful; for culinary enthusiasts, Wikipedia’s depth provides valuable insight into regional nuances.
+### Comparison Report
+- **Similarities**: Both sources agree on core principles—gentle heat, stirring, and avoiding overcooking. Butter/oil is universally recommended for texture and non-stick properties.
+- **Differences**:
+  - **Depth vs. Practicality**: Wikipedia offers historical context, technical variations (e.g., double boiler), and cultural nuances (e.g., Scotch woodcock). DDG focuses solely on modern, home-friendly steps with immediate, actionable advice.
+  - **Audience**: Wikipedia serves as a reference for understanding the dish broadly; DDG targets cooks seeking quick, reliable recipes (e.g., "4-ingredient" or "10-minute" guides).
+  - **Detail Level**: Wikipedia discusses debates (e.g., beating eggs first vs. cracking directly into the pan), while DDG snippets prioritize clear, step-by-step instructions without theoretical tangents.
+- **Key Takeaway**: For *understanding the science and history* of scrambled eggs, Wikipedia is ideal. For *making them today*, DDG results provide concise, tested methods tailored to home kitchens. Neither contradicts the other—they complement by addressing different needs: academic context vs. hands-on execution.
 
 ================================================================================
 NODE: input_node

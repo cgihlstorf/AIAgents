@@ -361,8 +361,8 @@ def create_conversation_graph():
     # System message to encourage tool usage
     system_message = (
         "You are a helpful assistant. "
-        "You will be given a search query. Please research the topic of the query using both Wikipedia AND" \
-        "DuckDuckGo (DDG). Generate a combined summary of the information from each source followed by a brief report "
+        "You will be given a search query. Use the tools provided to research the topic of the query using both Wikipedia AND" \
+        "DuckDuckGo (DDG). Generate a summary of the information from each source followed by a brief report "
         "that compares and contrasts the information from both sources."
     )
     
@@ -476,10 +476,6 @@ async def main():
     print("  - Type 'quit' or 'exit' to end the conversation")
     print("  - Type 'verbose' to enable detailed tracing")
     print("  - Type 'quiet' to disable detailed tracing")
-    print("\nAvailable tools:")
-    print("  - get_weather(location): Get weather information")
-    print("  - get_population(city): Get population data")
-    print("  - calculate(expression): Evaluate math expressions")
     print("="*80)
     
     # Create the conversation graph

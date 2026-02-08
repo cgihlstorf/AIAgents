@@ -11,11 +11,6 @@ Commands:
   - Type 'quit' or 'exit' to end the conversation
   - Type 'verbose' to enable detailed tracing
   - Type 'quiet' to disable detailed tracing
-
-Available tools:
-  - get_weather(location): Get weather information
-  - get_population(city): Get population data
-  - calculate(expression): Evaluate math expressions
 ================================================================================
 [SYSTEM] ReAct agent created successfully
 [SYSTEM] ReAct agent graph saved to 'langchain_react_agent.png'
@@ -45,10 +40,8 @@ The code that caused this warning is on line 389 of the file /Users/caroline/Lib
 [DEBUG] Tool calls: ['get_wikipedia_answer', 'get_ddg_answer']
 [DEBUG] Response preview: 
 
-### Combined Summary of Rainbows from Wikipedia and DuckDuckGo
-
-**Definition and Formation**:  
-A ...
+### Summary from Wikipedia
+Wikipedia provides a detailed scientific explanation of rainbows as an ...
 
 ================================================================================
 NODE: output_node
@@ -56,40 +49,27 @@ NODE: output_node
 
 Assistant: 
 
-### Combined Summary of Rainbows from Wikipedia and DuckDuckGo
+### Summary from Wikipedia
+Wikipedia provides a detailed scientific explanation of rainbows as an optical phenomenon caused by the refraction, internal reflection, and dispersion of light in water droplets. Key points include:
+- Rainbows appear as multicolored circular arcs in the sky, always opposite the sun.
+- A primary rainbow shows red on the outer edge and violet on the inner edge, formed by light refracting once inside water droplets.
+- A secondary rainbow (fainter and with reversed colors) occurs when light reflects twice inside droplets.
+- Rainbows can form from rain, mist, spray, or dew, and are visible as full circles when viewed from above (e.g., from an airplane), though ground observers typically see only arcs due to terrain blocking the lower portion.
+- The spectrum of colors is often described using the mnemonic "ROYGBIV" (red, orange, yellow, green, blue, indigo, violet), though modern interpretations sometimes simplify this.
+- Additional details cover polarized light patterns, moonbows (nighttime rainbows), and the physics of light scattering in droplets.
 
-**Definition and Formation**:  
-A rainbow is an optical phenomenon caused by the refraction, internal reflection, and dispersion of light in water droplets (e.g., rain, mist, or spray). It appears as a multicolored circular arc in the sky, always positioned directly opposite the sun. The primary rainbow shows red on the outer edge and violet on the inner edge due to light refracting once inside droplets, while a secondary rainbow (fainter and larger) forms when light reflects twice, reversing the color order (red on the inner side).
+### Summary from DuckDuckGo
+DuckDuckGo’s results include a mix of relevant and unrelated information:
+- **Relevant scientific details**: Mentions the secondary rainbow being fainter due to more light loss from double reflections and explains rainbows as arcs formed when sunlight disperses through water droplets, creating a spectrum of colors.
+- **Cultural symbolism**: Notes that rainbows are "a symbol of hope in many cultures" and are associated with spiritual wisdom and celebration.
+- **Unrelated content**: References to "Over the Rainbow" (a song), a charity named "Rainbows" providing palliative care, and fragmented text about Italian newspaper comparisons. These are not related to the natural phenomenon of rainbows but appear due to keyword matching in search results.
 
-**Key Details**:  
-- **Colors**: The sequence is traditionally described as red, orange, yellow, green, blue, indigo, and violet (ROYGBIV), though modern interpretations sometimes simplify to six colors.  
-- **Visibility**: Rainbows are most visible when half the sky is dark (e.g., after rain) with clear skies toward the sun. They appear in the western sky during morning and eastern sky during evening.  
-- **Higher-Order Rainbows**: Third-, fourth-, and fifth-order rainbows exist but are extremely rare. The third-order was first photographed in 2011, the fourth in 2011, and the fifth in 2014.  
-- **Moonbows**: Nighttime rainbows caused by moonlight, often appearing white due to low light affecting human color perception.  
-- **Polarization**: Primary rainbows are 96% polarized tangentially to the arc; secondary rainbows are 90% polarized.  
-- **No Physical Location**: Rainbows are not fixed in space—they depend entirely on the observer’s position relative to the sun and water droplets. Only one rainbow is visible per observer’s viewpoint.  
-- **Sky Brightness**: The sky inside a primary rainbow appears brighter than the area outside due to light scattering across a circular disc.  
+### Comparison and Contrast
+- **Scientific accuracy**: Wikipedia offers a comprehensive, authoritative, and technical explanation of the physics behind rainbows, including formation mechanisms, color order, and visibility conditions. DuckDuckGo includes some accurate scientific points but lacks depth and clarity, often presenting incomplete or fragmented details (e.g., "the secondary rainbow is fainter... because more light escapes").
+- **Cultural context**: While Wikipedia focuses purely on the physical phenomenon, DuckDuckGo briefly touches on cultural symbolism (e.g., rainbows as symbols of hope), which adds a humanistic perspective not covered in the Wikipedia summary provided. However, this cultural note is sparse compared to the scientific rigor of Wikipedia.
+- **Noise and relevance**: DuckDuckGo’s results include significant unrelated content (e.g., charity names, song references), which dilutes the relevance for a query about the natural phenomenon. Wikipedia’s response is entirely focused and free of extraneous information, making it more reliable for factual understanding.
 
----
-
-### Comparison of Sources  
-**Agreements**:  
-- Both sources confirm the core physics of rainbows (refraction, reflection, dispersion in water droplets).  
-- Consistent descriptions of primary/secondary rainbows, color order (ROYGBIV), and the requirement for sunlight opposite the observer.  
-- Both note that rainbows have no physical location and depend on the observer’s perspective.  
-
-**Differences**:  
-- **Wikipedia** provides deeper technical details:  
-  - Explains polarization percentages (96% for primary, 90% for secondary).  
-  - Describes why the sky inside the rainbow is brighter (light scattering across a disc).  
-  - Mentions moonbows but does not detail higher-order rainbows beyond secondary.  
-- **DuckDuckGo** highlights newer observational data:  
-  - Specifies the years when third-, fourth-, and fifth-order rainbows were first photographed (2011, 2011, 2014).  
-  - Emphasizes the "no physical location" concept with simpler phrasing, likely sourced from popular science platforms like National Geographic.  
-  - Includes general "fun facts" (e.g., rainbows only appear opposite the sun), which Wikipedia covers more technically.  
-
-**Conclusion**:  
-Wikipedia offers a comprehensive scientific breakdown of rainbow mechanics, ideal for understanding the underlying physics. DuckDuckGo’s results supplement this with recent discoveries (e.g., higher-order rainbows) and accessible explanations for general audiences. Together, they provide a complete picture: from the precise optical principles to real-world observations of rare phenomena.
+**Conclusion**: For a scientific explanation of rainbows, Wikipedia is the superior source due to its depth and precision. DuckDuckGo supplements this with limited cultural context but is less reliable due to irrelevant noise. Users seeking a clear, factual overview should prioritize Wikipedia, while those interested in broader symbolic meanings might find DuckDuckGo’s cultural notes useful—but with caution to filter out unrelated content.
 
 ================================================================================
 NODE: input_node
