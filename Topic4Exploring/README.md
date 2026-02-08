@@ -13,8 +13,7 @@ I compared the following graphs: `langchain_manual_tool_graph.png` for the manua
 
 4. What is an example of a case where the structure imposed by the LangChain react agent is too restrictive and you'd want to pursue the toolnode approach? 
 
-TODO
-
+The ReAct agent might be too restrictive if some of the queries require tool calls while other don't. The manual ToolNode graph allows for the model to skip the `tools` node and go straight to the `output` node if no tools need to be called, while the ReAct agent graph requires all inputs to be passed to the `call_react_agent` node, which handles tool calls, regardless of whether the input requires them or not. Therefore, the manual ToolNode structure might provide some flexibility for queries not requiring tool calls to not have to interact with any tool-calling structure at all and simply be passed along to the `output` node.
 
 ## Task 3
 
