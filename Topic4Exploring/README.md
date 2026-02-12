@@ -1,7 +1,9 @@
 ## Task 1
 1. What features of Python does ToolNode use to dispatch tools in parallel?  What kinds of tools would most benefit from parallel dispatch?
 
-TODO: can we look this up?
+I used Gemini to look up the answer to the first question. ToolNode implements different methods of parallelization depending on whether it recieves a synchronous call (via `invoke()`) or an asynchronous call (via `ainvoke()`). For synchronous calls, ToolNode uses Python's `ThreadPoolExecutor` to run tools in parallel. For asynchronous calls, ToolNode uses Python's `asyncio.gather()` function to run the tools in parallel. 
+
+Tools that would benefit most from parallel dispatch are tools that do not need to wait for information from other tools to be found before they are called (for example, a calculator tool might need to wait for a temparature to be computed using a weather tool if that temperature is to be used in its calculation). On the other hand, tools that retrieve information like the weather for a particular location, the population of a city, or facts about a certain subject (e.g., from a Wikipedia article) are unlikely to have to wait to recieve information from other tools before they can be called. They can thus run in parallel.
 
 2. How do the two programs handle special inputs such as "verbose" and "exit"?
 
