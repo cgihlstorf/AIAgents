@@ -1,3 +1,5 @@
+#NOTE: for this assignment I also used Ollama with `qwen3-next:80b-cloud` as the model.
+
 ## Task 1
 1. What features of Python does ToolNode use to dispatch tools in parallel?  What kinds of tools would most benefit from parallel dispatch?
 
@@ -19,9 +21,18 @@ The ReAct agent might be too restrictive if some of the queries require tool cal
 
 ## Task 3
 
+Task 3 TOC:
+- `info_search.py`: my code file for running the Wikipedia and DuckDuckGo tools, based on the ReAct agent code provided.
+- `langchain_conversation_graph.png`: the general graph for the ReAct agent pipeline
+- `langchain_react_agent.png `: the ReAct agent specific graph
+- `task_3_chili_recipe.txt`: the conversation with the model in response to prompt #4
+- `task_3_linguistics_and_cs.txt`: the conversation with the model in response to prompt #3
+- `task_3_rainbows_convo.txt`: the conversation with the model in response to prompt #1
+- `task_3_scrambled_eggs.txxt`: the conversation with the model in response to pormpt #2
+
 In this task, I implement an agent that takes a search query and searches both Wikipedia and DuckDuckGo for a response. The model outputs a summary of the responses from both sources and compares and contrasts the information in the responses. I query the model with the following prompts:
 
-1. "What are rainbows?"
+1. "What are rainbows?" 
 2. "How to make scrambled eggs"
 3. "How is linguistics related to computer science?"
 4. "Chili recipe"
