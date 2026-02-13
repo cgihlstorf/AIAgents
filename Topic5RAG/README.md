@@ -23,3 +23,30 @@ It is harder for me to determine the exact level of correctness of the model wit
 an expert in that area, so this answer focuses mostly on the congressional proceedings text. For most of the questions, the model with the
 default prompt seems to hallucinate most of its answers, even if small pieces of information it provides are not completely incorrect. For example, when asked about what Mr. Flood said about Mayor David Black the model correctly stated that the mayor was not going to run for re-election but hallucinated that the mayor was from New York as opposed to Papillion, Nebraska. The model gets one key detail correct in this case, but hallucinates other details. 
 
+
+## Experiment 2
+
+NOTE: for this experiment I used ChatOllama with `qwen3-next:80b-cloud` instead of `gpt4-mini`.
+
+### Does Qwen3-next do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
+
+TODO
+
+
+### Which questions does Qwen3-next answer correctly?  Compare the cut-off date of Qwen3-next pre-training and the age of the Model T Ford and Congressional Record corpora.
+
+TODO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
