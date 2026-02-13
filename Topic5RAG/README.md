@@ -28,14 +28,20 @@ default prompt seems to hallucinate most of its answers, even if small pieces of
 
 NOTE: for this experiment I used ChatOllama with `qwen3-next:80b-cloud` instead of `gpt4-mini`.
 
-### Does Qwen3-next do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
+### Does Qwen3-next80b do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
+
+`Qwen3-next80b` seems to hallucinate slightly less than `Qwen25-1.5b`, though I was unable to verify a few of its answers because the questions did not specify 
+information needed in order to most precisely answer the question. This informations includes specifying that questions about cars refer to Model T cars (question 3 about the 
+Model T does not specofy this) and specifying the specific date of congressional proceedings being referenced (question 4 about the congressional proceedings does not
+include a date or mention specific proceedings). Thus, there is no ground truth readily available to compare with these answers to determine if they are hallucinations
+or not. There were a couple of times when the model said that it could not answer a congressional proceedings questiion because it did not have the information from
+that far into the future, which helped prevent possible hallucinating false information in those cases.
+
+
+### Which questions does Qwen3-next80B answer correctly? Compare the cut-off date of Qwen3-next80b pre-training and the age of the Model T Ford and Congressional Record corpora.
 
 TODO
 
-
-### Which questions does Qwen3-next answer correctly?  Compare the cut-off date of Qwen3-next pre-training and the age of the Model T Ford and Congressional Record corpora.
-
-TODO
 
 
 
