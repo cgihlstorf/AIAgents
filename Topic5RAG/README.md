@@ -40,7 +40,12 @@ that far into the future, which helped prevent possible hallucinating false info
 
 ### Which questions does Qwen3-next80B answer correctly? Compare the cut-off date of Qwen3-next80b pre-training and the age of the Model T Ford and Congressional Record corpora.
 
-TODO
+It is difficult to determine the extent to which the model answers questions correctly for a few reasons: first, sometimes the model refuses to answer the question because its 
+knowledge cutoff is too far in the past, but it still provides information it claims it knows about the general topic at hand, which is not able to be verified with the ground
+truth documents provided. Second, I often couldn't find a ground truth answer for questions about the Model T after a few keyword searches in the manual, so I had nothing to compare the models' answers to. But given that I couldn't find couple of the model's answers via keyword search in the manual, it is possible that the models hallucinated their answers or are using some other data source (perhaps another manual) to inform their responses. Third, as mentioned in the previous answer, there are a couple of questions that do not 
+provide enough specifics (e.g., that the car in question is a Model T or that the question refers to specific congressional proceedings on a specific date). Given that the model's knowledge cutoff date seems to be before January 2026, it makes sense that it would either refuse to answer the questions that asked about specific dates after it was trained. The model never refused to answer questions about the Model T, however, suggesting that it had some information in its training corpus to draw from (which makes sense, as the Model T was introduced over 100 years ago). Even so, I could not fully verify its responses in the manual provided, suggesting that there might be another manual that I should e checking instead
+or that the model is hallucinating some or all of its responses.
+
 
 
 
