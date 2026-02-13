@@ -19,5 +19,7 @@ suggesting that the value was hallucinated. For question 4 ("What oil should I u
 
 ### Are there questions where the model's general knowledge is actually correct?
 
-The closest the mode
+It is harder for me to determine the exact level of correctness of the model with the default prompt on the Model T questions as I am not
+an expert in that area, so this answer focuses mostly on the congressional proceedings text. For most of the questions, the model with the
+default prompt seems to hallucinate most of its answers, even if small pieces of information it provides are not completely incorrect. For example, when asked about what Mr. Flood said about Mayor David Black the model correctly stated that the mayor was not going to run for re-election but hallucinated that the mayor was from New York as opposed to Papillion, Nebraska. The model gets one key detail correct in this case, but hallucinates other details. 
 
