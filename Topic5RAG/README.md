@@ -49,8 +49,23 @@ provide enough specifics (e.g., that the car in question is a Model T or that th
 or that the model is hallucinating some or all of its responses.
 
 
+## Experiment 3
 
+1. Where does the frontier model's general knowledge succeed?
 
+   TODO
+
+3. When did the frontier model appear to be using live web search to help answer your questions?
+
+   TODO
+
+5. Where does your RAG system provide more accurate, specific answers?
+
+   TODO
+
+6. What does this tell you about when RAG adds value vs. when a powerful model suffices?
+
+   TODO
 
 
 
