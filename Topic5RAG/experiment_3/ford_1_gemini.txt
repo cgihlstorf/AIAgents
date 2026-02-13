@@ -1,0 +1,29 @@
+The correct spark plug gap for a Model T Ford depends on your ignition setup, but the "gold standard" used by most owners is 1/32 of an inch (approximately .031").
+
+If you are looking for a quick answer, you can't go wrong with .030". However, here is the breakdown of why you might adjust it slightly:
+
+1. The Standard "By the Book" Specs
+Original Ford Specification: 1/32" (.03125"). This is the classic measurement found in the original Ford Service Manual.
+
+The "Dime" Rule: In the old days, a common "field adjustment" was to use a thin dime as a feeler gauge. A modern dime is roughly .053", so this only works if the dime is significantly worn down! Stick to a real feeler gauge if you have one.
+
+Gemini said
+The correct spark plug gap for a Model T Ford depends on your ignition setup, but the "gold standard" used by most owners is 1/32 of an inch (approximately .031").
+
+If you are looking for a quick answer, you can't go wrong with .030". However, here is the breakdown of why you might adjust it slightly:
+
+1. The Standard "By the Book" Specs
+Original Ford Specification: 1/32" (.03125"). This is the classic measurement found in the original Ford Service Manual.
+
+The "Dime" Rule: In the old days, a common "field adjustment" was to use a thin dime as a feeler gauge. A modern dime is roughly .053", so this only works if the dime is significantly worn down! Stick to a real feeler gauge if you have one.
+
+2. Adjusting for Your Ignition System
+Depending on whether your car is strictly stock or modified, you may want to vary the gap:
+
+3. Which Plugs to Use?
+Champion X: These are the original-style "take-apart" plugs. They are expensive (usually $30–$40 each) but are the most authentic and tend to run the best in a T because they are designed to resist oil fouling.
+
+Champion 25 or Autolite 3095: These are modern, cheaper alternatives. They usually come pre-gapped, but you must check them, as they are often gapped for other engines.
+
+Pro Tip: The "Drip Loop"
+When you gap your plugs (especially Champion X), ensure the side electrode is bent so that the tip points slightly downward toward the center. This creates a "drip loop" so that any oil that gets into the combustion chamber runs off the electrode rather than bridging the gap and fouling the plug.

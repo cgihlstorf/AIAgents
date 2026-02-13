@@ -1,0 +1,30 @@
+Adjusting the carburetor on a Ford Model T is a quintessential "old school" mechanical task. Unlike modern cars with fuel injection and computers, the Model T relies on a simple needle valve and your own ears to get the mixture right.
+
+Most Model Ts use a Holley NH or a Kingston L4 carburetor. Here is how you dial it in.
+
+1. The Initial "Cold Start" Setting
+Before you even crank the engine, you need a baseline setting that guarantees it will actually fire up.
+
+Locate the adjustment rod: This is the long rod that goes from the carburetor through the dash (firewall).
+
+Close the valve: Turn the knob clockwise until it gently seats. Don't force it, or you’ll score the needle.
+
+Open for starting: Turn the knob counter-clockwise (open) about 1.5 to 2 full turns. This provides a "rich" mixture, which is necessary for a cold start.
+
+2. Warming Up
+Start the car and let it run for a few minutes.
+
+Move the spark lever (left side of steering column) down about halfway to advance the timing once it’s running.
+
+Wait until the engine reaches operating temperature. You can't properly tune a cold Model T.
+
+3. The "Lean Out" (The Fine Tuning)
+Once the engine is warm, you want to find the "sweet spot" where the engine runs smoothly with the least amount of fuel.
+
+Slowly turn the dash knob clockwise (right): This leans out the mixture.
+
+Listen to the engine: Keep turning until the engine begins to stumble or "hunt."
+
+Back it off: As soon as it stumbles, turn the knob back counter-clockwise (left) about 1/8th to 1/4 of a turn until the idle smooths out and sounds crisp.
+
+The Goal: Usually, once warm, the car will run best at about 1 to 1.25 turns open from the closed position.
