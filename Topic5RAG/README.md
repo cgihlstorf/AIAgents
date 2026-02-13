@@ -11,7 +11,13 @@ democracy when in reality the mistake was that she accidentally cast a "no" vote
 
 ### Does RAG ground the answers in the actual manual?
 
+For the Model T corpus questions, the RAG answers seemed solidly grounded in the manual for all questions except question 2. 
+For question 2 ("What is the correct spark plug gap for a Model T Ford?") I could not find the value produced by the model in the manual,
+suggesting that the value was hallucinated. For question 4 ("What oil should I use in a Model T engine?"), the model expressed in its answer that it could not find the information in the manual it was given, suggesting that it did attempt to reference the manual but failed to find the answer. This aligns with my own experience of doing a keyword search for "motor oil" but getting no results.
 
 
 
 ### Are there questions where the model's general knowledge is actually correct?
+
+The closest the mode
+
