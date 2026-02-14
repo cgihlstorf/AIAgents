@@ -78,7 +78,10 @@ NOTE: for this experiment, I use Gemini as the frontier model.
 
 6. What does this tell you about when RAG adds value vs. when a powerful model suffices?
 
-   TODO
+   RAG models seem to be most useful when the user wants short, concise steps/summaries as opposed to longer explanations. Having additional details and
+   explanations is useful when one wants to dive in deeper into a particular subject, but having access to a shorter summary drawn from a databaseo of
+   relevant information might be more helpful in getting the general idea more quickly.
+
 
 
 
