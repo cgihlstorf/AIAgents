@@ -51,11 +51,17 @@ or that the model is hallucinating some or all of its responses.
 
 ## Experiment 3
 
+NOTE: for this experiment, I use Gemini as the frontier model.
+
 1. Where does the frontier model's general knowledge succeed?
 
-   TODO
+   Gemini seems to use a web search tool for most of the congressional proceedings questions, so my focus in this answer will be on the Model T queries.
+   Because it was difficult to pinpoint exact ground truth answers in the manual, I do not have exact ground truth answers to compare the model responses
+   to, but the model responses contained a good amount of information organized in a way such that it was easy to follow and often provided additional
+   information, explanations, and reccomenndations that, if true, could benefit someone might want to know why something works the way it does or what
+   additional options they have if they are using the model to help them repair a Model T.
 
-2. When did the frontier model appear to be using live web search to help answer your questions?
+3. When did the frontier model appear to be using live web search to help answer your questions?
 
    Some of the more obvious instances of models using live web search were when the model gave information on the congressional proceedings from January 2026. Since these
    proceedings happened fairly recently, the fact that the model was able to summarize them suggests that it used some kind of web search. The only exception might be the
@@ -66,11 +72,14 @@ or that the model is hallucinating some or all of its responses.
    
 4. Where does your RAG system provide more accurate, specific answers?
 
+   The RAG answers were not necessarily more accurate than the Gemini answers, but they were generally more concise (my point of reference for this is mostly from the
+   answers about the congressional proceedings, as the accuracy of these responses was far easier to determine). Overall, Gemini's answers contained more specific
+   and detailed information while the RAG answers were shorter and were formatted more as higher-level summaries.
+
+6. What does this tell you about when RAG adds value vs. when a powerful model suffices?
+
    TODO
 
-5. What does this tell you about when RAG adds value vs. when a powerful model suffices?
-
-   TODO
 
 
 
