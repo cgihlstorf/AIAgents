@@ -55,17 +55,21 @@ or that the model is hallucinating some or all of its responses.
 
    TODO
 
-3. When did the frontier model appear to be using live web search to help answer your questions?
+2. When did the frontier model appear to be using live web search to help answer your questions?
+
+   Some of the more obvious instances of models using live web search were when the model gave information on the congressional proceedings from January 2026. Since these
+   proceedings happened fairly recently, the fact that the model was able to summarize them suggests that it used some kind of web search. As for the questions about the
+   Model T, it is less clear whether the model is calling a web search tool or is simply generating information about the Model T that it learned from its training text,
+   as there are no clear citations or notes made to indicate that a web search was performed.
+   
+3. Where does your RAG system provide more accurate, specific answers?
 
    TODO
 
-5. Where does your RAG system provide more accurate, specific answers?
+4. What does this tell you about when RAG adds value vs. when a powerful model suffices?
 
    TODO
 
-6. What does this tell you about when RAG adds value vs. when a powerful model suffices?
-
-   TODO
 
 
 
