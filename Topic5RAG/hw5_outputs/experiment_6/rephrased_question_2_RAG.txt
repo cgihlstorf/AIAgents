@@ -1,0 +1,59 @@
+Rephrased Question: engine maintenance intervals
+
+Context: [Source: ATA_05.pdf, Relevance: 0.616]
+l recommended inspection intervals. 
+Inspection intervals are measured 
+from the last inspection or return-to-service date. 
+J. Unscheduled Maintenance Checks, Scheduled Servicing, Replacement Items, 
+Overhaul Items and other inspections which correspond to the inspection 
+intervals in this section, are to be accomplished concurrently. 
+EFFBC'lIVIrY: ALL 
+MM-98 
+D860 
+5-10-02 I 
+Page 1 
+Nov 21/86
+
+---
+
+[Source: ATA_24.txt, Relevance: 0.577]
+• • • • • • • • • •       24-00-00
+        Description    ••••••••••••            . . . . . . . . . . 24-00-00              1
+
+                                               . . . . . . . . . . 24-00-00
+      . General - Maintenance Practices • • • • • • • • • • • • •   24-00-00
+
+---
+
+[Source: ATA_05.txt, Relevance: 0.565]
+0-Hour Inspection • • •                5-10-03           62
+    12000-Hour Inspection (Accomplish at 6000-Hour Intervals
+     Thereafter) • • • • • • • •. • • • • • • • • • • • • • •              5-10-03           63
+REPLACEMENT AND. OVERHAUL SCHEDULE         • • • • • • • • • •             5-10-04
+   General • • • • • • • • • • • •
+   Replacement Items • • • • • •
+                                                  ... ..
+                                         .... . . . ... .
+
+---
+
+[Source: ATA_05.txt, Relevance: 0.553]
+commended inspection intervals. Inspection intervals are measured
+     from the last inspection or return-to-service date.
+  J. Unscheduled Maintenance Checks, Scheduled Servicing, Replacement Items,
+     Overhaul Items and other inspections which correspond to the inspection
+     intervals in this section, are to be accomplished concurrently.
+
+---
+
+[Source: ATA_05.txt, Relevance: 0.547]
+de
+                                  with these inspection intervals. (Refer to Chapter
+                                  12.)
+
+    X      X                6.    Check that al 1 necessary unscheduled Maintenance
+                                  Checks (5-50-00) have been complied with.
+
+The context mentions "Recommended inspection intervals" but does not specify any particular interval for engines. It states that inspection intervals are measured from the last inspection or return-to-service date and includes various types of checks such as Unscheduled Maintenance Checks, Scheduled Servicing, Replacement Items, Overhaul Items, and other inspections corresponding to the intervals specified here. However, it does not provide specific details about engine maintenance intervals. Therefore, the context does not give clear information about engine maintenance intervals. 
+
+The text focuses more on general inspection practices rather than detailed specifications for engine maintenance intervals. To get accurate information about engine maintenance intervals, one would need additional sources or documentation specifically related to engine maintenance procedures.

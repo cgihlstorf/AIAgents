@@ -1,0 +1,101 @@
+Unanswerable Question (w/original prompt): What's the horsepower of a 1925 Model T?
+
+Context: [Source: ModelTNew.txt, Relevance: 0.467]
+...... .· . . . . . . . . . . . . . . . . . 1171
+Running in crankshaft . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+             engine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+                                                    s
+Screen, sediment bulb, cleaning .................... . .. ...... 1017
+Seats, adjusting the improved Coupe . . . .. .... . .. . . . . . . . . . . . .. .
+
+---
+
+[Source: ATA_30.txt, Relevance: 0.456]
+3430A it Hewlett Packard For checking
+                                                                 heater circuits.     e
+
+Voltmeter                    260          c    Simpson           For checking
+                                                                 heater circuits.
+
+
+
+
+3.   Trouble Shooti                  t
+     K. See figure $01 for trouble shooting procedure.
+
+---
+
+[Source: ATA_77.txt, Relevance: 0.454]
+Dec 2/77
+                                                ~
+                                 •    GATES. LEARJET CORPORATION
+
+                         ■a1nIana■■I! ■a■ual
+
+
+
+
+       Engine Exhaust Pressure
+       (PT5) ~H Engine
+
+
+
+
+                                                                               LH Engine Pressure
+                                                                               Ratio Transducer
+
+---
+
+[Source: ATA_00.txt, Relevance: 0.450]
+Model CA-260, Publication No.: TP-210; Jet Electronics and Tech-
+                nology, Inc., 5353 52nd street S. E., Grand Rapids, Michigan 49508.
+            (f) Instruction Manual, Nose Gear/Stall Warning Computer Amplifier,
+                Model CA-250, Publication No.: TP-209; Jet Electronics and Tech-
+                nology, Inc., 5353 52nd street S.
+
+---
+
+[Source: ATA_08.pdf, Relevance: 0.448]
+is 156. O pounds (based on 6. 7 pounds 
+per gallon) and fuel moment is 58, 900. 
+FFECTIVITY: ALL 
+8-20-00 
+Page 2 
+Dec 2/'17 
+
+
+[Page 9]
+Power Supply -
+§) 
+. 
+• 
+. GmE8 LEARJET CORPORATION 
+■a1n11n1n11 ■an■al 
+Indicator-Amplifier----._ 10 
+acun@ 
+@= 
+"' u• @r;e 
+----
+au. 
+c-·L-~ 
+UUIICI 
+c::.:-
+~ 
+Aircraft Electronic Weighing Kit 
+Figure 1 
+EFFECTIVITY: ALL 
+0 
+um,rr 
+IOU. 
+0 
+8-20-00 
+Page 3 
+Dec ?/'11
+
+The context does not provide any information about the horsepower of a 1925 Model T. Therefore, I cannot determine its horsepower based solely on the given text. 
+
+Relevant quote from the context:
+
+"Model T New.txt, Relevance: 0.467"
+
+This file contains information related to the Model T but does not include details about its horsepower. To find out the horsepower of a 1925 Model T, you would need additional sources or specific data regarding this particular model.

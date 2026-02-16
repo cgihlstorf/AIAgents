@@ -1,0 +1,65 @@
+Rephrased Question: When do I need to check the engine?
+
+Context: [Source: ATA_71.pdf, Relevance: 0.589]
+20) 
+Perform engine motoring check. (Refer to Engine Maintenance Manual 
+SEI-186). 
+(21) 
+Perform engine operational check. 
+C. Engine Ground Operation 
+(l) 
+Refer to Engine Operating Instructions Manual SEI-188. 
+D. Activating Engine After Storage 
+(1) 
+Prime the·lube and scavenge pump as outlined in General Electric 
+CJ610 Maintenance Manual SEI-186 if any of the following conditions 
+exist: (1) Engine has not been operated within 14 days or longer, 
+(2) engine is being tested for first time since install
+
+---
+
+[Source: ATA_71.txt, Relevance: 0.550]
+operational check.
+     C. Engine Ground Operation
+         (l)  Refer to Engine Operating Instructions Manual SEI-188.
+     D. Activating Engine After Storage
+         (1)  Prime the·lube and scavenge pump as outlined in General Electric
+              CJ610 Maintenance Manual SEI-186 if any of the following conditions
+              exist: (1) Engine has not been operated within 14 days or longer,
+              (2) engine is being tested for first time since installation, (3) engine is
+              being t
+
+---
+
+[Source: ModelTNew.pdf, Relevance: 0.550]
+r, turning the engine over with the starting crank about one-
+quarter turn at a time until all of the magnets have been tested. 
+With the magnet clamps positioned directly between the magneto 
+coil cores, a reading of 45 units or better should register on the dial 
+when magnets are checked in the car. When magnets are removed 
+from the flywheel and checked individually a reading of 35 units or 
+better should be obtained).
+
+---
+
+[Source: ATA_71.txt, Relevance: 0.529]
+AT).
+             (d) Record test engine parameters: %RPM, EGT, RAT, fuel flow,
+                 airspeed (Mach No.), and EPR.
+
+                 NOTE:       Make throttle movements in a smooth and normal manner.
+                             Quick throttle retard followed by immediate advance will
+                             make the check invalid.
+
+---
+
+[Source: ATA_71.txt, Relevance: 0.526]
+days or longer,
+              (2) engine is being tested for first time since installation, (3) engine is
+              being tested for first time since preservation, or (4) engine is being
+              ~sted suice replacement of lube and scavenge pump.
+
+5.   Adjustment/Test (Aircraft Certified at 51, 000 feet Operation)
+     A. Maximum Altitude (51, 000 feet) Engine Flight Test
+
+You need to perform an engine motoring check after 14 days or more of storage, when testing for the first time since installation, or if the lubrication and scavenging pumps have been replaced recently. The specific instructions also mention checking the engine's operation before storage and priming it if necessary under certain conditions. To ensure accurate readings during the operational check, you must prime the lubrication and scavenging pump according to the General Electric CJ610 Maintenance Manual SEI-186. Additionally, quick throttle movements can invalidate the test results. Based on these points, the most critical times for performing an engine check are after extended periods of storage, upon initial testing, and whenever there's a change in maintenance procedures involving the lubrication system.

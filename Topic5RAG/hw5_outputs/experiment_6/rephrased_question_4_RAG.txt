@@ -1,0 +1,64 @@
+Rephrased Question: Preventive maintenance requirements
+
+Context: [Source: ATA_71.pdf, Relevance: 0.621]
+2. 
+Maintenance Precautions 
+A. 
+The following maintenance precautions should be followed to prolong 
+the life of the engine. Maintenance personnel should read and tho-
+roughly understand these precautions. 
+(1) Use.extreme care to prevent dirt, hardware, tools or other 
+foreign material from entering the engine. 
+(2) Handle. fuel and oil lines carefully to avoid denting or kinking. Be 
+especially careful not to damage threads of fittings and line coup-
+ling nuts.
+
+---
+
+[Source: ATA_35.pdf, Relevance: 0.609]
+maintenance precautions and procedures. strict adherence to 
+these instructions will aid in maintaining a trouble-free system. 
+B. The oxygen system should be functionally tested at the time interval 
+specified in Chapter 5-00-00. 
+2. 
+en Maintenance Precautions and Proce~r.es 
+. Maintenance on the oxygen system or any other system requiring re-
+moval of an oxygen system component requires strict adherence to 
+the following procedures and precautions.
+
+---
+
+[Source: ATA_71.txt, Relevance: 0.608]
+Section
+Subject                                                                    Subject        ~
+
+GENERAL - DESCRIPTION AND OPERATION••••••••••                              '11-00-00
+   General· ••••••••••••••••••••••••••••••••                               '11-00-00         1
+   General - Maintenance Practices • • • • • • • • • • • • • • •           '11-00-00
+     General ••••••••••••••••••••••••••••••                                '11-00-00       201
+      Maintenance Precau
+
+---
+
+[Source: ATA_34.pdf, Relevance: 0.570]
+ot and Static System - Maintenance Practices • • • • •• 
+General •••••••.••••••••••••• , •••••••••• 
+Maintenance Practices • • • • • • • • • • • • • • • • • • • • • 
+Tools and Equipment . • . • • • • • • • • • • • • • • • • • • • 
+Inspection/ Check • • • • • • • • • • • • • • • • • • • • • • • • • 
+Pi tot Tube Maintenance Practices • • • • • • • • • • • • • • • • .
+
+---
+
+[Source: ATA_34.txt, Relevance: 0.564]
+and Static System - Maintenance Practices • • • • ••                         34-11-00
+               General •••••••.••••••••••••• ,••••••••••                                      34-11-00       201
+               Maintenance Practices • • • • • • • • • • • • • • • • • • • • •                34-11-00.      201
+               Tools and Equipment . • .
+
+Based on the given context, preventive maintenance requirements include:
+
+1. Using extreme care to prevent dirt, hardware, tools, or foreign materials from entering the engine.
+2. Handling fuel and oil lines carefully to avoid dents or kinks, especially by being cautious about damaging threads of fittings and line coupling nuts. 
+
+These precautions aim to extend the life of the engine through proper handling and protection during maintenance activities. The context also mentions that strict adherence to these instructions is beneficial for maintaining a trouble-free system. However, it does not provide specific details regarding the frequency or timing of these maintenance practices beyond mentioning they occur "at the time interval specified in Chapter 5-00-00." To get more detailed information on when and how often these tasks should be performed, one would need to refer to additional sources such as the specific chapter mentioned in the text.

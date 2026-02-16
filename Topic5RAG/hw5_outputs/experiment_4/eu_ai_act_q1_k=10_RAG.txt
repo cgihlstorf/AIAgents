@@ -1,0 +1,19 @@
+Question: What are the risks of AI systems built to detect human emotions?
+
+The risks associated with AI systems designed to detect human emotions include:
+
+1. **Mass Surveillance Concerns**: These systems might increase feelings of being monitored, potentially leading to violations of fundamental rights like privacy.
+   
+2. **Cultural Sensitivity Issues**: Emotions expressed differently across cultures can make these systems unreliable and less accurate.
+
+3. **Reliability Shortcomings**: Limited reliability means the systems may produce inconsistent results, affecting their effectiveness.
+
+4. **Specificity Limitation**: Lack of specificity makes it difficult to accurately interpret emotions without prior training data.
+
+5. **Generalisability Problems**: Narrow applicability limits how broadly the systems can be applied effectively.
+
+6. **Potential Discrimination**: Systems relying solely on biometric data could inadvertently discriminate against certain groups due to differences in cultural expressions of emotions.
+
+7. **Subtle Manipulation Risks**: Subliminal audio, images, or videos could subtly influence decisions without conscious awareness, posing significant ethical concerns.
+
+These points highlight the complex challenges and potential drawbacks of developing AI systems aimed at detecting human emotions.

@@ -1,0 +1,5 @@
+Question: What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+
+The context does not provide specific details about the practices developers of non-general-purpose AI should follow when releasing their open-source models. It only mentions that if the Commission becomes aware of a general-purpose AI model meeting certain criteria, it may become more challenging to comply with the obligations set by the regulation post-release. Therefore, no clear guidance is offered regarding the practices for non-general-purpose AI models. 
+
+The passage focuses primarily on the challenges faced by general-purpose AI model developers upon making their models available under an open-source license, rather than providing guidelines for those developing non-general-purpose AI models. Thus, there's insufficient information within the given text to determine what specific practices developers of non-general-purpose AI should adopt.
