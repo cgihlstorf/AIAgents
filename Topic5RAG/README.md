@@ -99,7 +99,11 @@ This depends on the query. For query number 1, as k increased, the model respons
 
 3. When does too much context hurt (irrelevant information, confusion)?
 
-4. How does k interact with chunk size?
+Negative consequences for higher values of k were most pronounced in the responses to query number one, where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, where its answer can be easily constructed from various chunks in the text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
+
+5. How does k interact with chunk size?
+
+TODO
 
 
 
