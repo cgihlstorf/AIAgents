@@ -103,7 +103,7 @@ Negative consequences for higher values of k were most pronounced in the respons
 
 3. How does k interact with chunk size?
 
-TODO
+The larger the chunk size, the more information is likely to be stored in any given chunk. More information contained in a single chunk implies that a smaller k might be used without much information loss, as this smaller set of chunks might contain as much, if not more, information than a larger number of chunks with less information contained in each. So the larger the chunk size, the smaller k can be without risking losing information.
 
 ## Experiment 5
 
@@ -125,6 +125,7 @@ For the first two queries, the model states that the answer cannot be found in t
 
 5. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
    TODO
+
 
 
 
