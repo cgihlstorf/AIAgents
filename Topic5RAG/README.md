@@ -118,13 +118,15 @@ For this experiment, I used the three queries provided in the experiment descrip
 For the first two queries, the model states that the answer cannot be found in the context so it cannot produce a response. For the last query, the model attempts to provide an explanation for why synthetic oils are recommended despite a lack of context but eventually admits that it would need definitive information from the context to be more certain in its answer and explanations. 
 
 3. Does it hallucinate plausible-sounding but wrong answers?
-   TODO
+
+The closest the model gets to a hallucination is in its answer to the third query about synthetic oils. The model's response attempts to operate under the premise that the manual did recommend synthetic oils, even citing specific sections of the manual in its answer, though these quotes only generally refer to oil use in the Model T. The model attempts to draw a connection between these quotes and the supposed premise that synthetic oil is recommended, but the connection is very forced and it is obvious that the model is trying its best to find evidence for why the prompt's premise could be true.
 
 4. Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
    TODO
 
 5. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
    TODO
+
 
 
 
