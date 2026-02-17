@@ -126,7 +126,9 @@ The closest the model gets to a hallucination is in its answer to the third quer
 The retrieved context doesn't hurt for the first two queries, as the model recognizes that it cannot answer the question in both cases. For the third query, oil is mentioned generally in several of the chunks, which might be what the model uses to attempt an answer that supported the presupposed claim that synthetic oil is recommended. In the end, however, the model still admitted that it would need more information from the context to "confirm" its answer, suggesting that it realized in the end that the context did not provide any concrete evidence for the query's claim.
 
 6. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
-   TODO
+
+The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt asking the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
+
 
 
 
