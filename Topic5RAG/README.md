@@ -95,11 +95,12 @@ Each query is based off of a paragraph I found in the EU AI Act so the model sho
 
 1. At what point does adding more context stop helping?
 
-This depends on the query. 
+This depends on the query. For query number 1, as k increased, the model responses became more general, circular, and less grounded in providing a precise answer based on the question. This suggests that having too much context can result in the model trying to incorporate everything it finds without being able to prioritize a few key points that most concretely answer the question. For query number 2, more information was included in the responses as k increased, but this additional information was still concrete and relevant (though some of it seemed to be taken from other parts of the AI Act than I had originally used to construct the query). For query number 3, the opposite effect was observed: it was only with higher values of k that the model was able to cite the specific paragraph I had based my query off of in its answer. Answers with k < 10 stated that they could not find the exact information requested based off of the query, suggesting that the paragraph I was referencing only appeared in the context with larger k. These varying results reveal a potential tradeoff in wanting a lower k for more general questions whose answers could be found in multiple parts of the reference document versus wanting a higher k for more specific questions that reference a particular paragraph. 
 
 3. When does too much context hurt (irrelevant information, confusion)?
 
 4. How does k interact with chunk size?
+
 
 
 
