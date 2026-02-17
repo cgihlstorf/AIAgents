@@ -105,6 +105,21 @@ Negative consequences for higher values of k were most pronounced in the respons
 
 TODO
 
+## Experiment 5
+
+For this experiment, I used the three queries provided in the experiment description.
+
+1. Does the model admit it doesn't know?
+   TODO
+
+2. Does it hallucinate plausible-sounding but wrong answers?
+   TODO
+
+3. Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
+   TODO
+
+4. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
+   TODO
 
 
 
