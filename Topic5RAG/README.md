@@ -97,11 +97,11 @@ Each query is based off of a paragraph I found in the EU AI Act so the model sho
 
 This depends on the query. For query number 1, as k increased, the model responses became more general, circular, and less grounded in providing a precise answer based on the question. This suggests that having too much context can result in the model trying to incorporate everything it finds without being able to prioritize a few key points that most concretely answer the question. For query number 2, more information was included in the responses as k increased, but this additional information was still concrete and relevant (though some of it seemed to be taken from other parts of the AI Act than I had originally used to construct the query). For query number 3, the opposite effect was observed: it was only with higher values of k that the model was able to cite the specific paragraph I had based my query off of in its answer. Answers with k < 10 stated that they could not find the exact information requested based off of the query, suggesting that the paragraph I was referencing only appeared in the context with larger k. These varying results reveal a potential tradeoff in wanting a lower k for more general questions whose answers could be found in multiple parts of the reference document versus wanting a higher k for more specific questions that reference a particular paragraph. 
 
-3. When does too much context hurt (irrelevant information, confusion)?
+2. When does too much context hurt (irrelevant information, confusion)?
 
 Negative consequences for higher values of k were most pronounced in the responses to query number one, where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, where its answer can be easily constructed from various chunks in the text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
 
-5. How does k interact with chunk size?
+3. How does k interact with chunk size?
 
 TODO
 
@@ -120,6 +120,7 @@ For this experiment, I used the three queries provided in the experiment descrip
 
 4. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
    TODO
+
 
 
 
