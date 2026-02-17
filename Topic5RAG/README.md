@@ -83,6 +83,26 @@ NOTE: for this experiment, I use Gemini as the frontier model.
    relevant information might be more helpful in getting the general idea more quickly.
 
 
+## Experiment 4
+
+For this question, I prompted the model to retrieve information from the EU AI Act using the following three queries:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+
+Each query is based off of a paragraph I found in the EU AI Act so the model should have at least those references for its answers.
+
+1. At what point does adding more context stop helping?
+
+This depends on the query. 
+
+3. When does too much context hurt (irrelevant information, confusion)?
+
+4. How does k interact with chunk size?
+
+
+
 
 
 
