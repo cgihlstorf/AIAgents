@@ -107,19 +107,25 @@ TODO
 
 ## Experiment 5
 
-For this experiment, I used the three queries provided in the experiment description.
+For this experiment, I used the three queries provided in the experiment description:
+
+- "What is the capital of France?"
+- "What's the horsepower of a 1925 Model T?" (if not in your manual)
+- "Why does the manual recommend synthetic oil?" (when it doesn't)
 
 1. Does the model admit it doesn't know?
+
+For the first two queries, the model states that the answer cannot be found in the context so it cannot produce a response. For the last query, the model attempts to provide an explanation for why synthetic oils are recommended despite a lack of context but eventually admits that it would need definitive information from the context to be more certain in its answer and explanations. 
+
+3. Does it hallucinate plausible-sounding but wrong answers?
    TODO
 
-2. Does it hallucinate plausible-sounding but wrong answers?
+4. Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
    TODO
 
-3. Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
+5. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
    TODO
 
-4. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
-   TODO
 
 
 
