@@ -130,6 +130,19 @@ The retrieved context doesn't hurt for the first two queries, as the model recog
 The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt asking the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
 
 
+## Experiment 6
+
+1. Which phrasings retrieve the best chunks?
+
+   TODO
+
+2. Do keyword-style queries work better or worse than natural questions?
+
+   TODO
+
+3. What does this tell you about potential query rewriting strategies?
+
+   TODO
 
 
 
