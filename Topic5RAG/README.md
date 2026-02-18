@@ -138,11 +138,12 @@ The casual question, "How often should I service the engine?" retrieved the best
 
 2. Do keyword-style queries work better or worse than natural questions?
 
-   TODO
+Generally, no. The top two performing queries were not keyword-style queries, so the keyword-style query did not result in the best performance in this case. When compared to the remaining non-keyword queries, the keyword-style query performed simiarly in terms of the amount of specific information it was able to produce, though the particular types of information provided differed. 
 
 3. What does this tell you about potential query rewriting strategies?
 
-   TODO
+The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
+
 
 
 
