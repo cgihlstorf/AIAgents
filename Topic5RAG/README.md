@@ -134,7 +134,7 @@ The original prompt already contained a specification stating: "If the context d
 
 1. Which phrasings retrieve the best chunks?
 
-   TODO
+The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results forthe casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the enginer if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
 
 2. Do keyword-style queries work better or worse than natural questions?
 
@@ -143,6 +143,7 @@ The original prompt already contained a specification stating: "If the context d
 3. What does this tell you about potential query rewriting strategies?
 
    TODO
+
 
 
 
