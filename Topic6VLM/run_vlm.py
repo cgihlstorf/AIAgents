@@ -100,7 +100,7 @@ def create_graph():
         print("\n> ", end="")
         user_input = input()
 
-        with open("photo.png", "rb") as f:
+        with open("photo.jpg", "rb") as f:
             img_b64 = base64.b64encode(f.read()).decode("utf-8")
 
         # Check if user wants to exit

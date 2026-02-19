@@ -1,0 +1,73 @@
+==================================================
+LangGraph Agent with LLaVA
+==================================================
+
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+▶️  Starting new workflow...
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is this image of?
+
+--------------------------------------------------
+Model Response:
+--------------------------------------------------
+ The image shows a serene natural landscape featuring a lake with clear reflections, surrounded by trees that suggest it might be a mountainous area. The viewpoint suggests the photo was taken from a location near the water, possibly on a boat or a dock. It's a picturesque scene with calm waters and lush greenery, likely a popular spot for relaxation or outdoor activities. 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What time of day is it?
+
+--------------------------------------------------
+Model Response:
+--------------------------------------------------
+ The image shows a serene landscape during the daytime. It appears to be a sunny day with ample light, but without specific information like shadows or the position of the sun, I can't determine the exact time of day. However, it seems to be around midday or late afternoon, given the lighting and the fact that there are no visible shadows suggesting an early morning or late evening hour. 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> It does seem very sunny, with very few clouds        
+
+--------------------------------------------------
+Model Response:
+--------------------------------------------------
+ Yes, the image shows a clear and sunny day. The sky is mostly cloudless, allowing for bright sunlight to illuminate the scene. This creates a calm and serene atmosphere in the natural setting of the forest and lake depicted in the photo. 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> I like this photo, it is very beautiful
+
+--------------------------------------------------
+Model Response:
+--------------------------------------------------
+ That's wonderful to hear! The image captures a serene scene with a clear reflection of the landscape in the water. It features a tranquil lake, surrounded by tall trees and mountains in the distance, creating a harmonious blend of nature's elements. This kind of scenery often evokes feelings of calmness and awe for the beauty of the natural world. Is there anything specific you like about this photo or what it reminds you of? 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> The entire image is very tranquil
+
+--------------------------------------------------
+Model Response:
+--------------------------------------------------
+ This is indeed a serene and picturesque scene. The image captures a beautiful landscape of a lake with calm waters, surrounded by lush green trees. A mountain range provides a stunning backdrop, creating a tranquil atmosphere that would be ideal for relaxation or contemplation. The clear blue sky overhead adds to the overall beauty and peacefulness of the setting. It's a perfect representation of natural serenity. 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
