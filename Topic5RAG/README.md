@@ -83,6 +83,75 @@ NOTE: for this experiment, I use Gemini as the frontier model.
    relevant information might be more helpful in getting the general idea more quickly.
 
 
+## Experiment 4
+
+For this question, I prompted the model to retrieve information from the EU AI Act using the following three queries:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+
+Each query is based off of a paragraph I found in the EU AI Act so the model should have at least those references for its answers.
+
+1. At what point does adding more context stop helping?
+
+This depends on the query. For query number 1, as k increased, the model responses became more general, circular, and less grounded in providing a precise answer based on the question. This suggests that having too much context can result in the model trying to incorporate everything it finds without being able to prioritize a few key points that most concretely answer the question. For query number 2, more information was included in the responses as k increased, but this additional information was still concrete and relevant (though some of it seemed to be taken from other parts of the AI Act than I had originally used to construct the query). For query number 3, the opposite effect was observed: it was only with higher values of k that the model was able to cite the specific paragraph I had based my query off of in its answer. Answers with k < 10 stated that they could not find the exact information requested based off of the query, suggesting that the paragraph I was referencing only appeared in the context with larger k. These varying results reveal a potential tradeoff in wanting a lower k for more general questions whose answers could be found in multiple parts of the reference document versus wanting a higher k for more specific questions that reference a particular paragraph. 
+
+2. When does too much context hurt (irrelevant information, confusion)?
+
+Negative consequences for higher values of k were most pronounced in the responses to query number one, where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, where its answer can be easily constructed from various chunks in the text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
+
+3. How does k interact with chunk size?
+
+The larger the chunk size, the more information is likely to be stored in any given chunk. More information contained in a single chunk implies that a smaller k might be used without much information loss, as this smaller set of chunks might contain as much, if not more, information than a larger number of chunks with less information contained in each. So the larger the chunk size, the smaller k can be without risking losing information.
+
+## Experiment 5
+
+For this experiment, I used the three queries provided in the experiment description:
+
+- "What is the capital of France?"
+- "What's the horsepower of a 1925 Model T?" (if not in your manual)
+- "Why does the manual recommend synthetic oil?" (when it doesn't)
+
+1. Does the model admit it doesn't know?
+
+For the first two queries, the model states that the answer cannot be found in the context so it cannot produce a response. For the last query, the model attempts to provide an explanation for why synthetic oils are recommended despite a lack of context but eventually admits that it would need definitive information from the context to be more certain in its answer and explanations. 
+
+3. Does it hallucinate plausible-sounding but wrong answers?
+
+The closest the model gets to a hallucination is in its answer to the third query about synthetic oils. The model's response attempts to operate under the premise that the manual did recommend synthetic oils, even citing specific sections of the manual in its answer, though these quotes only generally refer to oil use in the Model T. The model attempts to draw a connection between these quotes and the supposed premise that synthetic oil is recommended, but the connection is very forced and it is obvious that the model is trying its best to find evidence for why the prompt's premise could be true.
+
+4. Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
+
+The retrieved context doesn't hurt for the first two queries, as the model recognizes that it cannot answer the question in both cases. For the third query, oil is mentioned generally in several of the chunks, which might be what the model uses to attempt an answer that supported the presupposed claim that synthetic oil is recommended. In the end, however, the model still admitted that it would need more information from the context to "confirm" its answer, suggesting that it realized in the end that the context did not provide any concrete evidence for the query's claim.
+
+6. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
+
+The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt asking the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
+
+
+## Experiment 6
+
+1. Which phrasings retrieve the best chunks?
+
+The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results forthe casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the enginer if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
+
+2. Do keyword-style queries work better or worse than natural questions?
+
+Generally, no. The top two performing queries were not keyword-style queries, so the keyword-style query did not result in the best performance in this case. When compared to the remaining non-keyword queries, the keyword-style query performed simiarly in terms of the amount of specific information it was able to produce, though the particular types of information provided differed. 
+
+3. What does this tell you about potential query rewriting strategies?
+
+The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
+
+
+
+
+
+
+
+
+
 
 
 
