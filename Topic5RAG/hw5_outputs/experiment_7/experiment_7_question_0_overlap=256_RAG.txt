@@ -1,0 +1,46 @@
+Overlap: 256
+
+Question: In what ways can AI systems benefit society?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.758]
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.694]
+By improving prediction, optimising operations
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture,
+infrastructure management, energy, transport and logistics, public services, security, justice, resource and energy
+efficiency,
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.691]
+By improving prediction, optimising operations 
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI 
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial 
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture, 
+infrastructure management, energy, transport and logistics, public services, security, justice, resource and energy 
+effici
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.682]
+In order to obtain the greatest benefits from AI systems while protecting fundamental rights, health and safety and to
+enable democratic control, AI literacy should equip providers, deployers and affected persons with the necessary
+notions to make informed decisions regarding AI systems.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.671]
+area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain 
+essential private and public services and benefits necessary for people to fully participate in society or to improve 
+one’s standard of living. In particular, natural persons applying for or receiving essential public assistance benefits 
+and services from public authorities namely healthcare services, social security benefits, social services providing 
+protection in cases such as maternity, illn
+
+AI systems can provide key competitive advantages to undertakings by improving prediction, optimising operations, and personalising digital solutions. They also support socially and environmentally beneficial outcomes across various sectors including healthcare, agriculture, food safety, education and training, media, sports, culture, infrastructure management, energy, transport and logistics, public services, security, justice, and resource and energy efficiency. Additionally, AI literacy helps ensure informed decision-making about AI systems, particularly concerning their impact on fundamental rights, health, and safety. These benefits contribute to enhancing societal participation and quality of life.

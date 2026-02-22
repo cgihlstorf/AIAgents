@@ -1,0 +1,115 @@
+Question: What practices are developers of open-source AI models encouraged to follow?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.689]
+AI Office early on. That information is especially 
+OJ L, 12.7.2024
+EN
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+29/144
+
+
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after 
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation 
+may be more difficult to implement.
+(113)
+If the Commission becomes aware of the fact that a general-purpose AI model meets the requirements
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.679]
+ngage with the AI Office early on. That information is especially
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+29/144
+
+EN
+
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation
+may be more difficult to implement.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.652]
+open-source license should not be considered to 
+be a sufficient reason to exclude compliance with the obligations under this Regulation. In any case, given that the 
+release of general-purpose AI models under free and open-source licence does not necessarily reveal substantial 
+information on the data set used for the training or fine-tuning of the model and on how compliance of copyright 
+law was thereby ensured, the exception provided for general-purpose AI models from compliance with the 
+transparency-
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.643]
+can
+contribute to research and innovation in the market and can provide significant growth opportunities for the Union
+economy. General-purpose AI models released under free and open-source licences should be considered to ensure
+high levels of transparency and openness if their parameters, including the weights, the information on the model
+architecture, and the information on model usage are made publicly available.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.632]
+onents. The fact of making AI components available through open
+repositories should not, in itself, constitute a monetisation.
+
+(104) The providers of general-purpose AI models that are released under a free and open-source licence, and whose
+
+parameters, including the weights, the information on the model architecture, and the information on model usage,
+are made publicly available should be subject to exceptions as regards the transparency-related requirements
+imposed on general-purpose AI models, unless
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.623]
+grated them, when those tools, 
+services, processes, or AI components are made accessible under a free and open-source licence. Developers of free 
+and open-source tools, services, processes, or AI components other than general-purpose AI models should be 
+encouraged to implement widely adopted documentation practices, such as model cards and data sheets, as a way to 
+accelerate information sharing along the AI value chain, allowing the promotion of trustworthy AI systems in the 
+Union.
+(90)
+The Commission
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.614]
+ollaborate with relevant national competent authorities, and could, where appropriate, consult
+with civil society organisations and other relevant stakeholders and experts, including the Scientific Panel, for the
+drawing up of such codes. Codes of practice should cover obligations for providers of general-purpose AI models
+and of general-purpose AI models presenting systemic risks.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.610]
+ondition that the original provider of the model is credited, the identical or comparable
+terms of distribution are respected.
+
+(103) Free and open-source AI components covers the software and data, including models and general-purpose AI
+
+models, tools, services or processes of an AI system. Free and open-source AI components can be provided through
+different channels, including their development on open repositories.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.609]
+and open-source licence that allows for the access, usage, modification, and distribution of the model, and whose
+parameters, including the weights, the information on the model architecture, and the information on model usage, are
+made publicly available, unless the general-purpose AI models present systemic risks.
+
+SECTION 3
+
+Obligations of providers of general-purpose AI models with systemic risk
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.606]
+hared and where users can freely access, use, modify and redistribute them or modified versions thereof, can 
+contribute to research and innovation in the market and can provide significant growth opportunities for the Union 
+economy. General-purpose AI models released under free and open-source licences should be considered to ensure 
+high levels of transparency and openness if their parameters, including the weights, the information on the model 
+architecture, and the information on model usage are made p
+
+According to the context, developers of free and open-source tools, services, processes, or AI components other than general-purpose AI models should be encouraged to implement widely adopted documentation practices, such as model cards and data sheets, as a way to accelerate information sharing along the AI value chain, allowing the promotion of trustworthy AI systems in the Union. These practices aim to facilitate the dissemination of essential details about the model's architecture, parameters, and usage, ensuring greater transparency and openness in the development and deployment of AI technologies.

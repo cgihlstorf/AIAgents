@@ -1,0 +1,70 @@
+Prompt: 
+
+CONTEXT:
+{context}
+
+QUESTION: {question}
+
+INSTRUCTIONS: Answer ONLY based on the context. If the answer isn't there, say so.
+
+ANSWER:
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.726]
+ted because that practice adds to the feeling of mass surveillance and can lead to gross
+violations of fundamental rights, including the right to privacy.
+
+(44)
+
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+genera
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.644]
+systems, such systems could lead to detrimental or unfavourable treatment of certain 
+natural persons or whole groups thereof. Therefore, the placing on the market, the putting into service, or the use of 
+AI systems intended to be used to detect the emotional state of individuals in situations related to the workplace and 
+education should be prohibited.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.643]
+based on the inference of those attributes or characteristics;
+(c) AI systems intended to be used for emotion recognition.
+
+2.
+
+Critical infrastructure: AI systems intended to be used as safety components in the management and operation of
+critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity.
+
+3.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.643]
+ng the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis 
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the 
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.638]
+dividual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons.
+
+Risks include:
+
+1. Mass surveillance feelings can lead to violations of fundamental rights like privacy.
+2. Limited reliability, specificity, and generalisability of these systems.
+3. Potential for discrimination against certain groups due to cultural differences in expressions of emotions.
+4. Intrusiveness to personal rights and freedoms when using biometric data. 
+
+The provided sources highlight significant concerns regarding the ethical implications and practical limitations of AI systems designed to detect human emotions, emphasizing issues such as potential misuse, reliability challenges, and the risk of discriminating against specific populations. The text also notes that reliance on biometric data raises additional concerns about fairness and privacy. These points collectively underscore the need for careful regulation and oversight to ensure that AI applications do not exacerbate existing social inequalities or infringe upon individual liberties.

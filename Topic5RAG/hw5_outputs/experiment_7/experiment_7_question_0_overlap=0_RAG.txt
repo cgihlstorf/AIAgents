@@ -1,0 +1,46 @@
+Overlap: 0
+
+Question: In what ways can AI systems benefit society?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.758]
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.691]
+By improving prediction, optimising operations 
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI 
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial 
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture, 
+infrastructure management, energy, transport and logistics, public services, security, justice, resource and energy 
+effici
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.661]
+AI systems used to monitor the performance and behaviour of such persons 
+may also undermine their fundamental rights to data protection and privacy.
+(58)
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain 
+essential private and public services and benefits necessary for people to fully participate in society or to improve 
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.652]
+horities involving certain uses of AI systems are 
+characterised by a significant degree of power imbalance and may lead to surveillance, arrest or deprivation of 
+a natural person’s liberty as well as other adverse impacts on fundamental rights guaranteed in the Charter.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.636]
+AI is a fast evolving family of technologies that contributes to a wide array of economic, environmental and societal
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial
+outcomes, for example in healthcare, agricultur
+
+AI systems can provide key competitive advantages to undertakings and support socially and environmentally beneficial outcomes, such as improvements in healthcare, agriculture, food safety, education and training, media, sports, culture, infrastructure management, energy, transport and logistics, public services, security, justice, and resource and energy efficiency. Additionally, they can enhance monitoring and personalisation of services, leading to better participation in society and improved standards of living. Furthermore, while there are concerns about potential negative impacts like power imbalances and adverse effects on fundamental rights, these should be considered alongside the numerous positive contributions AI makes to various sectors and aspects of life. The text emphasizes the importance of addressing these issues through regulation and ethical guidelines to ensure balanced development.

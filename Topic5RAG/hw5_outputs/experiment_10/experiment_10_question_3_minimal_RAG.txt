@@ -1,0 +1,69 @@
+Prompt: 
+
+CONTEXT:
+{context}
+
+QUESTION: {question}
+
+ANSWER:
+
+Question: What data privacy rights do people have with respect to AI?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.773]
+in a privacy-preserving, secure, timely, transparent and trustworthy 
+manner, and with an appropriate institutional governance. Relevant competent authorities, including sectoral ones, 
+providing or supporting the access to data may also support the provision of high-quality data for the training, 
+validation and testing of AI systems.
+(69)
+The right to privacy and to protection of personal data must be guaranteed throughout the entire lifecycle of the AI 
+system.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.765]
+he performance and behaviour of such persons
+may also undermine their fundamental rights to data protection and privacy.
+
+(58)
+
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.755]
+as they are not specific to AI systems and pursue other legitimate public interest objectives, 
+should not be affected by this Regulation.
+(10)
+The fundamental right to the protection of personal data is safeguarded in particular by Regulations (EU) 
+2016/679 (11) and (EU) 2018/1725 (12) of the European Parliament and of the Council and Directive (EU) 2016/680 
+of the European Parliament and of the Council (13).
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.747]
+y are not specific to AI systems and pursue other legitimate public interest objectives,
+should not be affected by this Regulation.
+
+(10)
+
+The fundamental right to the protection of personal data is safeguarded in particular by Regulations (EU)
+2016/679 (11) and (EU) 2018/1725 (12) of the European Parliament and of the Council and Directive (EU) 2016/680
+of the European Parliament and of the Council (13).
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.743]
+)
+The right to privacy and to protection of personal data must be guaranteed throughout the entire lifecycle of the AI 
+system. In this regard, the principles of data minimisation and data protection by design and by default, as set out in 
+Union data protection law, are applicable when personal data are processed.
+
+People have the right to privacy and to protection of personal data throughout the entire lifecycle of the AI system. The principles of data minimisation and data protection by design and by default, as set out in Union data protection law, apply when personal data are processed. 
+
+This answer directly addresses the question by stating that people have the right to privacy and protection of personal data throughout the lifecycle of an AI system. It also mentions the application of data minimisation and data protection by design and by default principles from Union data protection law. These principles help ensure that personal data are handled securely and appropriately within the context of AI systems. This information aligns closely with the provided sources on data privacy rights and AI regulations. 
+
+The reasoning process involves extracting key points about data privacy rights from the given text and summarizing them concisely while maintaining accuracy. The final sentence provides a clear and concise response based on the relevant information presented in the sources. 
+
+In conclusion, the answer accurately reflects the essence of the question by addressing both the general principle of data privacy rights for all AI systems and the specific application of data protection principles like data minimization and data protection by design and by default. This ensures that the response covers the essential aspects related to data privacy rights in relation to AI systems as per the provided sources.

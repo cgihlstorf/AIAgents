@@ -1,0 +1,43 @@
+Question: What practices are developers of open-source AI models encouraged to follow?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.689]
+AI Office early on. That information is especially 
+OJ L, 12.7.2024
+EN
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+29/144
+
+
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after 
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation 
+may be more difficult to implement.
+(113)
+If the Commission becomes aware of the fact that a general-purpose AI model meets the requirements
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.679]
+ngage with the AI Office early on. That information is especially
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+29/144
+
+EN
+
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation
+may be more difficult to implement.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.652]
+open-source license should not be considered to 
+be a sufficient reason to exclude compliance with the obligations under this Regulation. In any case, given that the 
+release of general-purpose AI models under free and open-source licence does not necessarily reveal substantial 
+information on the data set used for the training or fine-tuning of the model and on how compliance of copyright 
+law was thereby ensured, the exception provided for general-purpose AI models from compliance with the 
+transparency-
+
+Developers of open-source AI models are encouraged to engage with the AI Office early on. This action is particularly important because it ensures that they have access to the latest regulatory guidance and can take proactive steps to address potential compliance issues related to the release of their models as open-source software. The context emphasizes that such engagement helps mitigate challenges in implementing necessary measures post-release, which could become more complex without timely intervention. Additionally, the text suggests that engaging with the AI Office early allows developers to understand the specific requirements and expectations outlined by the European Union's regulations regarding open-source AI models. Therefore, the key practice recommended here is to initiate communication with the AI Office promptly upon planning to release an AI model as open-source.

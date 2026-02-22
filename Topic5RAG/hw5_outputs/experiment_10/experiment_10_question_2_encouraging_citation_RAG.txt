@@ -1,0 +1,81 @@
+Prompt: 
+
+CONTEXT:
+{context}
+
+QUESTION: {question}
+
+INSTRUCTIONS: Quote the exact passages that support your answer.
+
+ANSWER:
+
+Question: What practices are developers of open-source AI models encouraged to follow?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.689]
+AI Office early on. That information is especially 
+OJ L, 12.7.2024
+EN
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+29/144
+
+
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after 
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation 
+may be more difficult to implement.
+(113)
+If the Commission becomes aware of the fact that a general-purpose AI model meets the requirements
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.679]
+ngage with the AI Office early on. That information is especially
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+29/144
+
+EN
+
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation
+may be more difficult to implement.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.652]
+open-source license should not be considered to 
+be a sufficient reason to exclude compliance with the obligations under this Regulation. In any case, given that the 
+release of general-purpose AI models under free and open-source licence does not necessarily reveal substantial 
+information on the data set used for the training or fine-tuning of the model and on how compliance of copyright 
+law was thereby ensured, the exception provided for general-purpose AI models from compliance with the 
+transparency-
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.643]
+can
+contribute to research and innovation in the market and can provide significant growth opportunities for the Union
+economy. General-purpose AI models released under free and open-source licences should be considered to ensure
+high levels of transparency and openness if their parameters, including the weights, the information on the model
+architecture, and the information on model usage are made publicly available.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.632]
+onents. The fact of making AI components available through open
+repositories should not, in itself, constitute a monetisation.
+
+(104) The providers of general-purpose AI models that are released under a free and open-source licence, and whose
+
+parameters, including the weights, the information on the model architecture, and the information on model usage,
+are made publicly available should be subject to exceptions as regards the transparency-related requirements
+imposed on general-purpose AI models, unless
+
+Developers of open-source AI models should make public the parameters, including the weights, the information on the model architecture, and the information on model usage. This practice contributes to ensuring high levels of transparency and openness when it comes to these models' use. Additionally, they must adhere to the conditions outlined in Article 104 of the regulation, which allows them to avoid certain transparency-related requirements due to the nature of their licensing. However, it's important to note that simply releasing an AI component through an open repository does not automatically exempt them from complying with other aspects of the regulation, such as ensuring compliance with obligations under this Regulation. 
+
+The passage also mentions that if the Commission becomes aware that a general-purpose AI model meets the criteria specified in point (113), then necessary measures to ensure compliance may become more challenging to implement post-release. Therefore, while open source licenses offer some flexibility, they do not absolve developers from fulfilling all regulatory obligations related to AI. 
+
+Moreover, the text emphasizes that the release of general-purpose AI models under a free and open-source license does not inherently indicate substantial information about the data sets used for training or fine-tuning, nor does it guarantee compliance with copyright law. Thus, there remains a need for additional measures to ensure full compliance with the regulations governing AI. 
+
+In summary, while open-source licenses provide a degree of freedom and accessibility, they come with specific responsibilities and limitations that developers must navigate carefully to comply fully with EU regulations on artificial intelligence.

@@ -1,0 +1,113 @@
+Question: AI data privacy rights
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.806]
+in a privacy-preserving, secure, timely, transparent and trustworthy 
+manner, and with an appropriate institutional governance. Relevant competent authorities, including sectoral ones, 
+providing or supporting the access to data may also support the provision of high-quality data for the training, 
+validation and testing of AI systems.
+(69)
+The right to privacy and to protection of personal data must be guaranteed throughout the entire lifecycle of the AI 
+system.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.791]
+)
+The right to privacy and to protection of personal data must be guaranteed throughout the entire lifecycle of the AI 
+system. In this regard, the principles of data minimisation and data protection by design and by default, as set out in 
+Union data protection law, are applicable when personal data are processed.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.718]
+as they are not specific to AI systems and pursue other legitimate public interest objectives, 
+should not be affected by this Regulation.
+(10)
+The fundamental right to the protection of personal data is safeguarded in particular by Regulations (EU) 
+2016/679 (11) and (EU) 2018/1725 (12) of the European Parliament and of the Council and Directive (EU) 2016/680 
+of the European Parliament and of the Council (13).
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.715]
+y are not specific to AI systems and pursue other legitimate public interest objectives,
+should not be affected by this Regulation.
+
+(10)
+
+The fundamental right to the protection of personal data is safeguarded in particular by Regulations (EU)
+2016/679 (11) and (EU) 2018/1725 (12) of the European Parliament and of the Council and Directive (EU) 2016/680
+of the European Parliament and of the Council (13).
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.705]
+he performance and behaviour of such persons
+may also undermine their fundamental rights to data protection and privacy.
+
+(58)
+
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.705]
+rustful, accountable
+and non-discriminatory access to high-quality data for the training, validation and testing of AI systems. For
+example, in health, the European health data space will facilitate non-discriminatory access to health data and the
+training of AI algorithms on those data sets, in a privacy-preserving, secure, timely, transparent and trustworthy
+manner, and with an appropriate institutional governance.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.701]
+in a privacy-preserving, secure, timely, transparent and trustworthy
+manner, and with an appropriate institutional governance. Relevant competent authorities, including sectoral ones,
+providing or supporting the access to data may also support the provision of high-quality data for the training,
+validation and testing of AI systems.
+
+(69)
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.699]
+protection by design and by default, as set out in 
+Union data protection law, are applicable when personal data are processed. Measures taken by providers to ensure 
+compliance with those principles may include not only anonymisation and encryption, but also the use of 
+technology that permits algorithms to be brought to the data and allows training of AI systems without the 
+transmission between parties or copying of the raw or structured data themselves, without prejudice to the 
+requirements on data gov
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.698]
+protection by design and by default, as set out in
+Union data protection law, are applicable when personal data are processed. Measures taken by providers to ensure
+compliance with those principles may include not only anonymisation and encryption, but also the use of
+technology that permits algorithms to be brought to the data and allows training of AI systems without the
+transmission between parties or copying of the raw or structured data themselves, without prejudice to the
+requirements on data governa
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.698]
+s to alter the use or performance of the AI system so as to allow unlawful use by third parties, and 
+minimise unintended harm. Privacy and data governance means that AI systems are developed and used in 
+accordance with privacy and data protection rules, while processing data that meets high standards in terms of 
+quality and integrity.
+
+The context emphasizes several key aspects related to AI data privacy rights:
+
+1. **Privacy Preservation**: Data should be processed in a way that respects privacy, ensuring that personal data are protected throughout the lifecycle of the AI system.
+
+2. **Data Minimization**: Personal data should be collected only as much as necessary, adhering to the principle of data minimization.
+
+3. **Data Protection by Design and Default**: These principles apply to all data processing activities, including AI systems, emphasizing the importance of protecting personal data from inception.
+
+4. **Compliance with Legal Frameworks**: The fundamental right to the protection of personal data is safeguarded under Union data protection laws, specifically through Regulations (EU) 2016/679, (EU) 2018/1725, and Directive (EU) 2016/680.
+
+5. **Access to High-Quality Data**: Access to high-quality data for training, validating, and testing AI systems should be ensured, particularly in sectors like healthcare where it's crucial for non-discriminatory access to health data.
+
+These points collectively highlight the importance of maintaining privacy and security in AI systems, aligning with legal frameworks and ensuring fair access to essential services and benefits.

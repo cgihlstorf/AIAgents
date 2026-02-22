@@ -1,0 +1,103 @@
+Question: In what ways can AI systems benefit society?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.719]
+o a wide array of economic, environmental and societal
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture,
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.705]
+a wide array of economic, environmental and societal 
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations 
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI 
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial 
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, cultu
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.669]
+and cultural diversity, while avoiding 
+discriminatory impacts and unfair biases that are prohibited by Union or national law. Social and environmental 
+well-being means that AI systems are developed and used in a sustainable and environmentally friendly manner as 
+well as in a way to benefit all human beings, while monitoring and assessing the long-term impacts on the 
+individual, society and democracy.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.661]
+social or economic 
+situation that is likely to make those persons more vulnerable to exploitation such as persons living in extreme 
+poverty, ethnic or religious minorities. Such AI systems can be placed on the market, put into service or used with 
+the objective to or the effect of materially distorting the behaviour of a person and in a manner that causes or is 
+reasonably likely to cause significant harm to that or another person or groups of persons, including harms that may 
+be accumulated over time
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.656]
+way to benefit all human beings, while monitoring and assessing the long-term impacts on the
+individual, society and democracy. The application of those principles should be translated, when possible, in the
+design and use of AI models. They should in any case serve as a basis for the drafting of codes of conduct under this
+Regulation.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.655]
+AI systems and models specifically
+developed and put into service for the sole purpose of scientific research and development. Moreover, it is necessary
+to ensure that this Regulation does not otherwise affect scientific research and development activity on AI systems or
+models prior to being placed on the market or put into service.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.655]
+AI systems and models specifically 
+developed and put into service for the sole purpose of scientific research and development. Moreover, it is necessary 
+to ensure that this Regulation does not otherwise affect scientific research and development activity on AI systems or 
+models prior to being placed on the market or put into service.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.644]
+y and cultural diversity, while avoiding
+discriminatory impacts and unfair biases that are prohibited by Union or national law. Social and environmental
+well-being means that AI systems are developed and used in a sustainable and environmentally friendly manner as
+well as in a way to benefit all human beings, while monitoring and assessing the long-term impacts on the
+individual, society and democracy.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.638]
+ment that fosters
+innovation and facilitates the development, training, testing and validation of innovative AI systems for a limited time
+before their being placed on the market or put into service pursuant to a specific sandbox plan agreed between the
+providers or prospective providers and the competent authority.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.636]
+take into account, as appropriate, the ethical principles for the development of voluntary best
+practices and standards.
+
+(28)
+
+Aside from the many beneficial uses of AI, it can also be misused and provide novel and powerful tools for
+manipulative, exploitative and social control practices.
+
+According to the given context, AI systems can bring about various benefits to society, including:
+
+1. Improved prediction and decision-making processes.
+2. Enhanced operational efficiency and resource optimization.
+3. Personalized digital solutions tailored for individuals and organizations.
+4. Competitive advantages for businesses through AI-driven innovations.
+5. Support for socially and environmentally beneficial outcomes across multiple sectors like healthcare, agriculture, food safety, education, media, sports, and culture.
+6. Ensuring AI systems are developed and used sustainably and responsibly without discriminatory impacts or unfair biases.
+7. Monitoring and assessing long-term impacts on individual, societal, and democratic well-being.
+8. Translating ethical principles into the design and use of AI models.
+9. Fostering innovation and facilitating the development, training, testing, and validation of AI systems for limited periods before they go on the market or into service.
+10. Considering ethical considerations in developing voluntary best practices and standards. 
+
+These points highlight how AI can contribute positively to societal progress and welfare. However, it's important to note that misuse of AI could lead to negative consequences, which is why there's an emphasis on responsible and ethical development and usage. The text mentions potential risks but focuses primarily on the positive aspects of AI integration into society.

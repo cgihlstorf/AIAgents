@@ -1,0 +1,76 @@
+k value: 5
+
+Question: What are ALL the maintenance tasks I need to do monthly?
+
+Context: [Source: ATA_71.txt, Relevance: 0.565]
+Section
+Subject                                                                    Subject        ~
+
+GENERAL - DESCRIPTION AND OPERATION••••••••••                              '11-00-00
+   General· ••••••••••••••••••••••••••••••••                               '11-00-00         1
+   General - Maintenance Practices • • • • • • • • • • • • • • •           '11-00-00
+     General ••••••••••••••••••••••••••••••                                '11-00-00       201
+      Maintenance Precau
+
+---
+
+[Source: ATA_77.txt, Relevance: 0.525]
+ICES
+1.   General
+     A. Maintenance practices consists of electrical checks and replacement
+        of defective components.
+
+2.   Removal/Installation
+     A. Remove Pressure Ratio Transducer (See figure 201)
+        (1) Lower Tailcone access doors and disconnect aircraft batteries.
+        (2) Disconnect and cap plumbing from transducer.
+        (3) Disconnect electrical plug from transducer.
+        ( 4) Remove attaching parts and transducer from aircraft.
+     B.
+
+---
+
+[Source: ATA_39.txt, Relevance: 0.502]
+Section
+Subject                                                                             Subject
+
+GENERAL- DESCRIPTION AND OPERATION                         ............               39-00-00
+    Description • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •     39.:..00-00       1
+    General - Maintenance Practices •••••••••••••••••••                               39-00-00
+        GEmleml ••••••••••••••••••••••••••••••••••                                    39
+
+---
+
+[Source: ATA_34.txt, Relevance: 0.491]
+and Static System - Maintenance Practices • • • • ••                         34-11-00
+               General •••••••.••••••••••••• ,••••••••••                                      34-11-00       201
+               Maintenance Practices • • • • • • • • • • • • • • • • • • • • •                34-11-00.      201
+               Tools and Equipment . • .
+
+---
+
+[Source: ATA_71.txt, Relevance: 0.490]
+Dec 2/77
+                                      ~
+                             GAlEB LEARJET CORPORATION
+
+                ■ai■ll!■a■II!· ■a■■al
+                  GENERAL - MAINTENANCE PRACTICES
+
+1.   General
+     A. Maintenance practicea consist of servicing, removal and installation
+        for engine overhaul and engine replacement procedures.
+2.   Maintenance Precautions
+     A.
+
+Based on the information provided in the context, there is no specific mention of monthly maintenance tasks or precautions. The context focuses more on general descriptions and operations rather than detailed monthly maintenance tasks. Therefore, it's not possible to determine what all maintenance tasks you need to perform monthly without additional information. 
+
+Relevant Parts of Context:
+
+1. "General - Maintenance Practices" section mentions "Maintenance Precautions", but does not specify any particular tasks for monthly maintenance.
+   
+2. The "General - Description and Operation" section provides an overview of general maintenance practices but does not list specific monthly tasks.
+
+3. Other sections like "ICES" and "Tools and Equipment" also don't provide details about monthly maintenance tasks. 
+
+Therefore, the context does not include sufficient information to identify all monthly maintenance tasks needed. To accurately answer this question, further details would be required.

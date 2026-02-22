@@ -1,0 +1,110 @@
+Question: Benefits of AI on society
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.740]
+o a wide array of economic, environmental and societal
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture,
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.721]
+a wide array of economic, environmental and societal 
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations 
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI 
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial 
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, cultu
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.661]
+and cultural diversity, while avoiding 
+discriminatory impacts and unfair biases that are prohibited by Union or national law. Social and environmental 
+well-being means that AI systems are developed and used in a sustainable and environmentally friendly manner as 
+well as in a way to benefit all human beings, while monitoring and assessing the long-term impacts on the 
+individual, society and democracy.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.658]
+he performance and behaviour of such persons
+may also undermine their fundamental rights to data protection and privacy.
+
+(58)
+
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.638]
+y and cultural diversity, while avoiding
+discriminatory impacts and unfair biases that are prohibited by Union or national law. Social and environmental
+well-being means that AI systems are developed and used in a sustainable and environmentally friendly manner as
+well as in a way to benefit all human beings, while monitoring and assessing the long-term impacts on the
+individual, society and democracy.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.633]
+take into account, as appropriate, the ethical principles for the development of voluntary best
+practices and standards.
+
+(28)
+
+Aside from the many beneficial uses of AI, it can also be misused and provide novel and powerful tools for
+manipulative, exploitative and social control practices.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.627]
+st women, certain age groups, persons with disabilities, or persons of certain racial 
+or ethnic origins or sexual orientation. AI systems used to monitor the performance and behaviour of such persons 
+may also undermine their fundamental rights to data protection and privacy.
+(58)
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain 
+essential private and public services and benefits necessary for people to fully participate in society or to i
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.625]
+development, the placing on the market, the putting into service and the use of 
+artificial intelligence systems (AI systems) in the Union, in accordance with Union values, to promote the uptake of 
+human centric and trustworthy artificial intelligence (AI) while ensuring a high level of protection of health, safety, 
+fundamental rights as enshrined in the Charter of Fundamental Rights of the European Union (the ‘Charter’), 
+including democracy, the rule of law and environmental protection, to protect agai
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.623]
+e many beneficial uses of AI, it can also be misused and provide novel and powerful tools for 
+manipulative, exploitative and social control practices. Such practices are particularly harmful and abusive and 
+should be prohibited because they contradict Union values of respect for human dignity, freedom, equality, 
+democracy and the rule of law and fundamental rights enshrined in the Charter, including the right to 
+non-discrimination, to data protection and to privacy and the rights of the child.
+(29)
+AI-e
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.621]
+rined in the Treaties and, pursuant to Article 6 TEU, the 
+Charter. As a prerequisite, AI should be a human-centric technology. It should serve as a tool for people, with the 
+ultimate aim of increasing human well-being.
+(7)
+In order to ensure a consistent and high level of protection of public interests as regards health, safety and 
+fundamental rights, common rules for high-risk AI systems should be established.
+
+The context highlights several benefits of AI on society:
+
+1. Economic benefits: AI can lead to increased efficiency and productivity, driving growth and innovation across various sectors like healthcare, agriculture, and education.
+
+2. Environmental benefits: AI can help optimize resource usage and reduce waste, contributing to sustainability efforts.
+
+3. Societal benefits: AI can enhance personalized experiences and outcomes for individuals and organizations, promoting fairness and inclusivity.
+
+4. Ethical considerations: While AI has potential to bring positive changes, it's important to address concerns about its impact on privacy, discrimination, and manipulation. Special attention should be given to protecting vulnerable populations and ensuring ethical development of AI systems. 
+
+The text emphasizes how AI can drive progress and improvements in multiple areas, but also underscores the need for careful management to avoid negative consequences.

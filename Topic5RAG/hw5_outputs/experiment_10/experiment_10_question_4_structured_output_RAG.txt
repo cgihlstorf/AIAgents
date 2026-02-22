@@ -1,0 +1,78 @@
+Prompt: 
+
+CONTEXT:
+{context}
+
+QUESTION: {question}
+
+INSTRUCTIONS: First list relevant facts from the context, then synthesize your answer.
+
+ANSWER:
+
+Question: What are the main goals of the EU AI Act?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.699]
+into account their respective rights and obligations in the context of this Regulation, to make an informed deployment
+of AI systems, as well as to gain awareness about the opportunities and risks of AI and possible harm it can cause;
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+49/144
+
+EN
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.688]
+general-purpose AI models that have been placed on the market before 2 August 2025 shall take the
+necessary steps in order to comply with the obligations laid down in this Regulation by 2 August 2027.
+(58)
+
+Directive (EU) 2020/1828 of the European Parliament and of the Council of 25 November 2020 on representative actions for the
+protection of the collective interests of consumers and repealing Directive 2009/22/EC (OJ L 409, 4.12.2020, p. 1).
+
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+121/144
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.687]
+powers should be exercised in accordance with Regulation (EU) No 182/2011
+of the European Parliament and of the Council (56).
+
+(176) Since the objective of this Regulation, namely to improve the functioning of the internal market and to promote the
+
+uptake of human centric and trustworthy AI, while ensuring a high level of protection of health, safety, fundamental
+rights enshrined in the Charter, including democracy, the rule of law and environmental protection against harmful
+effects of AI systems in the
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.687]
+the putting into service, and the use of AI systems in the Union;
+44/144
+
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+EN
+
+OJ L, 12.7.2024
+(b) prohibitions of certain AI practices;
+(c) specific requirements for high-risk AI systems and obligations for operators of such systems;
+(d) harmonised transparency rules for certain AI systems;
+(e) harmonised rules for the placing on the market of general-purpose AI models;
+(f) rules on market monitoring, market surveillance, governance and enforcement;
+(g) meas
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.686]
+ights of the European Union (the ‘Charter’), 
+including democracy, the rule of law and environmental protection, to protect against the harmful effects of AI 
+systems in the Union, and to support innovation. This Regulation ensures the free movement, cross-border, of 
+AI-based goods and services, thus preventing Member States from imposing restrictions on the development, 
+marketing and use of AI systems, unless explicitly authorised by this Regulation.
+(2)
+This Regulation should be applied in accordance wi
+
+The main goals of the EU AI Act include improving the functioning of the internal market, promoting the uptake of human-centric and trustworthy AI, ensuring a high level of protection of health, safety, fundamental rights enshrined in the Charter, including democracy, the rule of law, and environmental protection against harmful effects of AI systems in the Union. Additionally, the act aims to prevent restrictions imposed by Member States on the development, marketing, and use of AI systems without explicit authorization under this regulation. It also seeks to ensure the free movement, cross-border, of AI-based goods and services, thereby preventing Member States from restricting these activities. Lastly, the act includes provisions related to prohibitions of certain AI practices, specific requirements for high-risk AI systems, harmonized transparency rules for certain AI systems, harmonized rules for the placing on the market of general-purpose AI models, rules on market monitoring, market surveillance, governance, and enforcement; and measures aimed at protecting the EU's Charter rights, including democracy, the rule of law, and environmental protection, against the harmful effects of AI systems within the Union.

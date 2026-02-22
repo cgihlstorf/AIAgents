@@ -1,0 +1,77 @@
+Prompt: 
+
+CONTEXT:
+{context}
+
+QUESTION: {question}
+
+INSTRUCTIONS: Use the context to help answer, but you may also use your knowledge.
+
+ANSWER:
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.726]
+ted because that practice adds to the feeling of mass surveillance and can lead to gross
+violations of fundamental rights, including the right to privacy.
+
+(44)
+
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+genera
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.644]
+systems, such systems could lead to detrimental or unfavourable treatment of certain 
+natural persons or whole groups thereof. Therefore, the placing on the market, the putting into service, or the use of 
+AI systems intended to be used to detect the emotional state of individuals in situations related to the workplace and 
+education should be prohibited.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.643]
+based on the inference of those attributes or characteristics;
+(c) AI systems intended to be used for emotion recognition.
+
+2.
+
+Critical infrastructure: AI systems intended to be used as safety components in the management and operation of
+critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity.
+
+3.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.643]
+ng the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis 
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the 
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.638]
+dividual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons.
+
+The risks associated with AI systems designed to detect human emotions include:
+
+1. **Privacy Concerns**: These systems might infringe upon an individual's right to privacy by monitoring their behavior without explicit consent. This can lead to feelings of being watched and surveilled, which can create a sense of unease and mistrust among users.
+
+2. **Biased Outcomes**: There is a risk that these systems could produce biased results due to the limitations in their design. For instance, they might not accurately capture all expressions of emotions, leading to misinterpretation or discrimination against certain groups based on cultural differences or personal circumstances.
+
+3. **Intrusiveness**: Such systems could potentially invade the privacy of individuals by collecting sensitive biometric data without proper authorization. This intrusion can violate the basic principles of privacy and autonomy.
+
+4. **Reliability and Specificity Issues**: The systems' performance can be unreliable, meaning they may fail to accurately detect emotions or provide specific insights. This unreliability can result in incorrect interpretations of emotions, leading to potential harm or unfair treatment.
+
+5. **Discrimination**: If the systems are trained using biased datasets or if they rely on algorithms that inherently discriminate, they could perpetuate existing biases and inequalities, affecting marginalized communities disproportionately.
+
+6. **Legal and Ethical Challenges**: Implementing and enforcing regulations to ensure ethical standards in the development and deployment of such systems poses significant challenges. Misuse or misuse of these technologies could have severe consequences, including violations of human rights and exacerbating social divides.
+
+These risks underscore the need for careful consideration and regulation when developing AI systems aimed at detecting human emotions to protect individuals from exploitation and ensure fairness and respect for their rights.

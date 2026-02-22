@@ -1,0 +1,33 @@
+Chunk Size: 128
+
+Question: What practices are developers of open-source AI models encouraged to follow?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.752]
+Developers of free 
+and open-source tools, services, processes, or AI components other than general-purpose AI models should be
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.708]
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.692]
+Developers of free
+and open-source tools, services, processes, or AI components other than general-purpose AI models should be
+e
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.690]
+(104) The providers of general-purpose AI models that are released under a free and open-source licence, and whose
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.669]
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, a
+
+Developers of free and open-source tools, services, processes, or AI components other than general-purpose AI models should be important with regard to general-purpose AI models that are planned to be released as open-source, given that, after. They should follow certain practices related to their contributions to these projects. These include ensuring transparency in their development process, providing clear documentation for users, adhering to ethical guidelines when using data, and maintaining the integrity of the codebase through regular updates and security patches. Additionally, they should consider contributing back to the community by sharing improvements and bug fixes, which can help foster collaboration and improve the overall quality of the project. This approach is crucial because it ensures that the AI models remain accessible and useful to the broader scientific and technological communities, while also promoting best practices in software development.

@@ -1,0 +1,68 @@
+Overlap: 256
+
+Question: What practices are developers of open-source AI models encouraged to follow?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.734]
+pate the placing on the market of general-purpose AI models with 
+systemic risks and the providers can start to engage with the AI Office early on. That information is especially 
+OJ L, 12.7.2024
+EN
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+29/144
+
+
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after 
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation 
+may be more d
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.710]
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation
+may be more difficult to implement.
+
+(113) If the Commission becomes aware of the fact that a general-purpose AI model meets the requirements to classify as
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.704]
+Office to anticipate the placing on the market of general-purpose AI models with
+systemic risks and the providers can start to engage with the AI Office early on. That information is especially
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+
+29/144
+
+EN
+
+OJ L, 12.7.2024
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation
+may be mo
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.700]
+[Page 30]
+important with regard to general-purpose AI models that are planned to be released as open-source, given that, after 
+the open-source model release, necessary measures to ensure compliance with the obligations under this Regulation 
+may be more difficult to implement.
+(113)
+If the Commission becomes aware of the fact that a general-purpose AI model meets the requirements to classify as 
+a general-purpose AI model with systemic risk, which previously had either not been known or of which the 
+relev
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.688]
+Developers of free
+and open-source tools, services, processes, or AI components other than general-purpose AI models should be
+encouraged to implement widely adopted documentation practices, such as model cards and data sheets, as a way to
+accelerate information sharing along the AI value chain, allowing the promotion of trustworthy AI systems in the
+Union.
+
+(90)
+
+Developers of free and open-source tools, services, processes, or AI components other than general-purpose AI models should be encouraged to implement widely adopted documentation practices, such as model cards and data sheets, as a way to accelerate information sharing along the AI value chain, allowing the promotion of trustworthy AI systems in the Union. This practice aims to facilitate transparency and trustworthiness in AI development by providing clear and comprehensive descriptions of the AI models being used. The use of model cards and data sheets helps stakeholders understand the characteristics, limitations, and potential impacts of these models, thereby enhancing their ability to make informed decisions about adopting them. These documents also serve as valuable resources for promoting the adoption of trustworthy AI technologies within the European Union. To achieve this goal, it is essential that developers adopt best practices in documenting AI models, ensuring that they meet high standards of clarity, completeness, and accessibility. By doing so, they contribute significantly to building a robust ecosystem of trustworthy AI solutions that benefit from widespread collaboration and continuous improvement. Additionally, the implementation of these practices aligns with broader efforts aimed at fostering an environment where AI innovation is conducted responsibly and transparently, contributing to the overall advancement of AI technology in Europe.

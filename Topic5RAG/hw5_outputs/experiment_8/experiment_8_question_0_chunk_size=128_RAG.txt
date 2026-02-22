@@ -1,0 +1,36 @@
+Chunk Size: 128
+
+Question: In what ways can AI systems benefit society?
+
+Context: [Source: EU_AI_Act.pdf, Relevance: 0.756]
+iven the major impact that AI can have on society and the need to build trust, it is vital for AI and its regulatory 
+framework
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.737]
+rstanding of the benefits, risks,
+safeguards and rights and obligations in relation to the use of AI systems;
+(g) facilitate the
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.728]
+Furthermore, without prejudice to the 
+exclusion of AI systems specifically developed and put into service for the sole purpose
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.728]
+Given the major impact that AI can have on society and the need to build trust, it is vital for AI and its regulatory
+framework
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.725]
+to obtain the greatest benefits from AI systems while protecting fundamental rights, health and safety and to 
+enable democratic
+
+The context mentions that understanding the benefits, risks, safeguards, and rights and obligations related to the use of AI systems is crucial. It also states that obtaining the greatest benefits from AI systems while protecting fundamental rights, health and safety, and enabling democracy is essential. However, specific details about how AI systems can benefit society aren't provided directly within this context. Therefore, I cannot provide a detailed list of benefits as requested. 
+
+The context highlights the importance of considering both the positive impacts and potential risks associated with AI technology when developing regulations and frameworks around their usage. This balanced approach aims to maximize societal gains while mitigating adverse effects.

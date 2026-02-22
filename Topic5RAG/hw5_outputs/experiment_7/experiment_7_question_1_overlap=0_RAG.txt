@@ -1,0 +1,56 @@
+Overlap: 0
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.804]
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.642]
+Therefore, the placing on the market, the putting into service, or the use of
+AI systems intended to be used to detect the emotional state of individuals in situations related to the workplace and
+education should be prohibited. That prohibition should not cover AI systems placed on the market strictly for
+medical or safety reasons, such as systems intended for therapeutical use.
+
+(45)
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.637]
+In addition,
+AI systems intended to be used for biometric categorisation according to sensitive attributes or characteristics
+protected under Article 9(1) of Regulation (EU) 2016/679 on the basis of biometric data, in so far as these are not
+prohibited under this Regulation, and emotion recognition systems that are not prohibited under this Regulation,
+should be classified as high-risk.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.637]
+In addition, 
+AI systems intended to be used for biometric categorisation according to sensitive attributes or characteristics 
+protected under Article 9(1) of Regulation (EU) 2016/679 on the basis of biometric data, in so far as these are not 
+prohibited under this Regulation, and emotion recognition systems that are not prohibited under this Regulation, 
+should be classified as high-risk.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.622]
+Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons. Considering the imbalance of power in the context of work or education, combined with the
+intrusive nature of these systems, such systems could lead to detrimental or unfavourable treatment of certain
+natural persons or whole groups thereof.
+
+The risks associated with AI systems designed to detect human emotions include:
+
+1. Limited Reliability: These systems often struggle to accurately interpret emotions due to variations between cultural expressions and situational factors.
+2. Lack of Specificity: They typically fail to provide detailed insights into specific emotions, which is crucial for understanding complex human behavior.
+3. Limited Generalisability: The effectiveness of these systems varies widely depending on the individual being analyzed, making them unreliable across different contexts.
+4. Potential Discrimination: Such systems might inadvertently discriminate against certain groups or individuals based on their perceived emotional states, potentially leading to unfair treatment.
+5. Intrusiveness: The use of biometric data for emotion detection can be seen as intrusive, especially in professional settings like workplaces and educational environments where privacy and autonomy are important values. 
+
+These issues highlight the need for caution when deploying AI systems aimed at detecting emotions, emphasizing the importance of ensuring fairness, accuracy, and respect for individual rights.

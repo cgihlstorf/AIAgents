@@ -1,0 +1,98 @@
+k value: 5
+
+Question: Compare the procedures for adjusting the engine vs. adjusting the brakes.
+
+Context: [Source: ATA_32.pdf, Relevance: 0.558]
+Automatic adjustment of brakes
+to compensate for brake wear is accomplished as follows.
+As the brakes
+wear, the return pins and tubes are pulled through grips by the pressure
+plate movement.
+This small movement between pin and grip is equal to the
+combined wear of all braking surfaces.
+Thus, when the brake return springs
+return the pressure plate to the released position, the built-in clearance
+1
+between the pressure plate and discs remains at a preset constant.
+Depressing the brake pedals and pulling the
+
+---
+
+[Source: ATA_32.pdf, Relevance: 0.529]
+.
+. . .
+Operation
+Brake System - Maintenance Practices
+. . .
+.
+Servicing
+. . . .
+.
+Adjustment/Test
+;. . . . .1. . . . . . .
+. . .
+Multiple Disc Brake - Maintenance Practices
+. .
+Removal/Installation
+Inspection/Check
+.
+Adjustment/Test
+_. . . .
+. . . . . . . . . . .
+‘ApprovedRepairs
+Power Brake Valve - Maintenance Practices . . .
+Removal/Installation . . . . . . . .. . . . . . . . .
+Adjustment/Test
+. . . . . .
+. . . . . . . .
+ApprovedRepairs...‘ . . .
+
+---
+
+[Source: ATA_32.txt, Relevance: 0.519]
+O   32-43-00     1
+           Component Description . . . . . . . . 4 . . . .               32-43-00     1
+       Operation                                                         32-43-00     2
+       Brake System - Maintenance Practices . . .        .               32-43-00
+            Servicing               . . . .                              32-43-00 201
+       .   Adjustment/Test ;. . . . .1. . . . . . .        . . .
+
+---
+
+[Source: ATA_32.txt, Relevance: 0.519]
+OIIUOOIOOIQOOOOIOI                                  D.   32-44-00
+         Description.....'....... . . . .                                                                      32-44-00         1
+         Operation                                                                                         O   32-44-00         1
+         Emergency Air Brake System - Maintenance Practices                                                    32-44-00
+             Adjustment/Test
+
+---
+
+[Source: ATA_32.pdf, Relevance: 0.517]
+sure distance between brake housing and pressure plate as shown.
+(4)
+If distance between brake housing and pressure plate is 0. 330 inch or
+greater, remove brake assemblies for inspection and overhaul.
+g
+3.
+AdjustmentlTest
+A Q
+Functionally Test Multiple Disc Brake
+a
+g
+(1)
+Apply normal braking pressure and hold several times while checking
+for leakage.
+t
+y
+(2)
+Release brake pressure and observe brake release.
+A
+' (3)
+Rotate main landing gear wheels and check for freedom of movement.
+4.
+Approved Repairs
+A.
+Di
+
+The procedure for adjusting the brakes involves monitoring the clearance between the pressure plate and the discs, which should remain constant despite wear. This is achieved by ensuring that the return pins and tubes move with the pressure plate's movement but not too far, thus compensating for the combined wear of all braking surfaces. On the other hand, there is no specific mention of an engine adjustment process in the given context. Therefore, the primary difference lies in the maintenance aspect related to brake systems versus engines.

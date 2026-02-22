@@ -1,0 +1,40 @@
+Question: Benefits of AI on society
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.740]
+o a wide array of economic, environmental and societal
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture,
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.721]
+a wide array of economic, environmental and societal 
+benefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations 
+and resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI 
+can provide key competitive advantages to undertakings and support socially and environmentally beneficial 
+outcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, cultu
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.661]
+and cultural diversity, while avoiding 
+discriminatory impacts and unfair biases that are prohibited by Union or national law. Social and environmental 
+well-being means that AI systems are developed and used in a sustainable and environmentally friendly manner as 
+well as in a way to benefit all human beings, while monitoring and assessing the long-term impacts on the 
+individual, society and democracy.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.658]
+he performance and behaviour of such persons
+may also undermine their fundamental rights to data protection and privacy.
+
+(58)
+
+Another area in which the use of AI systems deserves special consideration is the access to and enjoyment of certain
+essential private and public services and benefits necessary for people to fully participate in society or to improve
+one’s standard of living.
+
+The benefits of AI on society include improved prediction, optimization of operations and resource allocation, personalization of digital solutions, and support for socially and environmentally beneficial outcomes in various sectors like healthcare, agriculture, food safety, education, media, sports, and culture. Additionally, AI can contribute to sustainability and environmental friendliness, ensuring fair treatment and avoiding discriminatory impacts. It also ensures accessibility to essential services and benefits for everyone's participation in society and improvement of living standards. These advancements aim at enhancing overall well-being and inclusivity.

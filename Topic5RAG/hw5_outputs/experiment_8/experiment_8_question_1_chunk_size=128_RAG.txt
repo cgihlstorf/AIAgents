@@ -1,0 +1,38 @@
+Chunk Size: 128
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.695]
+for this specific purpose, or the use of AI systems to infer emotions
+of a natural person in the areas of workplace and educati
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.692]
+e, or the use of AI systems to infer emotions 
+of a natural person in the areas of workplace and education institutions, except
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.650]
+the intensity and
+scope of the risks that AI systems can generate.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.645]
+attributes or characteristics;
+(c) AI systems intended to be used for emotion recognition.
+
+2.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.639]
+ned.
+
+(18)
+
+The notion of ‘emotion recognition system’ referred to in this Regulation should be defined as an AI system for the
+
+The risks associated with AI systems designed to detect human emotions include potential misuse, privacy concerns, and ethical implications. These systems could lead to discrimination against certain groups if not properly regulated, and there is also a risk of over-reliance on technology leading to decreased empathy among users. Additionally, the accuracy and reliability of these systems may vary significantly depending on their training data and implementation, which could result in incorrect emotional assessments. Furthermore, the intensity and scope of the risks posed by such systems need to be carefully considered, especially when they are applied in sensitive areas like workplaces and educational institutions. The regulation aims to address these issues through stringent requirements and oversight mechanisms.

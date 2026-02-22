@@ -1,0 +1,209 @@
+k value: 10
+
+Question: What tools do I need for a complete tune-up?
+
+Context: [Source: ATA_23.txt, Relevance: 0.460]
+craft speakers when the tune cycle is complete.
+             (g)   Make con1act with ground station and request a radio check. The -
+                   READY light shall extinguish when transceiver is keyed but shall
+                   ilhnnfnate when operator speaks into microphone (starts modu-
+                   lating transmitter).
+             (h)   Using the Frequency Selector, select and depress TUNE Switch.
+                   The antenna coupler shall tune all frequencies selected.
+             (i)
+
+---
+
+[Source: ATA_23.pdf, Relevance: 0.451]
+(S). §0 
+® 
+Collins 718U-5M HF Control Panel 
+eJ 
+IC 3 Y 5.0 
+0 
+H 
+F 
+~ 
+.___A 
+H 
+0 QIIT 
+TUNE ~ [I] 0 [l ·mu 
+DIM 
+0 
+Q 
+,. 
+5 
+II 
+g 
+N 
+0 
+111:ADT f.AU1.T 
+1 
+1 
+Sunair SCU55 HF Control Panel 
+Detail B 
+Detail A 
+---'=m1·1 ck-Attach 
+Fastener 
+16-30A 
+16-.29A 
+HF Control Panel 
+Figure 201 
+EFFECTMTY: OPTIONAL 
+11111-11 
+23-12-04 
+Page 201 
+Apr 30/82 
+
+
+[Page 45]
+_. -·= 
+.,_ .,.r 
+·;::, 
+'.r•··· 
+• 
+,·· 
+.. ,'' 
+r, •• 
+',· 
+; .. 
+·,
+
+---
+
+[Source: ATA_32.txt, Relevance: 0.417]
+proceeding with assembly of nose gear steering actuator. "     I
+                                               0
+
+
+
+
+                 (10)       Install ball bearing, washer, and strut attachment nut, torque nut to
+                            18 to 25 inch-pounds. Install cotter pin.    '
+
+
+                                                                                                       l
+
+---
+
+[Source: ATA_77.pdf, Relevance: 0.416]
+generator and secure with nuts. Torque nuts 25 to 
+35 inch-pounds. 
+(3) 
+Connect electrical connector to tachometer generator. 
+(4) 
+Install engine lower nacelle. 
+C. 
+Remove Indicator 
+(1) 
+Remove avionics control heads as necessary to gain access to engine 
+tachometer indicator. 
+(2) 
+Disconnect electrical connector from indicator. 
+(3) 
+Lessen clamp and remove instrument from panel. 
+D. 
+Install Indicator 
+(1) 
+Install indicator in panel and secure with clamp and attaching parts.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.411]
+.. . . . .................. . 1231
+                                  installing . . . . . . . . . . . . . . . . . . . . . . . . . . . 1245
+Gear, noisy time . . .                  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44 7
+      ratio (steering) new and old design . . . . . . . . . . . . . . . . . . . . 772
+Generator, brush sanding .                            . . . .... . ................ 1082
+                   setting with test stand . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Source: ATA_22.txt, Relevance: 0.411]
+gear with MIL-G-81322 grease.
+                (3)  Install roll servo actuator and secure with attaching parts.
+               (4)   Connect electrical connector to roll servo actuator.
+               -(5) Install floorboards and carpet.
+               ( 6)  Rest.ore electrical power to aircraft.
+        C.
+
+---
+
+[Source: ATA_22.txt, Relevance: 0.410]
+Gates Learjet Corporation@
+               ■ainlenanae ■anaal
+        (30)   Tune navigation receiver to a localizer frequency. Cause a G/S up
+               indication with either a battery box or an ISL radio simulator.
+        (31)   Depress ALT and G/S ARM pushbutton on autopilot pushbutton con-
+               troller.
+        (32)   Reduce G/S up indicator to zero.
+
+---
+
+[Source: ATA_27.txt, Relevance: 0.407]
+assembly.
+              (3)   COJlllect electrical wtrfng t.o terminal board.
+              (4)   Install radar unit.
+              (5)   Rest.ore power t.o aircraft.
+              (6)    Perform Hor1zon1al Stabilizer Pitch Trim Operational Check. Refer
+                    t.o 27-40-00.
+
+
+
+
+                                   ~~ Terminal Board
+                                          (TB 93)
+
+
+
+
+                                                                            Frame 6
+ Radar Support
+ Assy
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.404]
+Install car covers, lift out mat and floor boards, remove
+        transmission cover door . . . . . . . . . . . . . . . . . . . . . . . . . . .             8
+2     Remove adjusting screw, adjusting nuts and washers ,
+        remove springs and pedals. . . . . . . . . . . . . . . . . . . . . . . . . . .          10
+3     Remove bands and install new bands . . . . . . . . . . . . . . . . . .
+
+---
+
+[Source: ModelTNew.pdf, Relevance: 0.402]
+ft out mat and floor boards, remove 
+Hrs . Min. 
+transmission cover door . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . 
+8 
+2 
+Remove adjusting screw, adjusting nuts and washers, 
+remove springs and pedals. . . . . . . . . . . . . . . . . . . . . . . . . . . 
+10 
+3 
+Remove bands and install new bands . . . . . . . . . . . . . . . . . . 
+10 
+4 
+Connect pedals, adjust bands, install transmission cover 
+door, floor boards and mat, remove car covers .~
+. ..... 
+12 
+0 
+40
+
+For a complete tune-up, you would need:
+
+1. Tools such as wrenches, pliers, and screwdrivers to tighten bolts and screws.
+2. A multimeter to measure voltage levels and continuity.
+3. A socket set to turn various types of fasteners.
+4. An adjustable wrench for larger bolts.
+5. A torque wrench for precise tightening of certain components.
+6. Wire strippers to prepare wires for connections.
+7. Electrical connectors and wire cutters if needed for wiring adjustments.
+8. A bench vise or other tool to hold components during installation.
+9. A level to ensure proper alignment of parts.
+10. A set of gauges like dial indicators for precision measurements. 
+
+These tools will help in performing detailed checks and adjustments according to the specific instructions given in the context.

@@ -1,0 +1,39 @@
+Question: What is the correct spark plug gap for a Model T Ford?
+
+
+
+The **correct spark plug gap for a Ford Model T (produced 1908–1927) is 0.025 inches (0.64 mm)**. This is the **factory-specified gap** according to Ford's original service manuals and historical documentation.
+
+### Key Details & Best Practices:
+1. **Measurement Tool**:  
+   Always use a **feeler gauge** (not a wire gauge) to set the gap accurately. Adjust the electrode carefully—bending it too much can damage the plug.
+
+2. **Spark Plug Type**:  
+   Model Ts use **"standard" threaded plugs** with a **5/8" hex** and **1/2" reach** (e.g., original Autolite 21, Champion H-10, or modern equivalents like NGK B7HS).  
+   ⚠️ **Do not use modern "extended reach" plugs** (e.g., for V8s)—they can contact pistons or valves!
+
+3. **Why 0.025"?**  
+   - **Too narrow (e.g., <0.020")**: Causes weak spark, misfiring, and plug fouling.  
+   - **Too wide (e.g., >0.030")**: Requires higher voltage than the Model T's magneto/coil system can provide, leading to misfires, especially at high RPMs.  
+   - 0.025" balances reliable ignition with the limitations of the original ignition system.
+
+4. **Real-World Adjustments**:  
+   While 0.025" is standard, some restorers slightly adjust it based on conditions:  
+   - **0.020–0.022"**: If using a modern coil (not magneto) or in high-humidity environments.  
+   - **0.025–0.027"**: For high-performance setups (e.g., aftermarket coils).  
+   **However, for authenticity and stock operation, 0.025" is universally recommended.**
+
+5. **Critical Tip**:  
+   Always **check the gap after installation**—plugs can shift during tightening. Re-check after the first few runs, as carbon buildup may alter it over time.
+
+### Why This Matters:
+The Model T’s ignition system (magneto + trembler coils) generates lower voltage than modern systems. An incorrect gap is a common cause of **hard starting, rough running, or power loss** in restored vehicles. Sticking to 0.025" ensures compatibility with the original design.
+
+> 💡 **Pro Tip**: If replacing plugs, use **"resistor" plugs** (e.g., NGK B7HS-R) to reduce radio interference—but verify the gap is set to 0.025" first. Avoid cheap "universal" plugs, as they often have incorrect thread reach or heat range.
+
+For authoritative reference, consult:  
+- *Ford Service Manual (1922)*, Section 3 (Ignition System)  
+- *The Model T Ford: The Car That Changed the World* by William Green (p. 104)  
+- The **Model T Ford Club of America (MTFCA)** technical resources ([mtfca.com](https://www.mtfca.com)).
+
+Always prioritize original specifications for authenticity and reliability—your Model T will thank you! 🚗💨

@@ -1,0 +1,135 @@
+Chunk Size: 2048
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.640]
+the feeling of mass surveillance and can lead to gross
+violations of fundamental rights, including the right to privacy.
+
+(44)
+
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons. Considering the imbalance of power in the context of work or education, combined with the
+intrusive nature of these systems, such systems could lead to detrimental or unfavourable treatment of certain
+natural persons or whole groups thereof. Therefore, the placing on the market, the putting into service, or the use of
+AI systems intended to be used to detect the emotional state of individuals in situations related to the workplace and
+education should be prohibited. That prohibition should not cover AI systems placed on the market strictly for
+medical or safety reasons, such as systems intended for therapeutical use.
+
+(45)
+
+Practices that are prohibited by Union law, including data protection law, non-discrimination law, consumer
+protection law, and competition law, should not be affected by this Regulation.
+
+(46)
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.587]
+inal offence based solely on profiling them or on assessing their personality traits and characteristics 
+should be prohibited. In any case, that prohibition does not refer to or touch upon risk analytics that are not based 
+on the profiling of individuals or on the personality traits and characteristics of individuals, such as AI systems using 
+risk analytics to assess the likelihood of financial fraud by undertakings on the basis of suspicious transactions or 
+risk analytic tools to predict the likelihood of the localisation of narcotics or illicit goods by customs authorities, for 
+example on the basis of known trafficking routes.
+(43)
+The placing on the market, the putting into service for that specific purpose, or the use of AI systems that create or 
+expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV 
+footage, should be prohibited because that practice adds to the feeling of mass surveillance and can lead to gross 
+violations of fundamental rights, including the right to privacy.
+(44)
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly 
+as expression of emotions vary considerably across cultures and situations, and even within a single individual. 
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis 
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the 
+concerned persons. Considering the imbalance of power in the context of work or education, combined with the 
+intrusive nature of these systems, such systems could lead to detrimental or unfavourable treatment of certain 
+natural persons or whole groups thereof.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.562]
+e costs of implementation and the generally acknowledged state of the art, as may be reflected in relevant technical
+standards. This obligation shall not apply to the extent the AI systems perform an assistive function for standard editing or
+do not substantially alter the input data provided by the deployer or the semantics thereof, or where authorised by law to
+detect, prevent, investigate or prosecute criminal offences.
+3.
+Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons
+exposed thereto of the operation of the system, and shall process the personal data in accordance with Regulations (EU)
+2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, as applicable. This obligation shall not apply to AI systems
+used for biometric categorisation and emotion recognition, which are permitted by law to detect, prevent or investigate
+criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, and in accordance with
+Union law.
+4.
+Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall
+disclose that the content has been artificially generated or manipulated. This obligation shall not apply where the use is
+authorised by law to detect, prevent, investigate or prosecute criminal offence. Where the content forms part of an evidently
+artistic, creative, satirical, fictional or analogous work or programme, the transparency obligations set out in this paragraph
+are limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not
+hamper the display or enjoyment of the work.
+Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public
+on matters of public interest shall disclose that the text has been artificially generated or manipulated.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.559]
+use of ‘live’ or ‘near-live’ material, such as video footage, generated
+by a camera or other device with similar functionality. In the case of ‘post’ systems, in contrast, the biometric data
+has already been captured and the comparison and identification occur only after a significant delay. This involves
+material, such as pictures or video footage generated by closed circuit television cameras or private devices, which
+has been generated before the use of the system in respect of the natural persons concerned.
+
+(18)
+
+The notion of ‘emotion recognition system’ referred to in this Regulation should be defined as an AI system for the
+purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data.
+The notion refers to emotions or intentions such as happiness, sadness, anger, surprise, disgust, embarrassment,
+excitement, shame, contempt, satisfaction and amusement. It does not include physical states, such as pain or
+fatigue, including, for example, systems used in detecting the state of fatigue of professional pilots or drivers for the
+purpose of preventing accidents. This does also not include the mere detection of readily apparent expressions,
+gestures or movements, unless they are used for identifying or inferring emotions. Those expressions can be basic
+facial expressions, such as a frown or a smile, or gestures such as the movement of hands, arms or head, or
+characteristics of a person’s voice, such as a raised voice or whispering.
+
+(19)
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.554]
+y aware of those techniques or, where they are aware of them, can still be 
+deceived or are not able to control or resist them. This could be facilitated, for example, by machine-brain interfaces 
+or virtual reality as they allow for a higher degree of control of what stimuli are presented to persons, insofar as they 
+may materially distort their behaviour in a significantly harmful manner. In addition, AI systems may also otherwise 
+exploit the vulnerabilities of a person or a specific group of persons due to their age, disability within the meaning of 
+Directive (EU) 2019/882 of the European Parliament and of the Council (16), or a specific social or economic 
+situation that is likely to make those persons more vulnerable to exploitation such as persons living in extreme 
+poverty, ethnic or religious minorities. Such AI systems can be placed on the market, put into service or used with 
+the objective to or the effect of materially distorting the behaviour of a person and in a manner that causes or is 
+reasonably likely to cause significant harm to that or another person or groups of persons, including harms that may 
+be accumulated over time and should therefore be prohibited. It may not be possible to assume that there is an 
+EN
+OJ L, 12.7.2024
+8/144
+ELI: http://data.europa.eu/eli/reg/2024/1689/oj
+(16)
+Directive (EU) 2019/882 of the European Parliament and of the Council of 17 April 2019 on the accessibility requirements for 
+products and services (OJ L 151, 7.6.2019, p. 70).
+
+The risks associated with AI systems designed to detect human emotions include:
+
+1. **Intrusiveness**: These systems might intrude on people's privacy and freedom, leading to violations of fundamental rights like the right to privacy.
+
+2. **Discrimination**: They may result in discriminatory outcomes against certain individuals or groups, potentially causing adverse treatment.
+
+3. **Limited Reliability and Specificity**: The systems' performance can be unreliable and lack precision, making it difficult to accurately interpret emotions.
+
+4. **Generalisability Issues**: Their ability to generalize results may be limited, affecting how well they perform across different cultural contexts and situations.
+
+5. **Ethical Concerns**: There are ethical issues regarding the use of biometric data without consent, especially when applied to sensitive areas like work or education.
+
+These risks highlight the need for stringent regulations to ensure that AI systems do not infringe on fundamental rights or engage in unfair practices.

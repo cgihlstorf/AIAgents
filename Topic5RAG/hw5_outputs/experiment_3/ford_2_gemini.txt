@@ -1,0 +1,34 @@
+A slipping transmission band in a Model T is usually a sign of one of two things: either the band just needs a simple adjustment, or the lining is worn out and needs replacement.
+
+Before you start tearing things apart, try the adjustment first. It’s a 10-minute job that often solves the problem.
+
+1. Identify Which Band is Slipping
+The Model T transmission has three bands. You need to know which one to tighten:
+
+Reverse (Left): Usually the least used.
+
+Slow Speed/Low (Center): The most common one to slip.
+
+Brake (Right): If the car won't stop, this is the culprit.
+
+2. The Adjustment Process
+You will need a 11/16" wrench and a steady hand (don't drop anything into the transmission!).
+
+Remove the Inspection Cover: This is the door on top of the transmission (held by 6 screws). Warning: Stuff a rag into the opening. If you drop a nut or washer into the transmission, you’ll be pulling the whole engine to get it out.
+
+Locate the Adjuster Nut: For the Brake and Reverse bands, the adjusters are inside the transmission. For the Slow Speed (Low) band, the adjuster is a screw/nut on the outside (left side) of the transmission.
+
+Tighten the Nut: * Turn the nut clockwise one full turn at a time.
+
+The Goal: You want the pedal to engage firmly about 2 inches before it hits the floorboard.
+
+Test the "Free Neutral": After tightening, ensure the car still rolls freely when the hand lever is upright. If it drags, you’ve gone too tight.
+
+3. When Adjustment Isn't Enough
+If you tighten the band and it still slips (or if the pedal feels "mushy"), the lining is likely glazed or worn down to the rivets.
+
+Glazed Bands: If you've been "slipping the clutch" too much, the surface gets hard and shiny like glass. Sometimes you can "rough them up" with a hacksaw blade through the inspection door, but this is a temporary fix.
+
+Worn Linings: If they are worn out, you'll need to replace them with either Cotton, Scandinavia, or Kevlar linings.
+
+Critical Warning: Never let a band slip for long. The friction generates intense heat which can crack the cast-iron transmission drums, turning a $20 band job into a $1,000 engine overhaul.

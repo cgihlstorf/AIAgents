@@ -1,0 +1,115 @@
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.726]
+ted because that practice adds to the feeling of mass surveillance and can lead to gross
+violations of fundamental rights, including the right to privacy.
+
+(44)
+
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+genera
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.644]
+systems, such systems could lead to detrimental or unfavourable treatment of certain 
+natural persons or whole groups thereof. Therefore, the placing on the market, the putting into service, or the use of 
+AI systems intended to be used to detect the emotional state of individuals in situations related to the workplace and 
+education should be prohibited.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.643]
+based on the inference of those attributes or characteristics;
+(c) AI systems intended to be used for emotion recognition.
+
+2.
+
+Critical infrastructure: AI systems intended to be used as safety components in the management and operation of
+critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity.
+
+3.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.643]
+ng the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis 
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the 
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.638]
+dividual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.630]
+hysical, psychological health or financial interests are likely to occur, are 
+particularly dangerous and should therefore be prohibited. Such AI systems deploy subliminal components such as 
+audio, image, video stimuli that persons cannot perceive, as those stimuli are beyond human perception, or other 
+manipulative or deceptive techniques that subvert or impair person’s autonomy, decision-making or free choice in 
+ways that people are not consciously aware of those techniques or, where they are aware of t
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.619]
+s or private devices, which
+has been generated before the use of the system in respect of the natural persons concerned.
+
+(18)
+
+The notion of ‘emotion recognition system’ referred to in this Regulation should be defined as an AI system for the
+purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data.
+The notion refers to emotions or intentions such as happiness, sadness, anger, surprise, disgust, embarrassment,
+excitement, shame, contempt, satisfacti
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.617]
+or infer emotions, particularly 
+as expression of emotions vary considerably across cultures and situations, and even within a single individual. 
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.616]
+sical, psychological health or financial interests are likely to occur, are
+particularly dangerous and should therefore be prohibited. Such AI systems deploy subliminal components such as
+audio, image, video stimuli that persons cannot perceive, as those stimuli are beyond human perception, or other
+manipulative or deceptive techniques that subvert or impair person’s autonomy, decision-making or free choice in
+ways that people are not consciously aware of those techniques or, where they are aware of them, c
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.612]
+age or disability should be taken 
+into account to the extent the AI system is intended to interact with those groups as well. Moreover, natural persons 
+should be notified when they are exposed to AI systems that, by processing their biometric data, can identify or infer 
+the emotions or intentions of those persons or assign them to specific categories.
+
+The risks associated with AI systems designed to detect human emotions include:
+
+1. **Mass Surveillance Concerns**: These systems can add to feelings of mass surveillance, potentially leading to violations of fundamental rights like privacy.
+   
+2. **Cultural Sensitivity Issues**: Emotions expressed differently across cultures pose challenges for these systems due to variability in cultural expressions.
+
+3. **Reliability Shortcomings**: Limited reliability means the accuracy of detecting emotions might be inconsistent, affecting trust in the technology.
+
+4. **Specificity Limitation**: Lack of specificity makes it difficult to accurately identify particular emotions, reducing the precision of the detection process.
+
+5. **Generalisability Problems**: Narrow applicability limits how effectively these systems work across various contexts and individuals.
+
+6. **Potential Discrimination**: Systems relying on biometric data could inadvertently discriminate against certain groups, violating ethical standards.
+
+7. **Subtle Manipulation Risks**: Subliminal audio, images, or videos can influence decisions without conscious awareness, posing significant threats to personal autonomy and freedom of choice.
+
+These points highlight the multifaceted risks involved in developing and deploying AI systems aimed at recognizing human emotions.

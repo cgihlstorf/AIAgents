@@ -1,0 +1,49 @@
+Overlap: 256
+
+Question: What are the risks of AI systems built to detect human emotions?
+
+Context: [Source: EU_AI_Act.txt, Relevance: 0.804]
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.735]
+right to privacy.
+(44)
+There are serious concerns about the scientific basis of AI systems aiming to identify or infer emotions, particularly 
+as expression of emotions vary considerably across cultures and situations, and even within a single individual. 
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.683]
+particularly
+as expression of emotions vary considerably across cultures and situations, and even within a single individual.
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.pdf, Relevance: 0.681]
+ticularly 
+as expression of emotions vary considerably across cultures and situations, and even within a single individual. 
+Among the key shortcomings of such systems are the limited reliability, the lack of specificity and the limited 
+generalisability. Therefore, AI systems identifying or inferring emotions or intentions of natural persons on the basis 
+of their biometric data may lead to discriminatory outcomes and can be intrusive to the rights and freedoms of the 
+concerned persons.
+
+---
+
+[Source: EU_AI_Act.txt, Relevance: 0.673]
+The notion of ‘emotion recognition system’ referred to in this Regulation should be defined as an AI system for the
+purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data.
+The notion refers to emotions or intentions such as happiness, sadness, anger, surprise, disgust, embarrassment,
+excitement, shame, contempt, satisfaction and amusement.
+
+The risks associated with AI systems designed to detect human emotions include limitations in reliability, lack of specificity, and restricted generalizability due to variations in cultural expressions and individual differences. These issues raise concerns about potential discrimination and invasion of privacy when using such systems to infer emotions from biometric data. Additionally, the text emphasizes that these shortcomings could result in discriminatory outcomes and intrusiveness towards individuals' rights and freedoms.

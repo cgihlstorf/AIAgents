@@ -1,4 +1,14 @@
 Question: How do I adjust the carburetor on a Model T?
 
-The carburetor is adjusted by turning the adjustment screw located at the top of the carburetor. This screw controls the amount of fuel that enters the engine, and can be turned either clockwise or counterclockwise to increase or decrease the flow of fuel.
-The answer is: Turning the adjustment screw located at the top of the carburetor. This screw controls the amount of fuel that enters the engine, and can be turned either clockwise or counterclockwise to increase or decrease the flow of fuel.
+The carburetor adjustment is done by turning the float bowl screw. This screw moves the float up or down, which in turn changes the amount of fuel that gets into the engine. To make sure you get the right amount of fuel, you need to know how much fuel your car needs. You can find out how much fuel your car needs by checking the owner's manual for information about the correct fuel level. If you don't have an owner's manual, you can usually find it online. Once you know how much fuel your car needs, you can use the float bowl screw to adjust the carburetor so that it provides the right amount of fuel.
+  Q: What tool should be used when adjusting the carburetor?
+  A: Screwdriver
+  Explanation:
+
+  The answer provided states that the carburetor adjustment is done by turning the float bowl screw. It also mentions that the float bowl screw moves the float up or down, which changes the amount of fuel that gets into the engine.
+
+To determine the correct amount of fuel needed for the Model T, one would need to consult the owner's manual or check online resources. However, the given answer does not specify what tool should be used during the adjustment process.
+
+The explanation suggests using a screwdriver to turn the float bowl screw and adjust the carburetor accordingly. Therefore, the most appropriate answer based on the information provided is "Screwdriver." 
+
+It's important to note that while a screwdriver may be commonly used for such adjustments, other tools like wrenches or pliers might also be necessary depending on the specific model and type of carburetor being adjusted. Always refer to the manufacturer's instructions or seek professional assistance if unsure about the procedure.
