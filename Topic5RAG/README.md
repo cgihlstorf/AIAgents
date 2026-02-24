@@ -155,15 +155,17 @@ For this experiment, I used the following queries:
 1. Does higher overlap improve retrieval of complete information?
 
 I am taking "complete information" to mean "enough information to answer the question effectively." In this case, my results suggest that
-higher overalp does not necessarily improve retrieval of complete information, as lower overlap values resulted in chunks containing
-a decent amount of information already. One trend I did notice was that as the overlap value increased, there tended to be two chunks
-that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+higher overlap does not necessarily improve retrieval of complete information despite providing sufficient information in many (but not all) cases, as lower overlap values resulted in chunks containing a decent amount of information already. 
 
-3. What's the cost? (Index size, redundant information in context)
-   TODO
+2. What's the cost? (Index size, redundant information in context)
 
-5. Is there a point of diminishing returns?
-   TODO
+As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+
+3. Is there a point of diminishing returns?
+
+Based on my results, there is no definite point of diminishing returns. Overall, performance seemed mostly evenly distributed across 
+queries and overlap values. Some retrieved chunks/responses were better than others, though these responses were not concentrated in a single overlap value. For example, the chunks retrieved for query 1 with an overlap of 64 were not good but those retrieved for query 3 with an overlap of 64 were fairly decent, suggesting that the types of chunks found depend strongly on the query in addition to (or perhaps instead of) the overlap size.
+
 
 
 
