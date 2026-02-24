@@ -144,6 +144,27 @@ Generally, no. The top two performing queries were not keyword-style queries, so
 
 The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
 
+## Experiment 7
+
+For this experiment, I used the following queries:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+
+1. Does higher overlap improve retrieval of complete information?
+
+I am taking "complete information" to mean "enough information to answer the question effectively." In this case, my results suggest that
+higher overalp does not necessarily improve retrieval of complete information, as lower overlap values resulted in chunks containing
+a decent amount of information already. One trend I did notice was that as the overlap value increased, there tended to be two chunks
+that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+
+3. What's the cost? (Index size, redundant information in context)
+   TODO
+
+5. Is there a point of diminishing returns?
+   TODO
+
 
 
 
