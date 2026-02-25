@@ -167,6 +167,27 @@ Based on my results, there is no definite point of diminishing returns. Overall,
 queries and overlap values. Some retrieved chunks/responses were better than others, though these responses were not concentrated in a single overlap value. For example, the chunks retrieved for query 1 with an overlap of 64 were not good but those retrieved for query 3 with an overlap of 64 were fairly decent, suggesting that the types of chunks found depend strongly on the query in addition to (or perhaps instead of) the overlap size.
 
 
+## Experiment 8
+
+I used the following queries for this experiment:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI models encouraged to follow?
+- What data privacy rights do people have with respect to AI?
+- What are the main goals of the EU AI Act?
+
+1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
+   
+
+2. How does it affect answer completeness?
+   
+
+3. Is there a sweet spot for your corpus?
+   
+
+4. Does optimal size depend on the type of question?
+   
 
 
 
