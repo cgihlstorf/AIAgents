@@ -179,18 +179,22 @@ I used the following queries for this experiment:
 
 1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
 
-Generally, a chunk size of 512 results in the highest retrieval of relevant content. This makes sense given that the chunk size
-is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
+Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. The chunks sizes are usually only parts of sentences, with a single sentences sometimes spanning multiplle chunks. This does not allow enough space for chunks to contain enough information (less so relevant information) to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not fully on aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
    
 
 2. How does it affect answer completeness?
+
+TODO
    
 
 3. Is there a sweet spot for your corpus?
+
+As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
    
 
 4. Does optimal size depend on the type of question?
    
+Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
 
 
 
