@@ -178,6 +178,9 @@ I used the following queries for this experiment:
 - What are the main goals of the EU AI Act?
 
 1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
+
+Generally, a chunk size of 512 results in the highest retrieval of relevant content. This makes sense given that the chunk size
+is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
    
 
 2. How does it affect answer completeness?
@@ -188,6 +191,7 @@ I used the following queries for this experiment:
 
 4. Does optimal size depend on the type of question?
    
+
 
 
 
