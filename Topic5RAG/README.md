@@ -197,6 +197,30 @@ As mentioned in the answer to question 2, a chunk size of 512 seems to be the sw
 Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
 
 
+## Experiment 9
+
+I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keywords on the chunks retrieved.
+
+Queries:
+
+- "In what ways can AI systems benefit society?"
+- "What are the risks of AI systems built to detect human emotions?"
+- "What practices are developers of open-source AI models encouraged to follow?"
+- "What data privacy rights do people have with respect to AI?"
+- "What are the main goals of the EU AI Act?"
+- "Benefits of AI on society"
+- "Risks of AI emotion detectors"
+- "Best practices for open-source AI developers"
+- "AI data privacy rights"
+- "EU AI Act main goals"
+
+1. When is there a clear "winner" (large gap between #1 and #2)?
+
+2. When are scores tightly clustered (ambiguous)?
+
+3. What score threshold would you use to filter out irrelevant results?
+
+4. How does score distribution correlate with answer quality?
 
 
 
