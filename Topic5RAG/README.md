@@ -184,7 +184,7 @@ Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant i
 
 2. How does it affect answer completeness?
 
-TODO
+Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more comlete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 was the sweet spot between inclusing enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
    
 
 3. Is there a sweet spot for your corpus?
@@ -195,6 +195,7 @@ As mentioned in the answer to question 2, a chunk size of 512 seems to be the sw
 4. Does optimal size depend on the type of question?
    
 Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
+
 
 
 
