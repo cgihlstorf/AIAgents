@@ -203,24 +203,32 @@ I used the following queries for this experiment. I wanted to explore the effect
 
 Queries:
 
-- "In what ways can AI systems benefit society?"
-- "What are the risks of AI systems built to detect human emotions?"
-- "What practices are developers of open-source AI models encouraged to follow?"
-- "What data privacy rights do people have with respect to AI?"
-- "What are the main goals of the EU AI Act?"
-- "Benefits of AI on society"
-- "Risks of AI emotion detectors"
-- "Best practices for open-source AI developers"
-- "AI data privacy rights"
-- "EU AI Act main goals"
+1. "In what ways can AI systems benefit society?"
+2. "What are the risks of AI systems built to detect human emotions?"
+3. "What practices are developers of open-source AI models encouraged to follow?"
+4. "What data privacy rights do people have with respect to AI?"
+5. "What are the main goals of the EU AI Act?"
+6. "Benefits of AI on society"
+7. "Risks of AI emotion detectors"
+8. "Best practices for open-source AI developers"
+9. "AI data privacy rights"
+10. "EU AI Act main goals"
 
 1. When is there a clear "winner" (large gap between #1 and #2)?
 
+The top two largest differences occurred with query 2 (diff = 0.082) and query 7 (diff = 0.061). Interestingly, each of these queries
+is asking the same question, albeit using different language.
+
 2. When are scores tightly clustered (ambiguous)?
+
+Scores were often fairly clustered. Sometimes, there was a larger difference between the first couple of scores while the remaining scores were closer together. Scores were especially close together for question 10, with the difference between the largest and second largest score being only 0.002. This makes sense given the broad nature of the query "EI AI Act main goals", as any chunk of text with any reference to some kind of goal objective of the act (which may or may not be explicitly specified as a "goal" or "objective") could have as much similarity to the query as any other, given the potentially large number of responses that fit this category.
 
 3. What score threshold would you use to filter out irrelevant results?
 
-4. How does score distribution correlate with answer quality?
+I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. From this, I would use a threshold of around 0.65 to filter out irrelevant results.
+
+5. How does score distribution correlate with answer quality?
+
 
 
 
