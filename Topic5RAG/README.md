@@ -232,6 +232,9 @@ I went through each chunk in each output file and determined the point at which 
 Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the repsonses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters, with larger differences in scores between different clusters. 
 
 
+**Experiment: Implement a score threshold (e.g., only include chunks with score > 0.5). How does this affect results?**
+
+I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold, despite none of the scores being low enough to remove from the output. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this was due to inherent randomness in the model.
 
 
 
