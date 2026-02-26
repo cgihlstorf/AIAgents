@@ -225,10 +225,11 @@ Scores were often fairly clustered. Sometimes, there was a larger difference bet
 
 3. What score threshold would you use to filter out irrelevant results?
 
-I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. From this, I would use a threshold of around 0.65 to filter out irrelevant results.
+I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
 
-5. How does score distribution correlate with answer quality?
-
+4. How does score distribution correlate with answer quality?
+   
+Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the repsonses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters, with larger differences in scores between different clusters. 
 
 
 
