@@ -269,19 +269,20 @@ I used the following queries for this experiment:
 
 1. Does retrieving more chunks improve synthesis?
 
-No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to Overall, the model struggled to retrieve adequate information from the context. The model had the entore Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
+No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to question 2, the context only ever included chunks on adjusting the breaks, regardless of the value of k. Overall, the model struggled to retrieve adequate information from the context. The model had the entore Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
 
 2. Can the model successfully combine information from multiple chunks?
 
-TODO
+Yes, it seems to have been able to do this. For example, in its answer to question 4 with k=10, the model combined information from two different chunks in its summary. 
 
 3. Does it miss information that wasn't retrieved?
 
-TODO
+Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model omits information in the second chunk of context from its answer that could have been at least useful to include, even though the information is fairly vague. Additionally, in its answer to question 4 with k=3, the model uses a congressional processings documents in its context, presumably because they each include the word "safety", but the model fails to access the Model T or even the Learjet files. The model also cites Learjet files more often than Model T files, which could be an issue if the question is asking about the Model T but does not explicitly state so.
 
 4. Does contradictory information in different chunks cause problems?
 
-TODO
+I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
