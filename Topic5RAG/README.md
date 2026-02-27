@@ -243,17 +243,19 @@ I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimate
 
 Overall, most prompts resulted in reasonable answers. Most answers were grounded in the context, many using the context almost word-for-word, with slight parapharasing here and there. The quality of the answer and the information in it strongly depended on the context. When there was enough context available, the model generally did a good job including that context in its answer. There was one instance, however, when the chunk of context the model was referencing was cut off from its original context and the model seemed to infer what it might mean instead. For instance, for the question "What practices are developers of open-source AI models encouraged to follow?", the context states:
 
-1. "General-purpose AI models released under free and open-source licences should be considered to ensure high levels of transparency and openness if their parameters, including the weights, the information on the model architecture, and the information on model usage are made publicly available."
-2.  "The providers of general-purpose AI models that are released under a free and open-source licence, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available should be subject to exceptions as regards the transparency-related requirements imposed on general-purpose AI models..." but the model's response states "Developers of open-source AI models are encouraged to make public the parameters, including the weights, the information on the model architecture, and the information on model usage," despite the two sections of the context never explicitely stating that developers are *encouraged* to make this information public (the context is simply discussing the scenario in which the developers happened to release this information).
+- "General-purpose AI models released under free and open-source licences should be considered to ensure high levels of transparency and openness if their parameters, including the weights, the information on the model architecture, and the information on model usage are made publicly available."
+-  "The providers of general-purpose AI models that are released under a free and open-source licence, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available should be subject to exceptions as regards the transparency-related requirements imposed on general-purpose AI models..." but the model's response states "Developers of open-source AI models are encouraged to make public the parameters, including the weights, the information on the model architecture, and the information on model usage," despite the two sections of the context never explicitely stating that developers are *encouraged* to make this information public (the context is simply discussing the scenario in which the developers happened to release this information).
 
 While the model's response makes sense and is intuitive, this is one example of when the nuances of the wording of the context might confuse the model and the model interprets the information to mean something slightly different. Thus, while overall the model's answers seemed to be appropriately grounded in the context, small mistakes like these could also be present, distorting projecting meaning onto the context that it did not fully have originally. 
 
-4. Which produces the most useful answers?
+2. Which produces the most useful answers?
 
 Overall most responses were decently helpful, though some responses were more helpful than others. There was some variation in response quality among the prompt types, but often answers were very similar to one another. The helpfulness of answers often depended on the question asked and the quality of the available context for that question, with answers to questions 3 and 4 having the most consistently helpful responses. The effect of context quality on the model's answers is evident in the model's answers for question 1: "In what ways can AI systems benefit society?" The model most often cited a chunk of context that listed potential areas that AI could be useful in, but did not go into more depth about *how* AI could be useful/applied in those fields. 
 
-5. Is there a trade-off between strict grounding and helpfulness?
-   TODO
+3. Is there a trade-off between strict grounding and helpfulness?
+
+From my results, there does not seem to be a trade-off. In fact, the more grounded the model is in the context, the more helpful it is. This may be due to the nature of the source I am drawing from, which is the EU AI Act. Since the questions I use are asking about information from different parts of the act, it makes sense that answers grounded directly in the context would be most helpful.
+
 
 
 
