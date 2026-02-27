@@ -237,6 +237,9 @@ Answers tended to be of higher quality when at least some of the scores were not
 I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold, despite none of the scores being low enough to remove from the output. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this was due to inherent randomness in the model.
 
 
+## Experiment 10
+
+
 
 
 
