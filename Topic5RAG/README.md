@@ -257,6 +257,31 @@ Overall most responses were decently helpful, though some responses were more he
 From my results, there does not seem to be a trade-off. In fact, the more grounded the model is in the context, the more helpful it is. This may be due to the nature of the source I am drawing from, which is the EU AI Act. Since the questions I use are asking about information from different parts of the act, it makes sense that answers grounded directly in the context would be most helpful.
 
 
+## Experiment 11
+
+I used the following queries for this experiment:
+
+1. "What are ALL the maintenance tasks I need to do monthly?"
+2. "Compare the procedures for adjusting the engine vs. adjusting the brakes."
+3. "What tools do I need for a complete tune-up?"
+4. "Summarize all safety warnings in the manual"
+   
+
+1. Does retrieving more chunks improve synthesis?
+
+No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to Overall, the model struggled to retrieve adequate information from the context. The model had the entore Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
+
+2. Can the model successfully combine information from multiple chunks?
+
+TODO
+
+3. Does it miss information that wasn't retrieved?
+
+TODO
+
+4. Does contradictory information in different chunks cause problems?
+
+TODO
 
 
 
