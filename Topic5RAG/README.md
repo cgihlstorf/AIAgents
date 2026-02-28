@@ -144,8 +144,144 @@ Generally, no. The top two performing queries were not keyword-style queries, so
 
 The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
 
+## Experiment 7
+
+For this experiment, I used the following queries:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+
+1. Does higher overlap improve retrieval of complete information?
+
+I am taking "complete information" to mean "enough information to answer the question effectively." In this case, my results suggest that
+higher overlap does not necessarily improve retrieval of complete information despite providing sufficient information in many (but not all) cases, as lower overlap values resulted in chunks containing a decent amount of information already. 
+
+2. What's the cost? (Index size, redundant information in context)
+
+As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+
+3. Is there a point of diminishing returns?
+
+Based on my results, there is no definite point of diminishing returns. Overall, performance seemed mostly evenly distributed across 
+queries and overlap values. Some retrieved chunks/responses were better than others, though these responses were not concentrated in a single overlap value. For example, the chunks retrieved for query 1 with an overlap of 64 were not good but those retrieved for query 3 with an overlap of 64 were fairly decent, suggesting that the types of chunks found depend strongly on the query in addition to (or perhaps instead of) the overlap size.
 
 
+## Experiment 8
+
+I used the following queries for this experiment:
+
+- In what ways can AI systems benefit society?
+- What are the risks of AI systems built to detect human emotions?
+- What practices are developers of open-source AI models encouraged to follow?
+- What data privacy rights do people have with respect to AI?
+- What are the main goals of the EU AI Act?
+
+1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
+
+Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. The chunks sizes are usually only parts of sentences, with a single sentences sometimes spanning multiplle chunks. This does not allow enough space for chunks to contain enough information (less so relevant information) to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not fully on aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
+   
+
+2. How does it affect answer completeness?
+
+Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more comlete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 was the sweet spot between inclusing enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
+   
+
+3. Is there a sweet spot for your corpus?
+
+As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
+   
+
+4. Does optimal size depend on the type of question?
+   
+Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
+
+
+## Experiment 9
+
+I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keywords on the chunks retrieved.
+
+Queries:
+
+1. "In what ways can AI systems benefit society?"
+2. "What are the risks of AI systems built to detect human emotions?"
+3. "What practices are developers of open-source AI models encouraged to follow?"
+4. "What data privacy rights do people have with respect to AI?"
+5. "What are the main goals of the EU AI Act?"
+6. "Benefits of AI on society"
+7. "Risks of AI emotion detectors"
+8. "Best practices for open-source AI developers"
+9. "AI data privacy rights"
+10. "EU AI Act main goals"
+
+1. When is there a clear "winner" (large gap between #1 and #2)?
+
+The top two largest differences occurred with query 2 (diff = 0.082) and query 7 (diff = 0.061). Interestingly, each of these queries
+is asking the same question, albeit using different language.
+
+2. When are scores tightly clustered (ambiguous)?
+
+Scores were often fairly clustered. Sometimes, there was a larger difference between the first couple of scores while the remaining scores were closer together. Scores were especially close together for question 10, with the difference between the largest and second largest score being only 0.002. This makes sense given the broad nature of the query "EI AI Act main goals", as any chunk of text with any reference to some kind of goal objective of the act (which may or may not be explicitly specified as a "goal" or "objective") could have as much similarity to the query as any other, given the potentially large number of responses that fit this category.
+
+3. What score threshold would you use to filter out irrelevant results?
+
+I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
+
+4. How does score distribution correlate with answer quality?
+   
+Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the repsonses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters, with larger differences in scores between different clusters. 
+
+
+**Experiment: Implement a score threshold (e.g., only include chunks with score > 0.5). How does this affect results?**
+
+I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold, despite none of the scores being low enough to remove from the output. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this was due to inherent randomness in the model.
+
+
+## Experiment 10
+
+1. Which prompt produces the most accurate answers?
+
+Overall, most prompts resulted in reasonable answers. Most answers were grounded in the context, many using the context almost word-for-word, with slight parapharasing here and there. The quality of the answer and the information in it strongly depended on the context. When there was enough context available, the model generally did a good job including that context in its answer. There was one instance, however, when the chunk of context the model was referencing was cut off from its original context and the model seemed to infer what it might mean instead. For instance, for the question "What practices are developers of open-source AI models encouraged to follow?", the context states:
+
+- "General-purpose AI models released under free and open-source licences should be considered to ensure high levels of transparency and openness if their parameters, including the weights, the information on the model architecture, and the information on model usage are made publicly available."
+-  "The providers of general-purpose AI models that are released under a free and open-source licence, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available should be subject to exceptions as regards the transparency-related requirements imposed on general-purpose AI models..." but the model's response states "Developers of open-source AI models are encouraged to make public the parameters, including the weights, the information on the model architecture, and the information on model usage," despite the two sections of the context never explicitely stating that developers are *encouraged* to make this information public (the context is simply discussing the scenario in which the developers happened to release this information).
+
+While the model's response makes sense and is intuitive, this is one example of when the nuances of the wording of the context might confuse the model and the model interprets the information to mean something slightly different. Thus, while overall the model's answers seemed to be appropriately grounded in the context, small mistakes like these could also be present, distorting projecting meaning onto the context that it did not fully have originally. 
+
+2. Which produces the most useful answers?
+
+Overall most responses were decently helpful, though some responses were more helpful than others. There was some variation in response quality among the prompt types, but often answers were very similar to one another. The helpfulness of answers often depended on the question asked and the quality of the available context for that question, with answers to questions 3 and 4 having the most consistently helpful responses. The effect of context quality on the model's answers is evident in the model's answers for question 1: "In what ways can AI systems benefit society?" The model most often cited a chunk of context that listed potential areas that AI could be useful in, but did not go into more depth about *how* AI could be useful/applied in those fields. 
+
+3. Is there a trade-off between strict grounding and helpfulness?
+
+From my results, there does not seem to be a trade-off. In fact, the more grounded the model is in the context, the more helpful it is. This may be due to the nature of the source I am drawing from, which is the EU AI Act. Since the questions I use are asking about information from different parts of the act, it makes sense that answers grounded directly in the context would be most helpful.
+
+
+## Experiment 11
+
+I used the following queries for this experiment:
+
+1. "What are ALL the maintenance tasks I need to do monthly?"
+2. "Compare the procedures for adjusting the engine vs. adjusting the brakes."
+3. "What tools do I need for a complete tune-up?"
+4. "Summarize all safety warnings in the manual"
+   
+
+1. Does retrieving more chunks improve synthesis?
+
+No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to question 2, the context only ever included chunks on adjusting the breaks, regardless of the value of k. Overall, the model struggled to retrieve adequate information from the context. The model had the entore Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
+
+2. Can the model successfully combine information from multiple chunks?
+
+Yes, it seems to have been able to do this. For example, in its answer to question 4 with k=10, the model combined information from two different chunks in its summary. 
+
+3. Does it miss information that wasn't retrieved?
+
+Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model omits information in the second chunk of context from its answer that could have been at least useful to include, even though the information is fairly vague. Additionally, in its answer to question 4 with k=3, the model uses a congressional processings documents in its context, presumably because they each include the word "safety", but the model fails to access the Model T or even the Learjet files. The model also cites Learjet files more often than Model T files, which could be an issue if the question is asking about the Model T but does not explicitly state so.
+
+4. Does contradictory information in different chunks cause problems?
+
+I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
 
 
 
