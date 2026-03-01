@@ -9,7 +9,10 @@ Code, results, and analyses (included in a separate README file) for this assign
 ## 3. Topic3Tools
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic3Tools` folder.
 
-## 3. Topic4Exploring
+## 4. Topic4Exploring
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic4Exploring` folder.
+
+## 5. Topic5RAG
+Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic5Exploring` folder.
 
 
