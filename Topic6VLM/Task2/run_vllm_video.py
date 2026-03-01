@@ -326,7 +326,7 @@ def main(images:list):
 # Entry point - only run main() if this script is executed directly
 if __name__ == "__main__":
 
-    frames_dir = "frames_blank_background"
+    frames_dir = "frames_nature_background"
     images = []
 
     for root, dirs, files in os.walk(frames_dir):
