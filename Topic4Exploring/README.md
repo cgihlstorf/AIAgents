@@ -21,7 +21,7 @@ The ReAct agent might be too restrictive if some of the queries require tool cal
 
 ## Task 3
 
-Task 3 TOC:
+Task 3 Table of Contents:
 - `info_search.py`: my code file for running the Wikipedia and DuckDuckGo tools, based on the ReAct agent code provided.
 - `langchain_conversation_graph.png`: the general graph for the ReAct agent pipeline
 - `langchain_react_agent.png `: the ReAct agent specific graph
