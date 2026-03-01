@@ -1,3 +1,16 @@
+## Table of Contents
+- `experiment_1` contains output files for experiment 1.
+- `experiment_2` contains output files for experiment 2.
+- `experiment_3` contains output files for experiment 3.
+- `experiment_4` contains output files for experiment 4.
+- `experiment_5` contains output files for experiment 5.
+- `experiment_6` contains output files for experiment 6.
+- `experiment_7` contains output files for experiment 7.
+- `experiment_8` contains output files for experiment 8.
+- `experiment_9` contains output files for experiment 9.
+- `experiment_10` contains output files for experiment 10.
+- `experiment_11` contains output files for experiment 11.
+
 ## Experiment 1
 
 ### Does the model hallucinate specific values without RAG?
@@ -282,6 +295,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
