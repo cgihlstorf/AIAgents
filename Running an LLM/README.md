@@ -6,17 +6,17 @@ For this assignment, I ran several language models on subsets of the `MMLU` benc
 
 I then tested `Llama-3.2 1B Instruct` as a chat agent on my local laptop. Using the code provided for the assignment as a starter, I modified it to limit the model's chat context to only the previous 10 rounds of conversation. I then instroduced a variable that determined whether the model has access to any context at all and had two conversations with it in each setting - with context and without context. I provide a qualitative analysis of these two conversations in question 2 of `Results - Local Laptop`. 
 
-## Folder Guide
+## Table of Contents
 
-`chat_histories` contains files of the chats I had with the `Llama-3.2 1B Instruct` agent both with and without conversation history.
+- `chat_histories` contains files of the chats I had with the `Llama-3.2 1B Instruct` agent both with and without conversation history.
 
-`figures` contains plots and graphs of the results of running models on `MMLU` on 10 subjects.
+- `figures` contains plots and graphs of the results of running models on `MMLU` on 10 subjects.
 
-`output_files` contains the output files for each model run on 10 subjects on `MMLU`. No quantization was used for these experiments, but I did vary whether I used a CPU or a GPU.
+- `output_files` contains the output files for each model run on 10 subjects on `MMLU`. No quantization was used for these experiments, but I did vary whether I used a CPU or a GPU.
 
-`output_files_2_subjects` contains output files for models I ran on 2 subjects, testing on both CPU and GPU.
+- `output_files_2_subjects` contains output files for models I ran on 2 subjects, testing on both CPU and GPU.
 
-The `colab_link.txt` file contains the link to the Colab file I used to replicate some of these experiments. Figures and output files for the Colab experiments are in a separate folder entitled `hw1_outputs_colab`.
+- The `colab_link.txt` file contains the link to the Colab file I used to replicate some of these experiments. Figures and output files for the Colab experiments are in a separate folder entitled `hw1_outputs_colab`.
 
 
 ## Results - Local Laptop
