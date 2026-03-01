@@ -42,7 +42,7 @@ default prompt seems to hallucinate most of its answers, even if small pieces of
 ## Experiment 2
 
 - NOTE 1: for this experiment I used ChatOllama with `qwen3-next:80b-cloud` instead of `gpt4-mini`.
-- NOTE 2: the code to run the model for this task can be found in `larger_model_no_RAG.py`
+- NOTE 2: the code to run the model for this task can be found in `experiment_2/larger_model_no_RAG.py`
 
 
 ### Does Qwen3-next80b do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
@@ -297,6 +297,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
