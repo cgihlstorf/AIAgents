@@ -58,9 +58,8 @@ class AgentState(TypedDict):
     should_exit: bool
     model_response: str
     chat_history: list  
-    images: list
 
-def create_graph():
+def create_graph(images:list):
     """
     Create the LangGraph state graph with three separate nodes:
     1. get_user_input: Reads input from stdin
@@ -102,9 +101,7 @@ def create_graph():
         print("\n> ", end="")
         user_input = input()
 
-        with open("photo.jpg", "rb") as f:
-            img_b64 = base64.b64encode(f.read()).decode("utf-8")
-
+                    
         # Check if user wants to exit
         if user_input.lower() in ['quit', 'exit', 'q']:
             print("Goodbye!")
@@ -121,7 +118,6 @@ def create_graph():
             "user_input" : user_input,
             "should_exit" : False,
             "chat_history" : chat_history, 
-            "images" : img_b64,
         }
     
 
@@ -137,24 +133,30 @@ def create_graph():
 
         user_input = state["user_input"]
 
-        images = state["images"]
-
         # Format the prompt for the instruction-tuned model
         prompt = f"User: {user_input}\nAssistant:"
 
         # Invoke the LLM and get the response
         chat_history = state["chat_history"] + [{"role": "user", "content": user_input}] #TASK 5: add the user input to the chat history
         
-        response = ollama.chat(
-            model='llava',
-            messages=[{
-                'role': 'user',
-                'content': prompt,
-                'images': images
-            }]
-        )
+        
+        for i in range(len(images)):
 
-        response = response['message']['content']
+            image = images[i]
+
+            response = ollama.chat(
+                model='llava',
+                messages=[{
+                    'role': 'user',
+                    'content': prompt,
+                    "images": [image],
+                }]
+            )
+
+            response = response['message']['content']
+
+            print(f"Image {i} response:", response)
+            print("=" * 60)
 
         chat_history.append({"role": "assistant", "content": response}) 
 
@@ -274,7 +276,7 @@ def save_graph_image(graph, filename="lg_graph.png"):
         print("You may need to install additional dependencies: pip install grandalf")
 
 
-def main():
+def main(images:list):
 
     print("=" * 50)
     print("LangGraph Agent with LLaVA")
@@ -284,7 +286,7 @@ def main():
 
     # Step 2: Build the LangGraph with the LLM
     print("\nCreating LangGraph...")
-    graph_builder = create_graph()
+    graph_builder = create_graph(images)
     print("Graph created successfully!")
 
     with SqliteSaver.from_conn_string("checkpoints.db") as checkpointer:
@@ -323,17 +325,19 @@ def main():
 
 # Entry point - only run main() if this script is executed directly
 if __name__ == "__main__":
-    main()
+
+    frames_dir = "frames_blank_background"
+    images = []
+
+    for root, dirs, files in os.walk(frames_dir):
+
+        for file in files:
+
+            file_path = frames_dir + "/" + file
+
+            with open(file_path, "rb") as f:
+                img_b64 = base64.b64encode(f.read()).decode("utf-8")
+                images.append(img_b64)
 
 
-
-
-
-
-
-
-
-
-
-if __name__ == "__main__":
-    pass
+    main(images)

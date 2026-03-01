@@ -19,10 +19,10 @@ def get_frames(video_file_path:str):
     cap.release()
 
     for i, frame in enumerate(frames):
-        cv2.imwrite(f"frames/frame_{i:04d}.jpg", frame)
+        cv2.imwrite(f"frames_blank_background/frame_{i:04d}.jpg", frame)
 
 
 
 if __name__ == "__main__":
-    video_file_path = "person_frame_video.mp4"
+    video_file_path = "video_frame_blank.mp4"
     get_frames(video_file_path)
