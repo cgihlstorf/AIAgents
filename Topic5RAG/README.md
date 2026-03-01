@@ -47,7 +47,7 @@ default prompt seems to hallucinate most of its answers, even if small pieces of
 
 ### Does Qwen3-next80b do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
 
-`Qwen3-next80b` seems to hallucinate slightly less than `Qwen25-1.5b`, though I was unable to verify a few of its answers because the questions did not specify information needed in order to most precisely answer the question, for example, specifying that questions about cars refer to Model T cars (question 3 about the Model T does not specofy this) and specifying the specific date of congressional proceedings being referenced (question 4 about the congressional proceedings does not
+`Qwen3-next80b` seems to hallucinate slightly less than `Qwen25-1.5b`, though I was unable to verify a few of its answers because the questions did not specify information needed in order to most precisely answer the question, for example, specifying that questions about cars refer to Model T cars (question 3 does not soecify this) and specifying the specific date of congressional proceedings being referenced (question 4 about the congressional proceedings does not
 include a date or mention specific proceedings). Thus, there is no ground truth readily available to compare with these answers to determine if they are hallucinations or not. There were a couple of times when the model said that it could not answer a congressional proceedings questiion because it did not have the information from that far into the future, which helped prevent possible hallucinating false information in those cases.
 
 
@@ -293,6 +293,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
