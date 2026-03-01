@@ -67,7 +67,7 @@ NOTE: for this experiment, I use Gemini as the frontier model.
 
    Gemini seems to use a web search tool for most of the congressional proceedings questions, so my focus in this answer will be on the Model T queries.
    Because it was difficult to pinpoint exact ground truth answers in the manual, I do not have exact ground truth answers to compare to the model responses to fully distinguish general knowledge from knowledge in the manual, but the model responses contained a good amount of information organized in a way such that it was easy to follow and often provided additional
-   information, explanations, and reccomenndations that, if true, could benefit someone might want to know why something works the way it does or what
+   information, explanations, and recommendations that, if true, could benefit someone who might want to know why something works the way it does or what
    additional options they have if they are using the model to help them repair a Model T.
 
 3. When did the frontier model appear to be using live web search to help answer your questions?
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
