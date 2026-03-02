@@ -180,35 +180,35 @@ queries and overlap values. Some retrieved chunks/responses were better than oth
 
 I used the following queries for this experiment:
 
-- In what ways can AI systems benefit society?
-- What are the risks of AI systems built to detect human emotions?
-- What practices are developers of open-source AI models encouraged to follow?
-- What data privacy rights do people have with respect to AI?
-- What are the main goals of the EU AI Act?
+1. In what ways can AI systems benefit society?
+2. What are the risks of AI systems built to detect human emotions?
+3. What practices are developers of open-source AI models encouraged to follow?
+4. What data privacy rights do people have with respect to AI?
+5. What are the main goals of the EU AI Act?
 
 1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
 
-Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. The chunks sizes are usually only parts of sentences, with a single sentences sometimes spanning multiplle chunks. This does not allow enough space for chunks to contain enough information (less so relevant information) to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not fully on aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
+Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. These chunks usually contain only parts of sentences, with multiple chunks sometimes spanning a single sentence. This does not allow enough space for chunks to contain enough information to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not always aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
    
 
 2. How does it affect answer completeness?
 
-Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more comlete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 was the sweet spot between inclusing enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
+Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more complete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 achoeved the best balance between including enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
    
 
 3. Is there a sweet spot for your corpus?
 
-As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
+As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate an adequate amount of relevant information but also not too large that it might encapsulate information unrelated to the prompt but which contains many of the prompts keywords nonetheless.
    
 
 4. Does optimal size depend on the type of question?
    
-Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
+Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yielded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
 
 
 ## Experiment 9
 
-I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keywords on the chunks retrieved.
+I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keyword phrases on the types of chunks retrieved.
 
 Queries:
 
@@ -226,7 +226,7 @@ Queries:
 1. When is there a clear "winner" (large gap between #1 and #2)?
 
 The top two largest differences occurred with query 2 (diff = 0.082) and query 7 (diff = 0.061). Interestingly, each of these queries
-is asking the same question, albeit using different language.
+is asking the same question even though their phrasing is slightly different.
 
 2. When are scores tightly clustered (ambiguous)?
 
@@ -234,16 +234,16 @@ Scores were often fairly clustered. Sometimes, there was a larger difference bet
 
 3. What score threshold would you use to filter out irrelevant results?
 
-I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
+I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded it for each question (though interestingly, there was often at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
 
 4. How does score distribution correlate with answer quality?
    
-Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the repsonses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters, with larger differences in scores between different clusters. 
+Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the responses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters. 
 
 
 **Experiment: Implement a score threshold (e.g., only include chunks with score > 0.5). How does this affect results?**
 
-I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold, despite none of the scores being low enough to remove from the output. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this was due to inherent randomness in the model.
+I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold despite keeping all of its original context. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this could have been due to inherent randomness in the model.
 
 
 ## Experiment 10
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
