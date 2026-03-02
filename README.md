@@ -15,5 +15,5 @@ Code, results, and analyses (included in a separate README file) for this assign
 ## 5. Topic5RAG
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic5Exploring` folder.
 
-## 6. Topic6VM
+## 6. Topic6VLM
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic6VLM` folder.
