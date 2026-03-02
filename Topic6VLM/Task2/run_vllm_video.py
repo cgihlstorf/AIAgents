@@ -138,8 +138,6 @@ def create_graph(images:list):
 
         # Invoke the LLM and get the response
         chat_history = state["chat_history"] + [{"role": "user", "content": user_input}] #TASK 5: add the user input to the chat history
-        
-        frames_with_person = []
 
         for i in range(len(images)):
 
@@ -156,13 +154,15 @@ def create_graph(images:list):
 
             response = response['message']['content']
 
-            if "yes" in response.lower():
-                frames_with_person.append(i)
+            print(f"Image {i} response: {response}")
+            print("=" * 60)
+
+            
 
         chat_history.append({"role": "assistant", "content": response}) 
 
         # Return only the field we're updating
-        return {"model_response": frames_with_person, 
+        return {"model_response": response, 
                 "chat_history": chat_history,
                 } 
     
@@ -183,15 +183,10 @@ def create_graph(images:list):
             - Nothing (returns empty dict, state unchanged)
         """
 
-        frame_numbers = state["model_response"]
-        enters_scene = frame_numbers[0] 
-        exits_scene = frame_numbers[-1] + 1 #add 1 because this is when the person will have left the scene
-
         print("\n" + "-" * 50)
         print("Model Response:")
         print("-" * 50)
-        print("Enters Scene: Frame", enters_scene)
-        print("Exits Scene: Frame", exits_scene)
+        print(state["model_response"])
     
         # Return empty dict - no state updates from this node
         return {}
