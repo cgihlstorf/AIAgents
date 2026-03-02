@@ -1,3 +1,18 @@
+# Table of Contents
+- `experiment_1` contains the output files for experiment 1.
+- `experiment_2` contains the output files for experiment 2.
+- `experiment_3` contains the output files for experiment 3.
+- `experiment_4` contains the output files for experiment 4.
+- `experiment_5` contains the output files for experiment 5.
+- `experiment_6` contains the output files for experiment 6.
+- `experiment_7` contains the output files for experiment 7.
+- `experiment_8` contains the output files for experiment 8.
+- `experiment_9` contains the output files for experiment 9.
+- `experiment_10` contains the output files for experiment 10.
+- `experiment_11` contains the output files for experiment 11.
+
+# Answers to Discussion Questions
+
 ## Experiment 1
 
 ### Does the model hallucinate specific values without RAG?
@@ -19,34 +34,29 @@ suggesting that the value was hallucinated. For question 4 ("What oil should I u
 
 ### Are there questions where the model's general knowledge is actually correct?
 
-It is harder for me to determine the exact level of correctness of the model with the default prompt on the Model T questions as I am not
+It is difficult for me to determine the exact level of correctness of the model with the default prompt on the Model T questions as I am not
 an expert in that area, so this answer focuses mostly on the congressional proceedings text. For most of the questions, the model with the
-default prompt seems to hallucinate most of its answers, even if small pieces of information it provides are not completely incorrect. For example, when asked about what Mr. Flood said about Mayor David Black the model correctly stated that the mayor was not going to run for re-election but hallucinated that the mayor was from New York as opposed to Papillion, Nebraska. The model gets one key detail correct in this case, but hallucinates other details. 
+default prompt seems to hallucinate most of its answers, even if small pieces of information it provides are not completely incorrect. For example, when asked about what Mr. Flood said about Mayor David Black the model correctly stated that the mayor was not going to run for re-election but hallucinated that the mayor was from New York as opposed to Papillion, Nebraska.
 
 
 ## Experiment 2
 
 - NOTE 1: for this experiment I used ChatOllama with `qwen3-next:80b-cloud` instead of `gpt4-mini`.
-- NOTE 2: the code to run the model for this task can be found in `larger_model_no_RAG.py`
+- NOTE 2: the code to run the model for this task can be found in `experiment_2/larger_model_no_RAG.py`
 
 
 ### Does Qwen3-next80b do a better job than Qwen 2.5 1.5B in avoiding hallucinations?
 
-`Qwen3-next80b` seems to hallucinate slightly less than `Qwen25-1.5b`, though I was unable to verify a few of its answers because the questions did not specify 
-information needed in order to most precisely answer the question. This informations includes specifying that questions about cars refer to Model T cars (question 3 about the 
-Model T does not specofy this) and specifying the specific date of congressional proceedings being referenced (question 4 about the congressional proceedings does not
-include a date or mention specific proceedings). Thus, there is no ground truth readily available to compare with these answers to determine if they are hallucinations
-or not. There were a couple of times when the model said that it could not answer a congressional proceedings questiion because it did not have the information from
-that far into the future, which helped prevent possible hallucinating false information in those cases.
+`Qwen3-next80b` seems to hallucinate slightly less than `Qwen25-1.5b`, though I was unable to verify a few of its answers because the questions did not specify information needed in order to most precisely answer the question, for example, specifying that questions about cars refer to Model T cars (question 3 does not specify this) and specifying the specific date of congressional proceedings being referenced (question 4 about the congressional proceedings does not
+include a date or mention specific proceedings). Thus, there is no ground truth readily available to compare with these answers to determine if they are hallucinations or not. There were a couple of times when the model said that it could not answer a congressional proceedings questiion because it did not have the information from that far into the future, which helped prevent possible hallucinating false information in those cases.
 
 
 ### Which questions does Qwen3-next80B answer correctly? Compare the cut-off date of Qwen3-next80b pre-training and the age of the Model T Ford and Congressional Record corpora.
 
 It is difficult to determine the extent to which the model answers questions correctly for a few reasons: first, sometimes the model refuses to answer the question because its 
 knowledge cutoff is too far in the past, but it still provides information it claims it knows about the general topic at hand, which is not able to be verified with the ground
-truth documents provided. Second, I often couldn't find a ground truth answer for questions about the Model T after a few keyword searches in the manual, so I had nothing to compare the models' answers to. But given that I couldn't find couple of the model's answers via keyword search in the manual, it is possible that the models hallucinated their answers or are using some other data source (perhaps another manual) to inform their responses. Third, as mentioned in the previous answer, there are a couple of questions that do not 
-provide enough specifics (e.g., that the car in question is a Model T or that the question refers to specific congressional proceedings on a specific date). Given that the model's knowledge cutoff date seems to be before January 2026, it makes sense that it would either refuse to answer the questions that asked about specific dates after it was trained. The model never refused to answer questions about the Model T, however, suggesting that it had some information in its training corpus to draw from (which makes sense, as the Model T was introduced over 100 years ago). Even so, I could not fully verify its responses in the manual provided, suggesting that there might be another manual that I should e checking instead
-or that the model is hallucinating some or all of its responses.
+truth documents provided. Second, for the Model T questions, I often couldn't find a ground truth answer after a few keyword searches in the Model T manual, so I had nothing to compare the models' answers to. Given this, it is possible that the models hallucinated their answers or are using some other data source (perhaps another manual) to inform their responses. Third, as mentioned in the previous answer, there are a couple of questions that do not 
+provide enough specifics (e.g., that the car in question is a Model T or that the question refers to specific congressional proceedings on a specific date). Given that the model's knowledge cutoff date seems to be before January 2026, it makes sense that it would either refuse to answer the questions that asked about specific dates after it was trained. The model never refused to answer questions about the Model T, however, suggesting that it had some information in its training corpus to draw from (which makes sense, as the Model T was introduced over 100 years ago). Even so, I could not fully verify its responses in the manual provided, suggesting that the model is referencing another manual or that it is hallucinating some or all of its responses.
 
 
 ## Experiment 3
@@ -56,9 +66,8 @@ NOTE: for this experiment, I use Gemini as the frontier model.
 1. Where does the frontier model's general knowledge succeed?
 
    Gemini seems to use a web search tool for most of the congressional proceedings questions, so my focus in this answer will be on the Model T queries.
-   Because it was difficult to pinpoint exact ground truth answers in the manual, I do not have exact ground truth answers to compare the model responses
-   to, but the model responses contained a good amount of information organized in a way such that it was easy to follow and often provided additional
-   information, explanations, and reccomenndations that, if true, could benefit someone might want to know why something works the way it does or what
+   Because it was difficult to pinpoint exact ground truth answers in the manual, I do not have exact ground truth answers to compare to the model responses to fully distinguish general knowledge from knowledge in the manual, but the model responses contained a good amount of information organized in a way such that it was easy to follow and often provided additional
+   information, explanations, and recommendations that, if true, could benefit someone who might want to know why something works the way it does or what
    additional options they have if they are using the model to help them repair a Model T.
 
 3. When did the frontier model appear to be using live web search to help answer your questions?
@@ -91,15 +100,15 @@ For this question, I prompted the model to retrieve information from the EU AI A
 - What are the risks of AI systems built to detect human emotions?
 - What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
 
-Each query is based off of a paragraph I found in the EU AI Act so the model should have at least those references for its answers.
+Each query is based off of a paragraph I found in the EU AI Act, so the model should have at least those references for its answers.
 
 1. At what point does adding more context stop helping?
 
-This depends on the query. For query number 1, as k increased, the model responses became more general, circular, and less grounded in providing a precise answer based on the question. This suggests that having too much context can result in the model trying to incorporate everything it finds without being able to prioritize a few key points that most concretely answer the question. For query number 2, more information was included in the responses as k increased, but this additional information was still concrete and relevant (though some of it seemed to be taken from other parts of the AI Act than I had originally used to construct the query). For query number 3, the opposite effect was observed: it was only with higher values of k that the model was able to cite the specific paragraph I had based my query off of in its answer. Answers with k < 10 stated that they could not find the exact information requested based off of the query, suggesting that the paragraph I was referencing only appeared in the context with larger k. These varying results reveal a potential tradeoff in wanting a lower k for more general questions whose answers could be found in multiple parts of the reference document versus wanting a higher k for more specific questions that reference a particular paragraph. 
+This depends on the query. For query number 1, as k increased, the model responses became more general, circular, and less grounded in providing a precise answer based on the question. This suggests that having too much context can result in the model trying to incorporate everything it finds without being able to prioritize a few key points that most concretely answer the question. For query number 2, more information was included in the responses as k increased, but this additional information was still concrete and relevant (though some of it seemed to be taken from other parts of the AI Act than I had originally used to construct the query). For query number 3, the opposite effect was observed: it was only with higher values of k that the model was able to cite the specific paragraph I had based my query off of in its answer. Answers with k < 10 stated that they could not find the exact information requested based off of the query, suggesting that the paragraph I was referencing only appeared in the context with larger k. These varying results reveal a potential tradeoff in wanting a lower k for more general questions whose answers could be found in multiple parts of the reference document versus wanting a higher k to increase the chances of finding specific segments that answer a question.
 
 2. When does too much context hurt (irrelevant information, confusion)?
 
-Negative consequences for higher values of k were most pronounced in the responses to query number one, where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, where its answer can be easily constructed from various chunks in the text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
+Negative consequences for higher values of k were most pronounced in the responses to query number 1: "In what ways can AI systems benefit society?", where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, resulting in the model wanting to include information from all the chunks of text in its answer. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
 
 3. How does k interact with chunk size?
 
@@ -110,8 +119,8 @@ The larger the chunk size, the more information is likely to be stored in any gi
 For this experiment, I used the three queries provided in the experiment description:
 
 - "What is the capital of France?"
-- "What's the horsepower of a 1925 Model T?" (if not in your manual)
-- "Why does the manual recommend synthetic oil?" (when it doesn't)
+- "What's the horsepower of a 1925 Model T?" 
+- "Why does the manual recommend synthetic oil?"
 
 1. Does the model admit it doesn't know?
 
@@ -127,14 +136,14 @@ The retrieved context doesn't hurt for the first two queries, as the model recog
 
 6. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
 
-The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt asking the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
+The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France (when it stated that it did not know the answer with the original prompt) rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. The new prompt, then, does not seem to help much. It could be that the instructions in the original prompt that asked the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
 
 
 ## Experiment 6
 
 1. Which phrasings retrieve the best chunks?
 
-The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results forthe casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the enginer if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
+The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results for the casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the engine if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
 
 2. Do keyword-style queries work better or worse than natural questions?
 
@@ -142,24 +151,24 @@ Generally, no. The top two performing queries were not keyword-style queries, so
 
 3. What does this tell you about potential query rewriting strategies?
 
-The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
+The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the formal syntactic structure of the questions makes them easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
 
 ## Experiment 7
 
 For this experiment, I used the following queries:
 
-- In what ways can AI systems benefit society?
-- What are the risks of AI systems built to detect human emotions?
-- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+1. In what ways can AI systems benefit society?
+2. What are the risks of AI systems built to detect human emotions?
+3. What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
 
 1. Does higher overlap improve retrieval of complete information?
 
 I am taking "complete information" to mean "enough information to answer the question effectively." In this case, my results suggest that
-higher overlap does not necessarily improve retrieval of complete information despite providing sufficient information in many (but not all) cases, as lower overlap values resulted in chunks containing a decent amount of information already. 
+higher overlap does not necessarily improve retrieval of complete information because lower overlap values resulted in chunks containing a decent amount of information already. 
 
 2. What's the cost? (Index size, redundant information in context)
 
-As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, though for query 2 there were almost identical responses for overlap values of 0 and 64. 
 
 3. Is there a point of diminishing returns?
 
@@ -171,35 +180,35 @@ queries and overlap values. Some retrieved chunks/responses were better than oth
 
 I used the following queries for this experiment:
 
-- In what ways can AI systems benefit society?
-- What are the risks of AI systems built to detect human emotions?
-- What practices are developers of open-source AI models encouraged to follow?
-- What data privacy rights do people have with respect to AI?
-- What are the main goals of the EU AI Act?
+1. In what ways can AI systems benefit society?
+2. What are the risks of AI systems built to detect human emotions?
+3. What practices are developers of open-source AI models encouraged to follow?
+4. What data privacy rights do people have with respect to AI?
+5. What are the main goals of the EU AI Act?
 
 1. How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
 
-Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. The chunks sizes are usually only parts of sentences, with a single sentences sometimes spanning multiplle chunks. This does not allow enough space for chunks to contain enough information (less so relevant information) to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not fully on aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
+Smaller chunk sizes (e.g., 128) are often too small to contain enough relevant information. These chunks usually contain only parts of sentences, with multiple chunks sometimes spanning a single sentence. This does not allow enough space for chunks to contain enough information to adequately answer the question. Chunk sizes of 2048 included a large amount of text but content was often not always aligned with the query (though sometimes a relevant paragraph or segment would be found within one of the chunks). Generally, a chunk size of 512 resulted in the highest retrieval of relevant content. 
    
 
 2. How does it affect answer completeness?
 
-Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more comlete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 was the sweet spot between inclusing enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
+Generally, the smallest chunk size of 128 resulted in the most incomplete answers or answers that the model made up using its own knowledge as opposed to referencing information in the context (likely because the context didn't contain enough relevant information). For higher chunk values, chunk sizes of both 512 and 2048 included more complete information, though a couple of times responses from chunk size 2048 included some additional information that was not necessary to answer the question. For question 1 chunk size 2048 actually produced a better response, but for the rest of the questions a shunk size of 512 achoeved the best balance between including enough information for a complete answer but not too much information that some parts of the response become irrelevant to the question.
    
 
 3. Is there a sweet spot for your corpus?
 
-As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate en adequate amount of relevant information but also not too large that it might encapsulate something unrelated to the prompt but which contains many of the prompts keywords nonetheless.
+As mentioned in the answer to question 2, a chunk size of 512 seems to be the sweet spot for getting the most relevant chunks to the query. This makes sense given that the chunk size is not so small that it cannot encapsulate an adequate amount of relevant information but also not too large that it might encapsulate information unrelated to the prompt but which contains many of the prompts keywords nonetheless.
    
 
 4. Does optimal size depend on the type of question?
    
-Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yeilded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
+Partially. A chunk size of 512 consistently yielded the highest number of relevant chunks out of the prompts I tried, but the margin by which the number of chunks was higher varied by question. For example, for question 4, all 5 retrieved chunks contribute relevant information for a chunks size or 512, compared to 2 chunks for a chunk size of 128 and 3 chunks for a chunk size of 2048. For question 2, on the other hand, chunks sizes of both 512 and 2048 yielded on 1 relevant chunk while a chunk size of 128 yeilded 0 relevant chunks.
 
 
 ## Experiment 9
 
-I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keywords on the chunks retrieved.
+I used the following queries for this experiment. I wanted to explore the effect of rephrasing questions into keyword phrases on the types of chunks retrieved.
 
 Queries:
 
@@ -217,7 +226,7 @@ Queries:
 1. When is there a clear "winner" (large gap between #1 and #2)?
 
 The top two largest differences occurred with query 2 (diff = 0.082) and query 7 (diff = 0.061). Interestingly, each of these queries
-is asking the same question, albeit using different language.
+is asking the same question even though their phrasing is slightly different.
 
 2. When are scores tightly clustered (ambiguous)?
 
@@ -225,36 +234,38 @@ Scores were often fairly clustered. Sometimes, there was a larger difference bet
 
 3. What score threshold would you use to filter out irrelevant results?
 
-I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded that for each question (though often there was, interestingly, at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
+I went through each chunk in each output file and determined the point at which the chunks were no longer helpful to the query. I noted the similarity score of the most recent helpful query and recorded it for each question (though interestingly, there was often at least one unhelpful chunk in between two helpful chunks. In these cases, I recorded the similarity score of the last helpful chunk such that no helpful chunks appeared after it). I then took the average of these scores over all questions and found their average to be 0.657. Given this result, I would use a threshold of around 0.65 to filter out irrelevant results.
 
 4. How does score distribution correlate with answer quality?
    
-Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the repsonses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters, with larger differences in scores between different clusters. 
+Answers tended to be of higher quality when at least some of the scores were not so tightly clustered together. For example, the responses to queries 6 and 7 were good quality, and in both cases the top few scores for the retrieved chunks were more spread out from each other than the lower scores, which were closer together. For query 8, whose response was decent, the scores seemed to fall into clusters where scores in each cluster were closer together than scores in other clusters. 
 
 
 **Experiment: Implement a score threshold (e.g., only include chunks with score > 0.5). How does this affect results?**
 
-I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold, despite none of the scores being low enough to remove from the output. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this was due to inherent randomness in the model.
+I generated outputs for a threshold of 0.5 and a threshold of 0.65, but ultimately decided to analyze outputs generated with a threshold of 0.65, as this was the threshold I recommended in question 3. Any chunks with scores less than or equal to 0.65 were not used. Most responses generated with this threshold were decent in terms of their quality. One downside, however, was that for one question 8 none of the retrieved chunks had a score higher than the threshold, so the model was left to give its best guess at the answer. Interestingly, the model's response to question 5 was shorter when the threshold of 0.65 was applied than with no threshold despite keeping all of its original context. The model's response without a threshold began repeating itself about halfway through while the model's response with the threshold was shorter and was not repetitive, suggesting this could have been due to inherent randomness in the model.
 
 
 ## Experiment 10
 
 1. Which prompt produces the most accurate answers?
 
-Overall, most prompts resulted in reasonable answers. Most answers were grounded in the context, many using the context almost word-for-word, with slight parapharasing here and there. The quality of the answer and the information in it strongly depended on the context. When there was enough context available, the model generally did a good job including that context in its answer. There was one instance, however, when the chunk of context the model was referencing was cut off from its original context and the model seemed to infer what it might mean instead. For instance, for the question "What practices are developers of open-source AI models encouraged to follow?", the context states:
+Overall, most prompts resulted in reasonable answers. Most answers were grounded in the context, many using the context almost word-for-word, with slight parapharasing here and there. The quality of the answer and the information in it strongly depended on the context. When there was enough context available, the model generally did a good job including that context in its answer. There was one instance, however, when the chunk of context the model was referencing was cut off from its original context and the model seemed to infer what it might mean instead. For the question "What practices are developers of open-source AI models encouraged to follow?", the context states:
 
 - "General-purpose AI models released under free and open-source licences should be considered to ensure high levels of transparency and openness if their parameters, including the weights, the information on the model architecture, and the information on model usage are made publicly available."
--  "The providers of general-purpose AI models that are released under a free and open-source licence, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available should be subject to exceptions as regards the transparency-related requirements imposed on general-purpose AI models..." but the model's response states "Developers of open-source AI models are encouraged to make public the parameters, including the weights, the information on the model architecture, and the information on model usage," despite the two sections of the context never explicitely stating that developers are *encouraged* to make this information public (the context is simply discussing the scenario in which the developers happened to release this information).
+-  "The providers of general-purpose AI models that are released under a free and open-source licence, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available should be subject to exceptions as regards the transparency-related requirements imposed on general-purpose AI models..."
 
-While the model's response makes sense and is intuitive, this is one example of when the nuances of the wording of the context might confuse the model and the model interprets the information to mean something slightly different. Thus, while overall the model's answers seemed to be appropriately grounded in the context, small mistakes like these could also be present, distorting projecting meaning onto the context that it did not fully have originally. 
+but the model's response states "Developers of open-source AI models are encouraged to make public the parameters, including the weights, the information on the model architecture, and the information on model usage," despite the two sections of the context never explicitly stating that developers are *encouraged* to make this information public (the context is simply discussing considerations *if* developers release this information).
+
+While the model's response still makes sense and is intuitive, this is one example of when the nuances of the wording of the context might confuse the model and make it interpret the information to mean something slightly different. Thus, while overall the model's answers seemed to be appropriately grounded in the context, small mistakes like these are not absent, projecting meaning onto the context that it did not fully have originally. 
 
 2. Which produces the most useful answers?
 
-Overall most responses were decently helpful, though some responses were more helpful than others. There was some variation in response quality among the prompt types, but often answers were very similar to one another. The helpfulness of answers often depended on the question asked and the quality of the available context for that question, with answers to questions 3 and 4 having the most consistently helpful responses. The effect of context quality on the model's answers is evident in the model's answers for question 1: "In what ways can AI systems benefit society?" The model most often cited a chunk of context that listed potential areas that AI could be useful in, but did not go into more depth about *how* AI could be useful/applied in those fields. 
+The helpfulness of answers often depended on the question asked and the quality of the available context for that question, with answers to questions 3 and 4 having the most consistently helpful responses. The effect of context quality on the model's answers is evident in the model's answers for question 1: "In what ways can AI systems benefit society?" The model most often cited a chunk of context that listed potential areas that AI could be useful in, but did not go into more depth about *how* AI could be useful/applied in those fields because the context did not provide this information. 
 
 3. Is there a trade-off between strict grounding and helpfulness?
 
-From my results, there does not seem to be a trade-off. In fact, the more grounded the model is in the context, the more helpful it is. This may be due to the nature of the source I am drawing from, which is the EU AI Act. Since the questions I use are asking about information from different parts of the act, it makes sense that answers grounded directly in the context would be most helpful.
+From my results, there does not seem to be a trade-off. In fact, the more grounded the model is in the context, the more helpful it is. This may be due to the nature of the source I am drawing from, which is the EU AI Act. Since the questions I use ask about information from different parts of the act, it makes sense that answers grounded directly in the context would be most helpful.
 
 
 ## Experiment 11
@@ -267,9 +278,10 @@ I used the following queries for this experiment:
 4. "Summarize all safety warnings in the manual"
    
 
-1. Does retrieving more chunks improve synthesis?
 
-No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to question 2, the context only ever included chunks on adjusting the breaks, regardless of the value of k. Overall, the model struggled to retrieve adequate information from the context. The model had the entore Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
+1 . Does retrieving more chunks improve synthesis?
+
+No, the model performance remained more or less the same when more chunks were added to the context. For example, in repsonding to question 2, the context only ever included chunks on adjusting the breaks, regardless of the value of k. Overall, the model struggled to retrieve adequate information from the context. The model had the entire Corpora folder available to it, which resulted in it choosing files in different folders, some of which were helpful while others were not.
 
 2. Can the model successfully combine information from multiple chunks?
 
@@ -277,11 +289,42 @@ Yes, it seems to have been able to do this. For example, in its answer to questi
 
 3. Does it miss information that wasn't retrieved?
 
-Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model omits information in the second chunk of context from its answer that could have been at least useful to include, even though the information is fairly vague. Additionally, in its answer to question 4 with k=3, the model uses a congressional processings documents in its context, presumably because they each include the word "safety", but the model fails to access the Model T or even the Learjet files. The model also cites Learjet files more often than Model T files, which could be an issue if the question is asking about the Model T but does not explicitly state so.
+Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model omits information found in the second chunk of context,  which could have been at least useful to include even though the information is fairly vague. Additionally, in its answer to question 4 with k=3, the model uses congressional processings documents in its context, presumably because they each include the word "safety", but the model fails to access the Model T or even the Learjet files. The model also cites Learjet files more often than Model T files, which could be an issue if the question is asking about the Model T but does not explicitly state so.
 
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
