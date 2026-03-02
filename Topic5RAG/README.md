@@ -100,7 +100,7 @@ For this question, I prompted the model to retrieve information from the EU AI A
 - What are the risks of AI systems built to detect human emotions?
 - What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
 
-Each query is based off of a paragraph I found in the EU AI Act so the model should have at least those references for its answers.
+Each query is based off of a paragraph I found in the EU AI Act, so the model should have at least those references for its answers.
 
 1. At what point does adding more context stop helping?
 
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
