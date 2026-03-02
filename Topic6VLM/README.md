@@ -8,7 +8,7 @@ found in `checkpoints.db`. An image of the LangGraph graph can be found in `lg_g
 
 ## Task 2
 
-For this task, I record two simple videos of a stick figure crossing the screen, once with some sun and cloud shapes in the background (the "nature background") and once with nothing in the background. I varied the background in each video to determine whether this would have an impact on model performance. Each video is approzimately 2 minutes long. I then break the videos down into image frames and, for each image, I ask the LLaVA model if there is a person in the scene. I then go through the model responses with each image to determine whether the model correctly identified the person in the image at the correct time.
+For this task, I record two simple videos of a stick figure crossing the screen, one with some sun and cloud shapes in the background (which I call the "nature background") and once with nothing in the background. I varied the background in each video to determine whether this would have an impact on model performance. Each video is approzimately 2 minutes long. I then break the videos down into image frames and, for each image, I ask the LLaVA model if there is a person in the scene. I then go through the model responses with each image to determine whether the model correctly identified the person in the image at the correct time.
 
 ### Table of Contents
 
@@ -32,6 +32,7 @@ For this task, I record two simple videos of a stick figure crossing the screen,
 - Frames that LLaVA states include a person (nature background): frame 5, frame 55
 
 For both videos, the model fails to detect the person at the right time. Interestingly, the model does state at least once for each video that there is a person in images where there is in fact no person. For the images that contain a person, the model fails to recognize the person. This is likely due to the cartoon-ish style of the scenes, where the model might not be able to distnguish a stick figure of a person because it was trained on real videos with real people.
+
 
 
 
