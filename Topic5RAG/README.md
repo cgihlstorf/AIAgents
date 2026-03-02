@@ -157,18 +157,18 @@ The word "interval" dominated the search chunks for the keyword-based query, sug
 
 For this experiment, I used the following queries:
 
-- In what ways can AI systems benefit society?
-- What are the risks of AI systems built to detect human emotions?
-- What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
+1. In what ways can AI systems benefit society?
+2. What are the risks of AI systems built to detect human emotions?
+3. What practices are developers of open-source AI that is not general-purpose AI encouraged to follow?
 
 1. Does higher overlap improve retrieval of complete information?
 
 I am taking "complete information" to mean "enough information to answer the question effectively." In this case, my results suggest that
-higher overlap does not necessarily improve retrieval of complete information despite providing sufficient information in many (but not all) cases, as lower overlap values resulted in chunks containing a decent amount of information already. 
+higher overlap does not necessarily improve retrieval of complete information because lower overlap values resulted in chunks containing a decent amount of information already. 
 
 2. What's the cost? (Index size, redundant information in context)
 
-As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, thogh for query 2 there were almost identical responses for overlap values of 0 and 64. 
+As the overlap value increased, there tended to be two chunks that contained almost identical information from the context, differentiated only by the presence or absence of a couple of words. This seemed to happen mostly for higher overlap values for queries 1 and 3, though for query 2 there were almost identical responses for overlap values of 0 and 64. 
 
 3. Is there a point of diminishing returns?
 
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
