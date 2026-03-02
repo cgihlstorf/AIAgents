@@ -31,7 +31,9 @@ For this task, I record two simple videos of a stick figure crossing the screen,
 - Frames that include a person (nature background): frame 29, frame 30
 - Frames that LLaVA states include a person (nature background): frame 5, frame 55
 
-For both videos, the model fails to detect the person at the right time. Interestingly, the model states at least once for each video that there is a person in images where there is in fact no person. For the images that contain a person, the model fails to recognize the person. This is likely due to the cartoon-ish style of the scenes, where the model might not be able to distnguish a stick figure of a person because it was trained on real videos with real people.
+For both videos, the model fails to detect the person at the right time, suggesting that the background was not a deciding factor in model performance. Interestingly, the model states at least once for each video that there is a person in images where there is in fact no person. For the images that contain a person, the model fails to recognize the person. This is likely due to the cartoon-ish style of the scenes, where the model might not be able to recognize a stick figure of a person because it was trained on real videos with real people.
+
+
 
 
 
