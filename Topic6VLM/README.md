@@ -8,5 +8,24 @@ found in `checkpoints.db`. An image of the LangGraph graph can be found in `lg_g
 
 ## Task 2
 
-For this task, I record two simple videos of a stick figure crossing the screen, once with some sun and cloud shapes in the background and once with nothing in the background. Each video is approzimately 2 minutes long. I then break the videos down into image frames and, for each image, I ask the model if there is a person in the scene. [TODO]
+For this task, I record two simple videos of a stick figure crossing the screen, once with some sun and cloud shapes in the background (what I call the "nature background") and once with nothing in the background. I varied the background in each video to determine whether this would have an impact on model performance. Each video is approzimately 2 minutes long. I then break the videos down into image frames and, for each image, I ask the LLaVA model if there is a person in the scene. I then go through the model responses with each image to determine whether the model correctly identified the person in the image at the correct time.
+
+### Table of Contents
+
+- `frames_blank_background` contains image frames for the video with the blank background.
+- `frames_nature_background` contains image frames for the video with the sun and cloud shapes in the background.
+- `checkpoints.db` holds the LangGraph checkpoints for the code used to run the model
+- `get_video_frames.py` contains code to transform a video into individual image frames
+- `lg_graph.png` contains an image of the graph used to run the chat interface with the LLaVA model
+- `llava_responses_blank_background.txt` contains the model responses for each image in the video with the blank background
+- `llava_responses_nature_background.txt` contains the model responses for each image in the video with the nature background
+- `person_frame_video.mp4` is the video with the nature background
+- `run_vllm_video.py` is the code I use to run the LLaVA model
+- `video_frame_blank.mp4` is the video with the blank background
+
+
+### Results
+
+For both videos, the model fails to detect the person at the right time. Interestingly, the model does state at least once for each video that there is a person in images where there is in fact no person. For the images that contain a person, the model fails to recognie the person. This is likely due to the cartoon-ish style of the scenes, where the model might not be able to distnguish a stick figure of a person because it was trained on real videos with real people.
+
 
