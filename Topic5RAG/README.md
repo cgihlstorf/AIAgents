@@ -143,7 +143,7 @@ The original prompt already contained a specification stating: "If the context d
 
 1. Which phrasings retrieve the best chunks?
 
-The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results forthe casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the enginer if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
+The casual question, "How often should I service the engine?" retrieved the best chunks, followed by the question form, "When do I need to check the engine?". The results for the casual question use chunks that promote reaching out to customers suggesting they get regular service and to take advantage of a 30-day free service period, which were most aligned with the question. The chunks retrieved for the question form describe how to perform a check on the engine if the Model T has not been driven for some time or if the engine was recently replaced, which also have some relevance to the question of engine maintenance intervals.
 
 2. Do keyword-style queries work better or worse than natural questions?
 
@@ -151,7 +151,7 @@ Generally, no. The top two performing queries were not keyword-style queries, so
 
 3. What does this tell you about potential query rewriting strategies?
 
-The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the forma syntactic structure of the questions makes it easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
+The word "interval" dominated the search chunks for the keyword-based query, suggesting that providing different keywords (e.g., such as "frequency") could change the output and the type of information retrieved. The non-keyword search queries still contained phrases such as these, so rephrasing these into keyword-based queries could potentially improve model performance if reducing the formal syntactic structure of the questions makes them easier for the model to understand. Otherwise, based on the results from the queries I tested, casual/simple questions work best for the model, so if an initial query if phrased very formally, rewriting the question more simply could improve model retrieval performance.
 
 ## Experiment 7
 
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
