@@ -119,8 +119,8 @@ The larger the chunk size, the more information is likely to be stored in any gi
 For this experiment, I used the three queries provided in the experiment description:
 
 - "What is the capital of France?"
-- "What's the horsepower of a 1925 Model T?" (if not in your manual)
-- "Why does the manual recommend synthetic oil?" (when it doesn't)
+- "What's the horsepower of a 1925 Model T?" 
+- "Why does the manual recommend synthetic oil?"
 
 1. Does the model admit it doesn't know?
 
@@ -136,7 +136,7 @@ The retrieved context doesn't hurt for the first two queries, as the model recog
 
 6. Experiment: Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
 
-The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt asking the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
+The original prompt already contained a specification stating: "If the context doesn't contain enough information to answer, say so", so I replaced this specification with the one provided in this question. Interestingly, with this new prompt the model initially tries to answer the first question about the capital of France (when it actually refused to answer this question with the original prompt) rather than state that it cannot find the answer, but after attempting to answer it does admit that it couldn't find anything definitive in the context. The model again refuses to answer question number 2, and on question number 3 outputs a very similar answer as it did with the original prompt, initially trying to justify the query's presupposition that synthetic oil is recommended but eventually admitting that it is only trying to work with the context given. It could thus be that the instructions in the original prompt that asked the model to state when it does not know the answer were sufficient, though it could also be due to randomness in the generation process that produced more concrete refusals for this particular run.
 
 
 ## Experiment 6
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
