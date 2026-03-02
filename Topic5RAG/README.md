@@ -108,7 +108,7 @@ This depends on the query. For query number 1, as k increased, the model respons
 
 2. When does too much context hurt (irrelevant information, confusion)?
 
-Negative consequences for higher values of k were most pronounced in the responses to query number 1: "In what ways can AI systems benefit society?", where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, so its answer might have been more easily constructed from various chunks in the text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
+Negative consequences for higher values of k were most pronounced in the responses to query number 1: "In what ways can AI systems benefit society?", where the model's answers became very general, circular, and less focused on precicely answering the question. This query might have been sensitive to too much context because it is very general, so it might have been easier to find at least some utility in the information from all the chunks of text. This would result in too much information needing to be aggregated and condensed, leading the model to lose its focus on the specifics of the question being asked.
 
 3. How does k interact with chunk size?
 
@@ -291,6 +291,7 @@ Sometimes. For example, in its answer to question 1, for k=5 and k=10, the model
 4. Does contradictory information in different chunks cause problems?
 
 I did not find any examples of contradictory information in different chunks. Most chunks contained very general information that was not concretely able to answer the question in depth, so models often had to do the best with the context available, often trying to infer meaning from the available snippets or generating their own responses altogether.
+
 
 
 
