@@ -1,0 +1,20 @@
+====================Drill 1 Results====================
+
+Title: InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents
+Year: 2024
+
+
+Title: Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning
+Year: 2025
+
+
+Title: A Survey of Large Language Model Agents for Question Answering
+Year: 2025
+
+
+Title: Emergence of human-like polarization among large language model agents
+Year: 2025
+
+
+Title: Large Language Model Agents for Radio Map Generation and Wireless Network Planning
+Year: 2025
