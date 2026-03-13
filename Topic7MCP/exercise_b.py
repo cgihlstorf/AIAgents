@@ -1,6 +1,8 @@
 import requests, os
 import json
 
+#export ASTA_API_KEY=O9erX9VmDRaCr3nbeP0rv9vXjrIabigS96m4Hg4g
+
 def get_result(result):
 
     result_items = []
@@ -88,7 +90,7 @@ def drill_2():
 
     results_count = len(result)
 
-    print("====================Drill 1 Results====================\n")
+    print("====================Drill 2 Results====================\n")
 
     print("Results Count:", results_count)
 
@@ -104,15 +106,6 @@ def drill_2():
 
         print("\n")
 
-
-
-
-
-
-
-    
-
-    
 
 
 if __name__ == "__main__":
