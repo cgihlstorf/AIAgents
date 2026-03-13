@@ -173,7 +173,7 @@ def create_graph(llm):
 
         llm_with_tools = state.get("llm_with_tools", llm.bind_tools(tools))
 
-        system_prompt = [{"role": "system", "content": "You are a helpful research assistant with with Semantic Scholar access."}] 
+        system_prompt = [{"role": "system", "content": "You are a helpful research assistant with Semantic Scholar access."}] 
         messages = state.get("messages", system_prompt) 
 
         return {"tools": tools_openai_format, "llm_with_tools": llm_with_tools, "messages": messages}

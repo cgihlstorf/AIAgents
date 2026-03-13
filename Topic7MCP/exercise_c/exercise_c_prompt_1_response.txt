@@ -1,0 +1,70 @@
+==================================================
+Starting conversation...
+==================================================
+
+Loading model...
+
+Creating LangGraph...
+Graph created successfully!
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Find recent papers about large language model agents
+====================Tool Call====================
+Tool Name: search_papers_by_relevance
+Tool Arguments: {'keyword': 'large language model agents', 'publication_date_range': '2022:2023', 'fields': 'title, authors, year, venue', 'limit': 10}
+
+Assistant: 
+
+Here are some recent papers on large language model based autonomous agents published in 2023:
+
+1. **A Survey on Large Language Model Based Autonomous Agents**  
+   *Authors:* Lei Wang, Chengbang Ma, Xueyang Feng, et al.  
+   *Venue:* Frontiers of Computer Science
+
+2. **Towards Autonomous System: Flexible Modular Production System Enhanced with Large Language Model Agents**  
+   *Authors:* Yuchen Xia, M. Shenoy, Nasser Jazdi, et al.  
+   *Venue:* IEEE International Conference on Emerging Technologies and Factory Automation
+
+3. **Autonomous Large Language Model Agents Enabling Intent-Driven Mobile GUI Testing**  
+   *Authors:* Juyeon Yoon, R. Feldt, Shin Yoo  
+   *Venue:* arXiv
+
+4. **The Rise and Potential of Large Language Model Based Agents: A Survey**  
+   *Authors:* Zhiheng Xi, Wenxiang Chen, Xin Guo, et al.  
+   *Venue:* arXiv
+
+5. **GestureGPT: Toward Zero-Shot Free-Form Hand Gesture Understanding with Large Language Model Agents**  
+   *Authors:* Xin Zeng, Xiaoyu Wang, Tengxiang Zhang, et al.  
+   *Venue:* Proceedings of the ACM on Human-Computer Interaction
+
+6. **Empowering Working Memory for Large Language Model Agents**  
+   *Authors:* Jing Guo, Nan Li, J. Qi, et al.  
+   *Venue:* arXiv
+
+7. **Self-driven Grounding: Large Language Model Agents with Automatical Language-aligned Skill Learning**  
+   *Authors:* Shaohui Peng, Xingui Hu, Qi Yi, et al.  
+   *Venue:* arXiv
+
+8. **GestureGPT: Zero-shot Interactive Gesture Understanding and Grounding with Large Language Model Agents**  
+   *Authors:* Xin Zeng, Xiaoyu Wang, Tengxiang Zhang, et al.  
+   *Venue:* arXiv
+
+9. **CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society**  
+   *Authors:* G. Li, Hasan Hammoud, Hani Itani, et al.  
+   *Venue:* Neural Information Processing Systems (NeurIPS)
+
+10. **Plug-and-Play Policy Planner for Large Language Model Powered Dialogue Agents**  
+    *Authors:* Yang Deng, Wenxuan Zhang, Wai Lam, et al.  
+    *Venue:* International Conference on Learning Representations (ICLR)
+
+These papers cover a wide range of topics including comprehensive surveys, gesture understanding systems, mobile testing applications, working memory enhancements, and dialogue planning frameworks for autonomous LLM agents.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
