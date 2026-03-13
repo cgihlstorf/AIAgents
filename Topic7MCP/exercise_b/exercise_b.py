@@ -107,7 +107,39 @@ def drill_2():
         print("\n")
 
 
+def drill_3():
+
+    url = "https://asta-tools.allen.ai/mcp/v1"
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
+        "x-api-key": os.environ["ASTA_API_KEY"]
+    }
+
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+            "name": "get_references",
+            "arguments": {
+                    "paper_id": "ARXIV:2210.03629",
+                    "fields": "title,year,authors",
+                    "limit": 10,
+                    "publication_date_range": "2023-01-01:"
+                }
+            }
+        }
+    
+    result = get_result(requests.post(url, headers=headers, json=payload))
+
+    print("Unknown tool: get_references")
+
+
+
 
 if __name__ == "__main__":
     #drill_1()
-    drill_2()
+    #drill_2()
+    drill_3()
