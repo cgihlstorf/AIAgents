@@ -52,9 +52,6 @@ def drill_1():
 
         paper = json.loads(result[i]["text"])
 
-        print(paper.keys())
-        break
-
         paper_title = paper["title"]
         paper_year = paper["year"]
 
@@ -104,9 +101,6 @@ def drill_2():
     for i in range(len(result[0:5])): #only go through the first 5 papers
 
         paper = json.loads(result[i]["text"])["citingPaper"]
-
-        print(paper.keys())
-        break
 
         print(str(i + 1) + ")", paper["title"])
 

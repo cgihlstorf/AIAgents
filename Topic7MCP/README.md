@@ -7,3 +7,9 @@
 The results for drill 1 and drill 2 are structured similarly. Both are a lists of dictionaries, with the relevant fields to be printed located in the value to the "text" key. One issue, however, was that this value was structured as a dictionary but was a string. I used the `json.loads()` method to transform this string into a dictionary so I could access the fields using normal dictionary calls. The dictionaries returned for drill 1 and drill 2 share many of the same fields, though the result returned for drill 1 contains 2 additional fields, `openAccessPdf` and `abstract`, that the result for drill 2 does not contain. 
 
 **TODO** need results for drill 3
+
+### Exercise C
+
+#### What changed compared to calling tools manually in Exercise B? You wrote almost no tool-specific code — the schema came from the server. The chatbot would work identically if Asta added new tools tomorrow. That is the core value of MCP.
+
+In Exercise B, I manually defined calls to specific tools that I knew were available based on the set of tools I found from Exercise A. In order to call a specific tool, I would have to manually specify the tool I wanted to use and code a unique parsing algorithm to get the desired information from the output of the tool call. I would also have to ensure that the tool I wanted to call was available, which, when relying on the fixed list of tools from Exercise A, might be limiting if new tools are added, tools are removed, or the names of tools change. The chatbot in this exercise allows for all available tools to be called using the same configuration, as the language model does the work of deciding which tools to use based on the query. Additionally, the model has access to the most current set of tools at every call because it retrieves them before asking for the input query. This configuration is thus more generalizable to different tools and most current with respect to the tools available.
