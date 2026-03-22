@@ -46,7 +46,7 @@ def run_base_model(test_data):
         name="base-model"
     )
     base_accuracy = evaluate_test_set(
-        base_sampling_client, tokenizer, test_data, "base"
+        base_sampling_client, tokenizer, test_data
     )
     print(f"Base model accuracy: {base_accuracy:.2%} ({int(base_accuracy * 200)}/200)")
 
