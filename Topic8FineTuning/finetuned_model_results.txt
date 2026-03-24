@@ -1,0 +1,5 @@
+Epoch 1/1, update 100, loss: 0.0407
+Epoch 1/1, update 200, loss: 0.0435
+Epoch 1/1, update 300, loss: 0.0286
+Epoch 1/1, update 307, loss: 0.0212
+Finetuned model accuracy: 87.00% (174/200)

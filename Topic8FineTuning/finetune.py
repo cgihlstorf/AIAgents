@@ -3,6 +3,7 @@ from tinker import types
 from datasets import load_dataset
 import json, random, sqlite3
 from sql_matches import sql_matches
+import numpy as np
 
 
 def sample_from_model(sampling_client, tokenizer, context: str, question: str) -> str:
@@ -51,6 +52,92 @@ def run_base_model(test_data):
     print(f"Base model accuracy: {base_accuracy:.2%} ({int(base_accuracy * 200)}/200)")
 
 
+def format_prompt(example: dict) -> tuple[str, str]:
+    """Format example as prompt and completion for text-to-SQL."""
+    prompt = f"""Table schema:
+{example['context']}
+Question: {example['question']}
+SQL: """
+    completion = example["answer"]
+    return prompt, completion
+
+
+def process_example(example: dict, tokenizer) -> types.Datum:
+    """Convert a (question, context, answer) example into a Tinker Datum."""
+    prompt, completion = format_prompt(example)
+
+    prompt_tokens = tokenizer.encode(prompt, add_special_tokens=True)
+    prompt_weights = [0.0] * len(prompt_tokens)
+
+    # Add space before completion, end with \n\n so the model learns to stop
+    completion_str = f" {completion}\n\n"
+    completion_tokens = tokenizer.encode(completion_str, add_special_tokens=False)
+    completion_weights = [1.0] * len(completion_tokens)
+
+    tokens = prompt_tokens + completion_tokens
+    weights = prompt_weights + completion_weights
+
+    # Next-token prediction: input is tokens[:-1], target is tokens[1:]
+    input_tokens = tokens[:-1]
+    target_tokens = tokens[1:]
+    weights = weights[1:]
+
+    return types.Datum(
+        model_input=types.ModelInput.from_ints(tokens=input_tokens),
+        loss_fn_inputs={
+            "target_tokens": np.array(target_tokens, dtype=np.int64),
+            "weights": np.array(weights, dtype=np.float32),
+        },
+    )
+
+
+def process_train_data(tokenizer, train_data):
+    processed_train = [process_example(ex, tokenizer) for ex in train_data]
+    random.shuffle(processed_train) 
+    return processed_train
+
+
+def train_model(train_data, test_data):
+
+    service_client = tinker.ServiceClient()
+    base_model = "meta-llama/Llama-3.2-1B"
+    training_client = service_client.create_lora_training_client(base_model=base_model)
+    tokenizer = training_client.get_tokenizer()
+    processed_train = process_train_data(tokenizer, train_data)
+
+    NUM_EPOCHS = 1
+    BATCH_SIZE = 256
+    LEARNING_RATE = 5e-4  # Tinker-recommended for Llama-3.2-1B with LoRA
+
+    step = 0
+    for epoch in range(NUM_EPOCHS):
+        random.shuffle(processed_train)
+        for batch_idx in range(0, len(processed_train), BATCH_SIZE):
+            batch = processed_train[batch_idx : batch_idx + BATCH_SIZE]
+            if len(batch) == 0:
+                break
+
+            fwdbwd_future = training_client.forward_backward(batch, "cross_entropy")
+            optim_future = training_client.optim_step(
+                types.AdamParams(learning_rate=LEARNING_RATE)
+            )
+
+            fwdbwd_result = fwdbwd_future.result()
+            optim_result = optim_future.result()
+
+            # Compute loss (weighted cross-entropy over completion tokens only)
+            to_arr = lambda x: x.to_numpy() if hasattr(x, "to_numpy") else np.array(x.tolist())
+            logprobs = np.concatenate([to_arr(o["logprobs"]) for o in fwdbwd_result.loss_fn_outputs])
+            weights = np.concatenate([to_arr(d.loss_fn_inputs["weights"]) for d in batch])
+            loss = float(-np.dot(logprobs, weights) / (weights.sum() + 1e-8))
+
+            step += 1
+            if step % 100 == 0 or batch_idx + BATCH_SIZE >= len(processed_train):
+                print(f"Epoch {epoch + 1}/{NUM_EPOCHS}, update {step}, loss: {loss:.4f}")
+
+    sampling_client_finetuned = training_client.save_weights_and_get_sampling_client(name="trained_model_01") #https://tinker-docs.thinkingmachines.ai/save-load
+    finetuned_model_accuracy = evaluate_test_set(sampling_client_finetuned, tokenizer, test_data)
+    print(f"Finetuned model accuracy: {finetuned_model_accuracy:.2%} ({int(finetuned_model_accuracy * 200)}/200)")
 
 if __name__ == "__main__":
 
@@ -63,107 +150,5 @@ if __name__ == "__main__":
     test_data = data[:NUM_TEST_EXAMPLES]
     train_data = data[NUM_TEST_EXAMPLES:]
 
-    run_base_model(test_data)
-
-
-
-
-
-
-
-
-
-# service_client = tinker.ServiceClient()
-# training_client = service_client.create_lora_training_client(
-#     base_model="meta-llama/Llama-3.2-1B",
-#     rank=32,
-# )
-# tokenizer = training_client.get_tokenizer()
-
-# examples = [
-#     {"input": "banana split",      "output": "anana-bay plit-say"},
-#     {"input": "quantum physics",   "output": "uantum-qay ysics-phay"},
-#     {"input": "donut shop",        "output": "onut-day op-shay"},
-#     {"input": "pickle jar",        "output": "ickle-pay ar-jay"},
-#     {"input": "space exploration", "output": "ace-spay exploration-way"},
-#     {"input": "rubber duck",       "output": "ubber-ray uck-day"},
-#     {"input": "coding wizard",     "output": "oding-cay izard-way"},
-# ]
-
-
-# def process_example(example, tokenizer):
-#     prompt = f"English: {example['input']}\nPig Latin:"
-
-#     # Tokenize prompt — the model sees this but is NOT trained on it
-#     prompt_tokens = tokenizer.encode(prompt, add_special_tokens=True)
-#     prompt_weights = [0] * len(prompt_tokens)
-
-#     # Tokenize completion — the model IS trained to produce this
-#     completion_tokens = tokenizer.encode(
-#         f" {example['output']}\n\n", add_special_tokens=False
-#     )
-#     completion_weights = [1] * len(completion_tokens)
-
-#     # Concatenate and shift for next-token prediction
-#     tokens = prompt_tokens + completion_tokens
-#     weights = prompt_weights + completion_weights
-
-#     input_tokens = tokens[:-1]
-#     target_tokens = tokens[1:]
-#     weights = weights[1:]
-
-#     return types.Datum(
-#         model_input=types.ModelInput.from_ints(tokens=input_tokens),
-#         loss_fn_inputs=dict(weights=weights, target_tokens=target_tokens),
-#     )
-
-# processed = [process_example(ex, tokenizer) for ex in examples]
-
-
-# import numpy as np
-
-# for step in range(6):
-#     # Forward + backward: compute gradients on Tinker's GPUs
-#     fwdbwd_future = training_client.forward_backward(
-#         processed, "cross_entropy"
-#     )
-
-#     # Optimizer step: update the LoRA adapter weights
-#     optim_future = training_client.optim_step(
-#         types.AdamParams(learning_rate=1e-4)
-#     )
-
-#     # Wait for results and compute loss
-#     fwdbwd_result = fwdbwd_future.result()
-#     optim_result = optim_future.result()
-
-#     logprobs = np.concatenate(
-#         [out['logprobs'].tolist()
-#          for out in fwdbwd_result.loss_fn_outputs]
-#     )
-#     weights = np.concatenate(
-#         [ex.loss_fn_inputs['weights'].tolist()
-#          for ex in processed]
-#     )
-#     loss = -np.dot(logprobs, weights) / weights.sum()
-#     print(f"Step {step}: loss = {loss:.4f}")
-
-
-# def get_responses():
-
-#     sampler = training_client.save_weights_and_get_sampling_client(
-#         name="pig-latin-model"
-#     )
-#     prompt = types.ModelInput.from_ints(
-#         tokenizer.encode("English: coffee break\nPig Latin:")
-#     )
-#     params = types.SamplingParams(
-#         max_tokens=20, temperature=0.0, stop=["\n"]
-#     )
-#     result = sampler.sample(
-#         prompt=prompt, sampling_params=params, num_samples=8
-#     ).result()
-
-#     print("Responses:")
-#     for i, seq in enumerate(result.sequences):
-#         print(f"  {i}: {tokenizer.decode(seq.tokens)}")
+    #run_base_model(test_data)
+    train_model(train_data, test_data)
