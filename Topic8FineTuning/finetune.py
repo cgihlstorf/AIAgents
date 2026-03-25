@@ -147,35 +147,40 @@ def run_challenge_set():
 
     service_client = tinker.ServiceClient()
     base_model = "meta-llama/Llama-3.2-1B"
-    sampling_client = service_client.create_sampling_client(model_path="tinker://f80e3886-eb4f-5c61-93af-383b9a17f8f7:train:0/weights/final_checkpoint")
+    sampling_client = service_client.create_sampling_client(model_path="tinker://e82bc01d-22b6-5f31-bfcf-ae99b8fb4023:train:0/sampler_weights/final_checkpoint")
     tokenizer = sampling_client.get_tokenizer()
     
     challenge_set = [
         {
             "question": "What are the names of employees in the engineering department?",
-            "context": "CREATE TABLE employees (id INTEGER, name VARCHAR, salary REAL, department VARCHAR)"
+            "context": "CREATE TABLE employees (id INTEGER, name VARCHAR, salary REAL, department VARCHAR)",
+            "answer": ""
         },
         {
             "question": "How many products cost more than 50 dollars?",
-            "context": "CREATE TABLE products (id INTEGER, name VARCHAR, price REAL, category VARCHAR)"
+            "context": "CREATE TABLE products (id INTEGER, name VARCHAR, price REAL, category VARCHAR)",
+            "answer": ""
         },
         {
             "question": "What is the highest score in the science class?",
-            "context": "CREATE TABLE students (id INTEGER, name VARCHAR, score INTEGER, class VARCHAR)"
+            "context": "CREATE TABLE students (id INTEGER, name VARCHAR, score INTEGER, class VARCHAR)",
+            "answer": ""
         },
         {
             "question": "List the top 3 customers by total order amount.",
-            "context": "CREATE TABLE orders (id INTEGER, customer VARCHAR, amount REAL, date VARCHAR)"
+            "context": "CREATE TABLE orders (id INTEGER, customer VARCHAR, amount REAL, date VARCHAR)",
+            "answer": ""
         },
         {
             "question": "CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)",
-            "context": "How many students are enrolled in each department?"
+            "context": "How many students are enrolled in each department?",
+            "answer": ""
         }
     ]
 
-    processed_challenge_set = process_train_data(tokenizer, challenge_set)
+    #processed_challenge_set = process_train_data(tokenizer, challenge_set)
 
-    for ex in processed_challenge_set:
+    for ex in challenge_set:
 
         model_response = sample_from_model(sampling_client, tokenizer, ex["context"], ex["question"])
         print("Input:", ex)
@@ -197,5 +202,5 @@ if __name__ == "__main__":
     train_data = data[NUM_TEST_EXAMPLES:]
 
     #run_base_model(test_data)
-    train_model(train_data, test_data)
-    #run_challenge_set()
+    #train_model(train_data, test_data)
+    run_challenge_set()
