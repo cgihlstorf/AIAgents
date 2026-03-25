@@ -1,3 +1,17 @@
+# Table of Contents
+
+- `tinker-cookbook`: link to the Tinker Cookbook repository
+- `base_model_results.txt`: results from running the base model on the test examples
+- `finetune.y`: code used to run the base model, finetune the model, and eveluate it on the test set and the challenge set
+- `finetuned_model_challenge_inputs_responses.txt`: results from running the fintuned model on the challenge examples
+- `finetuned_model_results.txt`: results from running the finetuned model on the test examples
+- `gemini_sql_challenge_set_answers.txt`: file comparing results from running the finetuned model on the test set to ground truth answers obtained from prompting Gemini
+- `sql_create_context_v4.json`: examples used to train and evaluate the models
+- `sql_matches.py`: file containing helper functuons to evaluate the SQL outputs from the model
+
+
+# Results/Analysis
+
 ## Base Model Results
 
 The base model achieved an accuracy of 50% on the test examples. Results for the base model can be found in `base_model_results.txt`.
