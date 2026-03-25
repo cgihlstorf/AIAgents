@@ -22,4 +22,41 @@ In general, a RAG system would work better when the questions in the database we
 
 ### Error analysis: When the fine-tuned model gets a query wrong, how does it fail? Wrong column names? Wrong SQL syntax? Wrong logic? Each failure mode tells you something different about what the model learned.
 
-This analysis is focused on the finetuned model's performance on the challenge set. 
+This analysis is focused on the finetuned model's performance on the challenge set. As mentioned above, the model only got 1 out of the 5 questions correct. Below, I lay out the ground truth answers from Gemini and compare them to the finetuned model's responses for each question. These results can also be found in `gemini_sql_challenge_set_answers.txt`. Results for just the finetuned model on the challenge set can be found in `finetuned_model_challenge_inputs_responses.txt`. 
+
+#### Question: What are the names of employees in the engineering department?
+- Ground Truth Answer (Gemini): `SELECT name FROM employees WHERE department = 'engineering';`
+- Finetuned Model Answer: `SELECT MAX(id) FROM employees WHERE salary > 100000 AND department = 'engineering'`
+
+**Analysis**: The model makes two mistakes here. First, it uses `SELECT MAX(id)` instead of `SELECT name`. It also includes the condition that the employee's salary be greater than $100,000, which was not a specification of the orginal question.
+
+#### Question: How many products cost more than 50 dollars?
+- Ground Truth Answer (Gemini): `SELECT COUNT(*) FROM products WHERE price > 50;`
+- Finetuned Model Answer: `SELECT SUM(id) FROM products WHERE price > 50 AND category = 'electronics'`
+
+**Analysis**: The model makes similar errors here to those from the first question. Instead of using `SELECT COUNT(*)`, the model uses `SELECT SUM(id)` instead (after asking Gemini about this, I learned that these are two different functions). Additionally, the model specifies that the produces should be limited to electronics, which was not specified in this original question.
+
+#### Question: What is the highest score in the science class?
+- Ground Truth Answer (Gemini): `SELECT MAX(score) FROM students WHERE class = 'science';`
+- Finetuned Model Answer: `SELECT MAX(score) FROM students WHERE class = 'Science'`
+
+**Analysis**: The model answers this question correctly (assuming the capitalization of 'science' makes no difference here).
+
+#### Question: List the top 3 customers by total order amount.
+- Ground Truth Answer (Gemini): `SELECT customer, SUM(amount) AS total_spent`
+`FROM orders`
+`GROUP BY customer`
+`ORDER BY total_spent DESC`
+`LIMIT 3;`
+- Finetuned Model Answer: `SELECT MAX(id), customer FROM orders GROUP BY customer ORDER BY SUM(amount) DESC LIMIT 3`
+
+**Analysis**: The model's answer does not align with the ground truth answer. Although a few keyword phrases in the model's answer match those in the ground truth, the model's syntax is off and does not call all of the same things in the same order that the ground truth query does. The model's incorrect answer makes sense here, since this is a more difficult query.
+
+#### Question: How many students are enrolled in each department?
+- Ground Truth Answer (Gemini): `SELECT c.department, COUNT(e.student_id) AS student_count`
+`FROM courses c`
+`JOIN enrollments e ON c.id = e.course_id`
+`GROUP BY c.department;`
+- Finetuned Model Answer: `SELECT SUM(T1.student_id), T1.name, T2.department FROM enrollments AS T1 JOIN courses AS T2 ON T1.course_id = T2.id GROUP BY T2.department`
+
+**Analysis**: I asked Gemini whether these two queries were the same, as they seemed to contain similarly-named references but I wasn't sure whether they meant the same thing or not. According to Gemini, these queries are not the same, and the finetuned model's answer acrually contains a syntax error that makes it invalid SQL. Similarly to some of the model's previous answers, it uses column ids instead of the actual information it needs from the columns, which might be a mistake it learned during training — that is, to associate column ids with the actual information in the columns that it needs.
