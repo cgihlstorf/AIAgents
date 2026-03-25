@@ -1,0 +1,21 @@
+Input: {'question': 'What are the names of employees in the engineering department?', 'context': 'CREATE TABLE employees (id INTEGER, name VARCHAR, salary REAL, department VARCHAR)', 'answer': ''}
+Gemini's Answer: SELECT name FROM employees WHERE department = 'engineering';
+
+Input: {'question': 'How many products cost more than 50 dollars?', 'context': 'CREATE TABLE products (id INTEGER, name VARCHAR, price REAL, category VARCHAR)', 'answer': ''}
+Gemini's Answer: SELECT COUNT(*) FROM products WHERE price > 50;
+
+Input: {'question': 'What is the highest score in the science class?', 'context': 'CREATE TABLE students (id INTEGER, name VARCHAR, score INTEGER, class VARCHAR)', 'answer': ''}
+Gemini's Answer: SELECT MAX(score) FROM students WHERE class = 'science';
+
+Input: {'question': 'List the top 3 customers by total order amount.', 'context': 'CREATE TABLE orders (id INTEGER, customer VARCHAR, amount REAL, date VARCHAR)', 'answer': ''}
+Gemini's Answer: SELECT customer, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer
+ORDER BY total_spent DESC
+LIMIT 3;
+
+Input: Input: {'question': 'How many students are enrolled in each department?', 'context': 'CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)', 'answer': ''}
+Gemini's Answer: SELECT c.department, COUNT(e.student_id) AS student_count
+FROM courses c
+JOIN enrollments e ON c.id = e.course_id
+GROUP BY c.department;

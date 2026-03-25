@@ -10,6 +10,6 @@ Model Output: SELECT MAX(score) FROM students WHERE class = 'Science'
 Input: {'question': 'List the top 3 customers by total order amount.', 'context': 'CREATE TABLE orders (id INTEGER, customer VARCHAR, amount REAL, date VARCHAR)', 'answer': ''}
 Model Output: SELECT MAX(id), customer FROM orders GROUP BY customer ORDER BY SUM(amount) DESC LIMIT 3
 ========================================================================================================================
-Input: {'question': 'CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)', 'context': 'How many students are enrolled in each department?', 'answer': ''}
-Model Output: SELECT SUM(T1.id), T1.name FROM courses AS T1 JOIN enrollments AS T2 ON T1.id = T2.student_id WHERE T1.department = 'department' GROUP BY T1.name
+Input: {'question': 'How many students are enrolled in each department?', 'context': 'CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)', 'answer': ''}
+Model Output: SELECT SUM(T1.student_id), T1.name, T2.department FROM enrollments AS T1 JOIN courses AS T2 ON T1.course_id = T2.id GROUP BY T2.department
 ========================================================================================================================

@@ -172,8 +172,8 @@ def run_challenge_set():
             "answer": ""
         },
         {
-            "question": "CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)",
-            "context": "How many students are enrolled in each department?",
+            "question": "How many students are enrolled in each department?",
+            "context": "CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)",
             "answer": ""
         }
     ]
