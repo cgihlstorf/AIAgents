@@ -17,3 +17,8 @@ Code, results, and analyses (included in a separate README file) for this assign
 
 ## 6. Topic6VLM
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic6VLM` folder.
+
+## 7. TBD
+
+## 8. Topic8FineTuning
+Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic8FineTuning` folder.
