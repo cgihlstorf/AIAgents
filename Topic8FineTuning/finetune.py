@@ -135,9 +135,55 @@ def train_model(train_data, test_data):
             if step % 100 == 0 or batch_idx + BATCH_SIZE >= len(processed_train):
                 print(f"Epoch {epoch + 1}/{NUM_EPOCHS}, update {step}, loss: {loss:.4f}")
 
-    sampling_client_finetuned = training_client.save_weights_and_get_sampling_client(name="trained_model_01") #https://tinker-docs.thinkingmachines.ai/save-load
-    finetuned_model_accuracy = evaluate_test_set(sampling_client_finetuned, tokenizer, test_data)
+    sampling_path = training_client.save_weights_for_sampler(name="final_checkpoint").result().path
+    print(f"Model saved to: {sampling_path}")
+    sampling_client = service_client.create_sampling_client(model_path=sampling_path)
+
+    finetuned_model_accuracy = evaluate_test_set(sampling_client, tokenizer, test_data)
     print(f"Finetuned model accuracy: {finetuned_model_accuracy:.2%} ({int(finetuned_model_accuracy * 200)}/200)")
+
+   
+def run_challenge_set():
+
+    service_client = tinker.ServiceClient()
+    base_model = "meta-llama/Llama-3.2-1B"
+    sampling_client = service_client.create_sampling_client(model_path="tinker://f80e3886-eb4f-5c61-93af-383b9a17f8f7:train:0/weights/final_checkpoint")
+    tokenizer = sampling_client.get_tokenizer()
+    
+    challenge_set = [
+        {
+            "question": "What are the names of employees in the engineering department?",
+            "context": "CREATE TABLE employees (id INTEGER, name VARCHAR, salary REAL, department VARCHAR)"
+        },
+        {
+            "question": "How many products cost more than 50 dollars?",
+            "context": "CREATE TABLE products (id INTEGER, name VARCHAR, price REAL, category VARCHAR)"
+        },
+        {
+            "question": "What is the highest score in the science class?",
+            "context": "CREATE TABLE students (id INTEGER, name VARCHAR, score INTEGER, class VARCHAR)"
+        },
+        {
+            "question": "List the top 3 customers by total order amount.",
+            "context": "CREATE TABLE orders (id INTEGER, customer VARCHAR, amount REAL, date VARCHAR)"
+        },
+        {
+            "question": "CREATE TABLE courses (id INTEGER, name VARCHAR, department VARCHAR); CREATE TABLE enrollments (student_id INTEGER, course_id INTEGER, grade VARCHAR)",
+            "context": "How many students are enrolled in each department?"
+        }
+    ]
+
+    processed_challenge_set = process_train_data(tokenizer, challenge_set)
+
+    for ex in processed_challenge_set:
+
+        model_response = sample_from_model(sampling_client, tokenizer, ex["context"], ex["question"])
+        print("Input:", ex)
+        print("Model Output:", model_response)
+        print("==" * 60)
+
+
+
 
 if __name__ == "__main__":
 
@@ -152,3 +198,4 @@ if __name__ == "__main__":
 
     #run_base_model(test_data)
     train_model(train_data, test_data)
+    #run_challenge_set()

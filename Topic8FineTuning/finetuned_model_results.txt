@@ -1,5 +1,6 @@
-Epoch 1/1, update 100, loss: 0.0407
-Epoch 1/1, update 200, loss: 0.0435
-Epoch 1/1, update 300, loss: 0.0286
-Epoch 1/1, update 307, loss: 0.0212
-Finetuned model accuracy: 87.00% (174/200)
+Epoch 1/1, update 100, loss: 0.0376
+Epoch 1/1, update 200, loss: 0.0308
+Epoch 1/1, update 300, loss: 0.0314
+Epoch 1/1, update 307, loss: 0.0272
+Model saved to: tinker://e82bc01d-22b6-5f31-bfcf-ae99b8fb4023:train:0/sampler_weights/final_checkpoint
+Finetuned model accuracy: 90.00% (180/200)

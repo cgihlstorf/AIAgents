@@ -16,8 +16,52 @@ def get_result(result):
     return result_final
 
 
-#TODO get tools
-#TODO bind tools to model
+def get_metadata(url:str, headers:dict, paper_id:str):
+
+    #Retrieve full metadata for the seed paper (title, abstract, year, authors, fields of study).
+    
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+            "name": "get_paper",
+            "arguments": {
+                "paper_id": paper_id,
+                "fields": "title, abstract, year, authors",
+            }
+        }
+    }
+    
+    result = json.loads(get_result(requests.post(url, headers=headers, json=payload))[0]["text"])
+
+    return result
+
+
+def get_top_5_refs(url:str, headers:dict):
+
+    #Fetch the paper's references and retrieve abstracts for the 5 most-cited ones.
+    #TODO I think this is another get reference thing
+
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+            "name": "get_citations",
+            "arguments": {
+                "paper_id": paper_id,
+                "fields": "title, abstract, year, authors",
+                "limit": 5,
+            }
+        }
+    }
+
+    result = json.loads(get_result(requests.post(url, headers=headers, json=payload))[0]["text"])
+    
+    assert len(result) == 5
+
+    return result
 
 
 
