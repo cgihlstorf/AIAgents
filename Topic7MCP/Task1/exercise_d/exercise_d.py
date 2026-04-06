@@ -1,5 +1,6 @@
-from langchain_ollama import ChatOllama
+import ollama
 import requests, os, json
+import fire
 
 def get_result(result):
 
@@ -84,8 +85,13 @@ def get_top_5_refs(url:str, headers:dict, paper_id:str):
             }
         }
 
-        new_result = json.loads(get_result(requests.post(url, headers=headers, json=new_payload))[0]["text"])
-        new_results.append(new_result)
+        new_result = get_result(requests.post(url, headers=headers, json=new_payload))
+        
+        try:
+           new_results.append(json.loads(new_result[0]["text"]))
+
+        except:
+            new_results.append(new_result)
 
 
     return new_results
@@ -181,15 +187,11 @@ def get_authors_other_works(url:str, headers:dict, paper_id:str):
 
         author_dict["most_cited_paper"] = paper_with_most_citations
 
-    print(authors)
     
     return authors
 
 
-
-
-
-if __name__ == "__main__":
+def main(paper_id:str):
 
     url = "https://asta-tools.allen.ai/mcp/v1"
 
@@ -199,9 +201,41 @@ if __name__ == "__main__":
         "x-api-key": os.environ["ASTA_API_KEY"]
     }
 
-    paper_id = "ARXIV:2210.03629"
+    prompt = "You will be given metadata about a research paper. Please generate a structured markdown report containing: \n\n"
+    prompt += "- A one-paragraph summary of the seed paper\n"
+    prompt += "A \"Foundational Works\" section with the 5 key references\n"
+    prompt += "A \"Recent Developments\" section with 5 citing papers\n"
+    prompt += "An \"Author Profiles\" section with each author's most notable other work\n\n"
+    prompt += "Here is the metadata:\n\n"
 
-    #get_metadata(url, headers, paper_id)
-    #get_top_5_refs(url, headers, paper_id)
-    #get_citing_papers_past_3_years(url, headers, paper_id)
-    get_authors_other_works(url, headers, paper_id)
+
+    general_metadata = str(get_metadata(url, headers, paper_id))
+    top_5_abstracts = str(get_top_5_refs(url, headers, paper_id))
+    recent_citing_papers = str(get_citing_papers_past_3_years(url, headers, paper_id))
+    authors_most_cited_other_works = str(get_authors_other_works(url, headers, paper_id))
+
+    prompt += "General Metadata:\n" + general_metadata + "\n\n"
+    prompt += "Top 5 Most-Cited Abstracts:\n" + top_5_abstracts + "\n\n"
+    prompt += "Papers that cite the research paper:\n" + recent_citing_papers + "\n\n"
+    prompt += "Most Cited Work for each Author:" + authors_most_cited_other_works
+
+
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": prompt}
+    ]
+
+    response = ollama.chat(
+        model="qwen3-next:80b-cloud",
+        messages=messages,
+    )
+
+    print(response)
+
+
+    
+
+if __name__ == "__main__":
+
+    #paper_id = "ARXIV:2210.03629"
+    fire.Fire(main)
