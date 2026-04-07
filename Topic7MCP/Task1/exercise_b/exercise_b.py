@@ -11,11 +11,16 @@ def get_result(result):
         result_items.append(l)
 
     result_str = result_items[1].decode("utf-8").replace("data:", "").strip()
-    result_dict = json.loads(result_str)
     
-    result_final = result_dict["result"]["content"]
+    try:
+        result_dict = json.loads(result_str)
+        result_final = result_dict["result"]["content"]
+    except:
+        result_final = {}
+    
 
     return result_final
+
 
 def drill_1():
 
@@ -122,24 +127,57 @@ def drill_3():
         "id": 2,
         "method": "tools/call",
         "params": {
-            "name": "get_references",
+            "name": "get_paper",
             "arguments": {
                     "paper_id": "ARXIV:2210.03629",
-                    "fields": "title,year,authors",
+                    "fields": "references, year",
                     "limit": 10,
                     "publication_date_range": "2023-01-01:"
                 }
             }
         }
     
-    result = get_result(requests.post(url, headers=headers, json=payload))
+    references = json.loads(get_result(requests.post(url, headers=headers, json=payload))[0]["text"])["references"]
+    references_info = {}
 
-    print("Unknown tool: get_references")
+    for ref_dict in references:
+        
+        ref_id = ref_dict["paperId"]
+
+        payload_r = {
+            "jsonrpc": "2.0",
+            "id": 2,
+            "method": "tools/call",
+            "params": {
+                "name": "get_paper",
+                "arguments": {
+                        "paper_id": ref_id,
+                        "fields": "year",
+                        "limit": 1,
+                    }
+                }
+            }
+        
+        year_result = get_result(requests.post(url, headers=headers, json=payload_r))
+        
+        try:
+            ref_year = json.loads(year_result[0]["text"])["year"]
+        except:
+            continue #if there is no year, do not count this paper
+        
+        references_info[ref_dict["title"]] = ref_year
+
+
+    references_info = {key: value for key, value in sorted(references_info.items(), key=lambda item: item[1], reverse=True)}
+
+
+    for ref_title in references_info.keys():
+        print(ref_title, references_info[ref_title])
 
 
 
 
 if __name__ == "__main__":
-    drill_1()
-    drill_2()
-    #drill_3()
+    #drill_1()
+    #drill_2()
+    drill_3()

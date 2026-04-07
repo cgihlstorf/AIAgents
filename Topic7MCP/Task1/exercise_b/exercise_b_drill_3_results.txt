@@ -1,1 +1,32 @@
-Unknown tool: get_references
+Improving alignment of dialogue agents via targeted human judgements 2022
+Text and Patterns: For Effective Chain of Thought, It Takes Two to Tango 2022
+Faithful Reasoning Using Large Language Models 2022
+BlenderBot 3: a deployed conversational agent that continually learns to responsibly engage 2022
+WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents 2022
+Rationale-Augmented Ensembles in Language Models 2022
+Large Language Models are Zero-Shot Reasoners 2022
+Least-to-Most Prompting Enables Complex Reasoning in Large Language Models 2022
+PaLM: Scaling Language Modeling with Pathways 2022
+Language Models that Seek for Knowledge: Modular Search & Generation for Dialogue and Prompt Completion 2022
+Self-Consistency Improves Chain of Thought Reasoning in Language Models 2022
+Pre-Trained Language Models for Interactive Decision-Making 2022
+Chain of Thought Prompting Elicits Reasoning in Large Language Models 2022
+Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents 2022
+Show Your Work: Scratchpads for Intermediate Computation with Language Models 2021
+LILA: Language-Informed Latent Actions 2021
+Adaptive Information Seeking for Open-Domain Question Answering 2021
+Language Models are Few-Shot Butlers 2021
+Imitating Interactive Intelligence 2020
+ALFWorld: Aligning Text and Embodied Environments for Interactive Learning 2020
+Keep CALM and Explore: Language Models for Action Generation in Text-based Games 2020
+Language Models are Few-Shot Learners 2020
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks 2020
+A Simple Language Model for Task-Oriented Dialogue 2020
+ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks 2019
+ELI5: Long Form Question Answering 2019
+HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering 2018
+FEVER: a Large-scale Dataset for Fact Extraction and VERification 2018
+Thinking and Speech 2018
+Inner Speech: Development, Cognitive Functions, Phenomenology, and Neurobiology 2015
+Vygotsky, Luria, and the social brain. 2010
+Working memory 1984
