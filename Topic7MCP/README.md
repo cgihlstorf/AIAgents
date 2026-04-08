@@ -4,7 +4,7 @@
 
 #### What differences did you notice in the structure of results across the three tools? How did you handle the JSON returned inside the content[0]["text"] field?
 
-The results for all three drills are structured similarly. All are lists of dictionaries, with the relevant fields to be printed located in the value to the "text" key. One issue, however, was that this value was structured as a dictionary but was a string. I used the `json.loads()` function to transform this string into a dictionary so I could access the fields using normal dictionary calls. The dictionaries returned for each drill contained the information that was specified in the "fields" key of the payload, and this information differed for each drill depending on which information I wanted (e.g., references for a publication, its year title, authors, etc). 
+The results for all three drills are structured similarly. All are lists of dictionaries, with the relevant fields to be printed located in the value of the "text" key. One issue, however, was that this value was structured as a dictionary but was a string. I used the `json.loads()` function to transform this string into a dictionary so I could access the fields using normal dictionary calls. The dictionaries returned for each drill contained the information that was specified in the "fields" key of the payload, and this information differed for each drill depending on which information I wanted (e.g., references for a publication, its year title, authors, etc). 
 
 ### Exercise C
 
