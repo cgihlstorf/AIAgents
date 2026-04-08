@@ -6,8 +6,6 @@
 
 The results for all three drills are structured similarly. All a lists of dictionaries, with the relevant fields to be printed located in the value to the "text" key. One issue, however, was that this value was structured as a dictionary but was a string. I used the `json.loads()` function to transform this string into a dictionary so I could access the fields using normal dictionary calls. The dictionaries returned for each drill contained the information that was specified in the "fields" key of the payload, and this information differed for each drill depending on which information I wanted (e.g., references for a publication, its year title, authors, etc). 
 
-**TODO** need results for drill 3
-
 ### Exercise C
 
 #### What changed compared to calling tools manually in Exercise B? You wrote almost no tool-specific code — the schema came from the server. The chatbot would work identically if Asta added new tools tomorrow. That is the core value of MCP.
