@@ -27,7 +27,7 @@ In Exercise B, I manually defined calls to specific tools that I knew were avail
 
 #### You wrote tool schemas by hand in concept, then saw MCP provide them dynamically. What does this automation buy you? What does it cost (complexity, new failure modes)?
 
-TODO
+This level of automation saves time by removing the need to write a new tool schema every time you want to use a new tool with your model. Depending on the reliability of the automatic retrieval system, however, it may result in some information being missed when a particular source is requested due to errors in the retrieval process that miss important details.
 
 #### The Asta tools return rich JSON. How did you decide what to include in the context window and what to discard? What happened to response quality when you passed everything vs. a summary?
 
