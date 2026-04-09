@@ -1,5 +1,21 @@
 # Topic7MCP
 
+# TOC
+- `exercise_a/exercise_a.py`: the python script to run exercise a
+- `exercise_a/exercise_a_response.txt`: the output from exercise a
+- `exercise_b/exercise_b.py`: the python script to run exercise b
+- `exercise_b/exercise_b_drill_1_results.txt`: results from drill 1 of exercise b
+- `exercise_b/drill_2_results.txt`: results from drill 2 of exercise b
+- `exercise_b/drill_3_results.txt`: results from drill 3 of exercise b
+- `exercise_c/exercise_c.py`: the python script to run exercise c
+- `exercise_c/prompt_1_response.txt`: the chatbot's response to prompt 1 in the assignment
+- `exercise_c/prompt_2_response.txt`: the chatbot's response to prompt 2 in the assignment
+- `exercise_c/prompt_3_response.txt`: the chatbot's response to prompt 3 in the assignment
+- `exercise_c/prompt_4_response.txt`: the chatbot's response to prompt 4 in the assignment
+- `exercise_c/lg_graph.png`: the langgraph graph for the chatbot
+- `exercise_d/exercise_d.py`: the python script to run exercise d
+- `exercise_d/model_response.md `: the model's response for exercise d
+
 ## Task 1
 
 ### Exercise A
