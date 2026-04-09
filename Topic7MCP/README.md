@@ -31,7 +31,7 @@ This level of automation saves time by removing the need to write a new tool sch
 
 #### The Asta tools return rich JSON. How did you decide what to include in the context window and what to discard? What happened to response quality when you passed everything vs. a summary?
 
-TODO
+For most tasks, I simply added the output json string from the MCP call into the model's context. For results like the top 5 most-cited references, I only took the first 5 references to make that input string simpler, but I left it in dictionary format. When getting the most-cited work for each author, I first got the list of dictionaries containing information about each author, then wrote a script to get the most-cited work for each author and simply added that information back into the original dictionary for each author.
 
 #### In Exercise D, you controlled the tool-calling order. What would it take to let the LLM decide the order? What could go wrong?
 
@@ -39,4 +39,4 @@ The LLM would have to be carefully prompted to determine the proper order of ope
 
 #### MCP is a relatively young standard. What would you want a mature MCP ecosystem to offer that is not available today?
 
-TODO
+In the context of the system used for this assignment, I would like a mature version of the system to be able to summarize the different research areas an particular author has worked in over time and return representative works for each of those areas. This would be helpful in tracking the research foci of authors over time as well as the particular contributions they made in each area. 
