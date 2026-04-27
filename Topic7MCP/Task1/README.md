@@ -1,4 +1,4 @@
-# Topic7MCP
+# Topic7MCP - Task 1
 
 # TOC
 - `exercise_a/exercise_a.py`: the python script to run exercise a
@@ -15,8 +15,6 @@
 - `exercise_c/lg_graph.png`: the langgraph graph for the chatbot
 - `exercise_d/exercise_d.py`: the python script to run exercise d
 - `exercise_d/model_response.md `: the model's response for exercise d
-
-## Task 1
 
 ### Exercise A
 
