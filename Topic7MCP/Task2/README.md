@@ -12,7 +12,7 @@ Using a central registry allowed us to limit the agents we could call to those f
 
 #### System prompts as strategy: How much did the system prompt matter for scoring? Could you craft a prompt that is good at all categories while still being funny on off-topic questions?
 
-The system prompt is important in defining the scope of the agent's knowledge. Particularly when the agent is asked to be funny on off-topic questions, it is important for the model to know when a question is off-topic or not. An agent that performs well in all categories theoretically might never encounter an off-topc question if it is supposedly good at everything, but an agent that is good at *most* things might need additional specification of what it is **not** good at, so whenever it encounters a question outside of its already large scope, it knows how to recognize that the topic is outside of its scope and respond accordingly. 
+The system prompt is important in defining the scope of the agent's knowledge. Particularly when the agent is asked to be funny on off-topic questions, it is important for the model to know when a question is off-topic or not. An agent that performs well in all categories theoretically might never encounter an off-topc question if it is supposedly good at everything, but an agent that is good at *most* things might need additional specification of what it is **not** good at, so whenever it encounters a question outside of its already large scope, it knows how to recognize that the topic is outside of its scope and respond in a funny way.
 
 #### Smart routing: TF-IDF matched questions to agents based on text overlap. What would happen with semantic embeddings instead? What if agents could self-report confidence?
 
