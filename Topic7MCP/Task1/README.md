@@ -53,4 +53,4 @@ The LLM would have to be carefully prompted to determine the proper order of ope
 
 #### MCP is a relatively young standard. What would you want a mature MCP ecosystem to offer that is not available today?
 
-In the context of the system used for this assignment, I would like a mature version of the system to be able to summarize the different research areas an particular author has worked in over time and return representative works for each of those areas. This would be helpful in tracking the research foci of authors over time as well as the particular contributions they made in each area. 
+In the context of the system used for this assignment, I would like a mature version of the system to be able to summarize the different research areas that a particular author has worked in over time and return representative works for each of those areas. This would be helpful in tracking the research foci of authors over time as well as the particular contributions they made in each area. 
