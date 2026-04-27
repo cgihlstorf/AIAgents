@@ -16,6 +16,8 @@ The system prompt is important in defining the scope of the agent's knowledge. P
 
 #### Smart routing: TF-IDF matched questions to agents based on text overlap. What would happen with semantic embeddings instead? What if agents could self-report confidence?
 
+Semantic embeddings would likely offer a more meaningful comparison between questions and agents because the embeddings store information about word order patterns, which approximates the "meaning" of a word as opposed to simply checking for an overlap score. Self-reported confidence could offer another method of checking the validity of a match. Assuming an agent's self-reported confidence scores actually align with the ground-truth similarity (which does not seem to always be the case, according to past research in this area), results could be filtered not only by overlap or semantic similarity, but by model confidence as well, which could aid in resolving ties between results with similar overlap or semantic similarity by preferring the result that the model is more confident in.
+
 #### Trust and reliability: In a real multi-agent system, how would you handle an agent that returns bad data? What if an agent is slow or goes offline mid-task?
 
 #### Scaling: What would break if there were 1,000 agents instead of 20? What architectural changes would you need?
