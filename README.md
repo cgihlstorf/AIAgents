@@ -23,3 +23,6 @@ Code, results, and analyses (included in separate README files) for this assignm
 
 ## 8. Topic8FineTuning
 Code, results, and analyses (included in a separate README file) for this assignment can be found in the `Topic8FineTuning` folder.
+
+## 9. Final Project
+Links to the GitHub repo and demo video for our final project can be found in the `final_project` folder.
